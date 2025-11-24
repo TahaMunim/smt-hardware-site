@@ -1,0 +1,84 @@
+import fs from "fs";
+import path from "path";
+
+// Folders we want to scan
+const SRC_DIR = path.join(process.cwd(), "src");
+
+
+// File extensions to consider as code assets
+const EXTENSIONS = [".tsx", ".ts", ".jsx", ".js", ".json"];
+
+// Track all files + those referenced
+const allFiles = [];
+const referencedFiles = new Set();
+
+// Recursively get all files
+function walk(dir) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+
+    if (stat.isDirectory()) {
+      walk(filePath);
+    } else {
+      const ext = path.extname(file);
+      if (EXTENSIONS.includes(ext)) {
+        allFiles.push(filePath);
+      }
+    }
+  }
+}
+
+// Extract import paths from code
+function extractImports(filePath) {
+  const content = fs.readFileSync(filePath, "utf8");
+
+  const importRegex =
+    /(?:import\s.*?from\s+['"](.*?)['"])|(?:require\(['"](.*?)['"]\))/g;
+
+  let match;
+  while ((match = importRegex.exec(content))) {
+    const importPath = match[1] || match[2];
+    if (!importPath) continue;
+
+    // Ignore packages (react, lucide-react, etc)
+    if (!importPath.startsWith(".")) continue;
+
+    const resolved = path.resolve(path.dirname(filePath), importPath);
+
+    // Try each extension
+    for (const ext of EXTENSIONS) {
+      if (fs.existsSync(resolved + ext)) {
+        referencedFiles.add(resolved + ext);
+      }
+    }
+  }
+}
+
+// RUN
+walk(SRC_DIR);
+
+// Scan imports
+for (const file of allFiles) {
+  extractImports(file);
+}
+
+// Always treat main.tsx or main.jsx as used
+const ENTRY_FILE = path.resolve("src/main.tsx");
+referencedFiles.add(ENTRY_FILE);
+
+// Compute unused files
+const unused = allFiles.filter((file) => !referencedFiles.has(file));
+
+console.log("\n==============================");
+console.log(" 🔍 UNUSED FILES DETECTED");
+console.log("==============================\n");
+
+if (unused.length === 0) {
+  console.log("🔥 No unused files found! Project is clean.");
+} else {
+  unused.forEach((f) => console.log("⚠️  " + f));
+}
+
+console.log("\n==============================\n");

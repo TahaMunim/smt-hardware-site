@@ -1,0 +1,58 @@
+Rebuild my **Next.js + TailwindCSS** business website for **Saleh Mohsin Trading LLC (SMT)** with the following changes:
+
+## Fix Button Design (Consistency)
+- All buttons must follow **one consistent style** across all pages:
+  - Background: yellow (#FFD600).
+  - Text: black, bold, uppercase.
+  - Shape: fully rounded (rounded-full).
+  - Padding: px-6 py-3 (same everywhere).
+  - Hover effect: black background with yellow text + smooth transition.
+- Apply to: header CTAs, hero CTAs, product "Get Quote" buttons, contact forms, and footer links.
+
+---
+
+## Fix Product & Category Images
+- All product and category images must **match actual hardware, sealants, adhesives, and safety gear** (no random stock art).
+- Use **realistic industrial placeholders** until I upload my own photos.
+- Placeholders should visually match categories:
+  - **Power Tools:** drills, cordless tools, saws.
+  - **Hand Tools:** wrenches, hammers, pliers.
+  - **Construction Chemicals:** sealants, adhesives, WD40 cans, Tuffix tubes, Sika buckets.
+  - **Safety Equipment:** helmets, gloves, safety goggles.
+  - **Sanitary:** taps, faucets, pipes.
+  - **Electrical:** wires, switches, sockets.
+  - **Construction Materials:** cement bags, screws, consumables.
+- In `/app/products/ProductGrid.tsx`, replace mismatched images with category-appropriate placeholders.
+- Document clearly in comments where I can replace these placeholder image URLs with my **own shop/product images**.
+
+---
+
+## Global Website Features
+- Business name: **SALEH MOHSIN TR. LLC**
+- Logo: use my provided SMT logo (without white background).
+- Colors: black & yellow theme, white text on dark sections.
+- Pages: Home, Products, Services, About, Contact (all already built).
+- CTA buttons: consistent, professional, visible.
+- Products page: all product cards must use correct category images + new button styling.
+- About page: placeholder for shop/team photos with easy replacement notes.
+- Contact page: WhatsApp integration (`wa.me/971503821352`), Google Map embed of my Sajaa location, Supabase form for quotes & messages.
+
+---
+
+## Technical Details
+- Framework: **Next.js (App Router)** + **TailwindCSS**.
+- Forms: connect to **Supabase** tables `quotes` and `contact_messages`.
+- Responsive: must look polished on mobile, tablet, desktop.
+- Animations: smooth hover transitions, fade-in for sections, hover scale on product cards.
+- Product Management:
+  - Product list stored in `/app/products/ProductGrid.tsx`.
+  - Fields: {id, name, brand, category, price, originalPrice, inStock, image}.
+  - Add clear inline comments showing where to update products, prices, stock, and images.
+
+---
+
+## Professional Finish
+- Buttons must look like part of the same design system.
+- Product images must match actual hardware categories (no irrelevant stock art).
+- Site should look like it was built by a **professional design agency** with consistent typography, spacing, and branding.
+

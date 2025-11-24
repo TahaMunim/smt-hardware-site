@@ -1,0 +1,94 @@
+Build me a **professional React + Next.js + TailwindCSS website** for my hardware and construction materials business in the UAE, called **Saleh Mohsin Trading LLC (SMT)**.
+
+## Brand Identity
+- Business name: **SALEH MOHSIN TR. LLC**
+- Logo: use my uploaded SMT logo (green & red horse logo without white background). Show it in the header and footer.
+- Brand colors: **black and yellow** theme (black background, yellow accents/buttons). White text for readability.
+- Fonts: modern, clean, professional.
+
+## Pages & Sections
+
+### 1. Home Page
+- Header:
+  - SMT logo (left), navigation menu (Home, Products, Services, About, Contact).
+  - Sticky header on scroll.
+- Hero Section:
+  - Full-width industrial warehouse background.
+  - Company tagline: *"Your Trusted Partner in Sealants, Adhesives & Hardware since 2012"*
+  - CTA buttons: “View Products” & “Get Quote”.
+- Product Categories Section:
+  - Grid layout with categories: Power & Hand Tools, Construction Chemicals, Safety Gear, Sanitary, Electrical, Construction Materials.
+- Featured Products Section:
+  - Highlight best sellers like **Stanley Cordless Tools, Sika Sealants, Tuffix Adhesives, WD40**.
+  - Each product card: image, short description, price OR “Quote on Request”.
+- Why Choose Us Section:
+  - Bullets: “12+ Years Experience, Fast Delivery, Bulk Discounts, Trusted Brands, B2B & Retail Friendly”.
+- Testimonials Section:
+  - Carousel slider with 3–4 customer testimonials.
+- CTA Section:
+  - Black + yellow banner with “Get a Quote Today” + button to open quote form.
+- Footer:
+  - SMT logo, quick links, business hours (Sat–Thu, 7am–8pm), WhatsApp button, email link, and Sharjah address.
+
+---
+
+### 2. Products Page
+- Hero section: “Our Product Range”.
+- Sidebar: filter by category.
+- Product Grid:
+  - Card with product image, name, price (or “Quote on Request”), brand logo, in-stock status.
+  - Each card should link to “Request Quote”.
+- Search bar for products.
+- Editable products array in `/app/products/ProductGrid.tsx`.
+
+---
+
+### 3. Services Page
+- Hero: “Our Services”.
+- Services list: bulk supply, technical support, contractor discounts, site delivery.
+- Process section: Step 1 (Request Quote) → Step 2 (We Confirm) → Step 3 (Fast Delivery).
+- CTA section: “Need Bulk Pricing? Get in Touch”.
+
+---
+
+### 4. About Page
+- Hero: “Who We Are”.
+- Company Story: Founded 2012, serving Sharjah & UAE market, focus on sealants, adhesives, tools, safety.
+- Stats Section: “12+ Years Experience, 2000+ Clients Served, 5000+ Products”.
+- Team Section: placeholder for team images.
+- Warehouse / shop photo section (easy to replace with my actual images).
+
+---
+
+### 5. Contact Page
+- Hero: “Contact Us”.
+- Contact Form: Name, Phone, Email, Message (connected to Supabase table `contact_messages`).
+- Quote Form (modal): Product type, quantity, notes, contact info (connected to Supabase table `quotes`).
+- Contact Info box: Phone **+971 50 382 1352**, Email **sales@salehmohsin.com**, Address **Old Tasheel St, Al Sajaa, Sharjah**.
+- Google Maps embed of my location.
+
+---
+
+## Technical Requirements
+- Framework: **Next.js (App Router)** with **TailwindCSS**.
+- Forms connected to **Supabase**:
+  - `quotes` table (quote requests).
+  - `contact_messages` table (contact inquiries).
+- Responsive: Mobile-first, looks professional on phones/tablets/desktops.
+- Animations: Smooth scroll, fade-in sections, hover effects on cards.
+- WhatsApp Integration: Direct “Order Now via WhatsApp” button linking to **wa.me/971503821352**.
+- Product Management:
+  - All product data should live in a products array inside `/app/products/ProductGrid.tsx`.
+  - Fields: {id, name, brand, category, price, originalPrice, inStock, image}.
+  - Easy to add/remove products and change prices.
+- Images:
+  - Allow me to replace stock photos with my own warehouse and shop pictures (especially in Hero sections and About page).
+
+---
+
+## Final Touch
+Make the website look like it was designed by a **professional web design agency**:
+- Clean layouts, card-based design.
+- Consistent spacing and typography.
+- Industrial stock images where I haven’t yet provided photos.
+- Call-to-action buttons clearly visible in yellow.

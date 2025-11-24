@@ -1,0 +1,221 @@
+Open `src/pages/contact.tsx`.
+
+I want the WhatsApp Quick Order card to align so that the bottom of that green card finishes at the same vertical line as the bottom of the left-hand "Business Hours" card.
+
+Right now the layout is a 3-column grid where the right column is a single flex column (`lg:col-span-2 flex flex-col gap-10`). This makes the WhatsApp card extend below the left column.
+
+Do the following refactor ONLY inside the `<section className="py-20 bg-background" data-testid="contact-info-section">` section, and keep all imports, schemas, logic, and card content exactly the same.
+
+1. Replace the existing grid wrapper and its three children (the `grid grid-cols-1 lg:grid-cols-3 gap-10` div, the left `space-y-6` div, the `lg:col-span-2 flex flex-col gap-10` wrapper, and everything inside that wrapper) with the following code:
+
+```tsx
+<div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] lg:grid-rows-[auto_auto] gap-10 items-start">
+  {/* Left Column: Contact Info Cards (span both rows) */}
+  <div className="space-y-6 lg:row-span-2">
+    {contactInfo.map((info, index) => {
+      const Icon = info.icon;
+      const content = (
+        <Card
+          className="rounded-xl bg-[#0d1117] border border-[#1f2937] shadow-lg hover:shadow-xl transition-shadow"
+          data-testid={`contact-info-card-${index}`}
+        >
+          <CardContent className="p-6 text-center">
+            <div className="bg-accent text-accent-foreground w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Icon className="w-7 h-7" />
+            </div>
+            <h3
+              className="font-semibold text-lg mb-2 text-accent"
+              data-testid={`contact-info-title-${index}`}
+            >
+              {info.title}
+            </h3>
+            <p
+              className="text-muted-foreground whitespace-pre-line"
+              data-testid={`contact-info-content-${index}`}
+            >
+              {info.content}
+            </p>
+          </CardContent>
+        </Card>
+      );
+
+      return info.link ? (
+        <a
+          key={info.title}
+          href={info.link}
+          target={info.link.startsWith("http") ? "_blank" : undefined}
+          rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
+          className="block"
+          data-testid={`link-contact-${info.title.toLowerCase()}`}
+        >
+          {content}
+        </a>
+      ) : (
+        <div key={info.title}>{content}</div>
+      );
+    })}
+  </div>
+
+  {/* Top Right: Send Us a Message Form */}
+  <Card className="rounded-xl bg-[#0d1117] border border-[#1f2937] shadow-lg" >
+    <CardContent className="p-10">
+      <h2
+        className="text-2xl md:text-3xl font-bold mb-6 text-accent"
+        data-testid="contact-form-title"
+      >
+        Send Us a Message
+      </h2>
+
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-6"
+          data-testid="contact-form"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name *</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="Your full name"
+                      className="bg-input border-border text-white h-12"
+                      data-testid="input-contact-name"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email *</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="email"
+                      placeholder="your@email.com"
+                      className="bg-input border-border text-white h-12"
+                      data-testid="input-contact-email"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <FormField
+              control={form.control}
+              name="phone"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="+971 50 123 4567"
+                      className="bg-input border-border text-white h-12"
+                      data-testid="input-contact-phone"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="subject"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Subject</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder="How can we help?"
+                      className="bg-input border-border text-white h-12"
+                      data-testid="input-contact-subject"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
+          <FormField
+            control={form.control}
+            name="message"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Message *</FormLabel>
+                <FormControl>
+                  <Textarea
+                    placeholder="Tell us about your requirements..."
+                    className="bg-input border-border text-white resize-none"
+                    rows={5}
+                    data-testid="textarea-contact-message"
+                    {...field}
+                  />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+
+          <Button
+            type="submit"
+            className="w-full bg-[#F5C518] text-black font-semibold h-12 px-6 rounded-lg shadow-sm transition-all hover:bg-[#d9ad15]"
+            data-testid="button-send-message"
+          >
+            Send Message
+          </Button>
+        </form>
+      </Form>
+    </CardContent>
+  </Card>
+
+  {/* Bottom Right: WhatsApp Quick Order */}
+  <Card className="rounded-xl bg-[#16a34a] border-0 shadow-lg">
+    <CardContent className="p-10 text-center">
+      <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-6">
+        <FaWhatsapp className="w-8 h-8 text-[#16a34a]" />
+      </div>
+      <h3
+        className="text-2xl font-bold mb-4 text-white"
+        data-testid="whatsapp-quick-order-title"
+      >
+        WhatsApp Quick Order
+      </h3>
+      <p className="text-white/90 mb-6">
+        Need a quick quote? Chat with us directly on WhatsApp for instant
+        assistance.
+      </p>
+      <Button
+        asChild
+        className="w-full bg-white text-[#16a34a] font-semibold h-12 px-6 rounded-lg shadow-sm transition-all hover:bg-gray-100"
+      >
+        <a
+          href="https://wa.me/971503821352?text=I%20need%20a%20quick%20order%20quote"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center"
+          data-testid="button-whatsapp-quick-order"
+        >
+          <FaWhatsapp className="mr-2 w-5 h-5" />
+          Chat on WhatsApp
+        </a>
+      </Button>
+    </CardContent>
+  </Card>
+</div>
