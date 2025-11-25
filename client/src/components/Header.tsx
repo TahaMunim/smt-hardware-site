@@ -16,23 +16,27 @@ export default function Header() {
     const handleScroll = () => {
       const current = window.scrollY;
 
-      // Disable ALL scroll behavior when mobile menu is open
       if (isMenuOpen) return;
 
-      // Shrink navbar
-      if (current > 20) setShrink(true);
-      else setShrink(false);
 
-      // Hide on scroll down
-      if (current > lastScroll && current > 100) setHidden(true);
-      else setHidden(false);
+      if (!shrink && current > 40) {
+        setShrink(true);
+      } else if (shrink && current < 10) {
+        setShrink(false);
+      }
+
+      if (current > lastScroll && current > 100) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
 
       setLastScroll(current);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll, isMenuOpen]);
+  }, [lastScroll, isMenuOpen, shrink]);
 
 
   const closeMenu = () => setIsMenuOpen(false);
