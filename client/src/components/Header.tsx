@@ -10,21 +10,36 @@ export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [shrink, setShrink] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
+  // Detect mobile once on mount
+  useEffect(() => {
+    const mobile = window.innerWidth < 768;
+    setIsMobile(mobile);
+
+    if (mobile) {
+      // Mobile always uses shrunk mode
+      setShrink(true);
+    }
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const current = window.scrollY;
 
+      // When mobile menu is open, disable scroll behavior
       if (isMenuOpen) return;
 
-
-      if (!shrink && current > 40) {
-        setShrink(true);
-      } else if (shrink && current < 10) {
-        setShrink(false);
+      if (!isMobile) {
+        // DESKTOP ONLY shrink logic
+        if (!shrink && current > 40) {
+          setShrink(true);
+        } else if (shrink && current < 10) {
+          setShrink(false);
+        }
       }
 
+      // Hide on scroll down (mobile + desktop)
       if (current > lastScroll && current > 100) {
         setHidden(true);
       } else {
@@ -36,8 +51,7 @@ export default function Header() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScroll, isMenuOpen, shrink]);
-
+  }, [lastScroll, isMenuOpen, shrink, isMobile]);
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -58,11 +72,11 @@ export default function Header() {
       <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-yellow-500/70 to-transparent" />
 
       <div className="w-full px-4 sm:px-6 lg:px-8">
-        {/* Header Inner */}
         <div
           className={`
             flex items-center justify-between w-full
             transition-all duration-300
+
             ${shrink ? "h-14" : "h-20"}
           `}
         >
@@ -86,7 +100,7 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-10">
             {[
               { href: "/", label: "Home" },
@@ -109,7 +123,6 @@ export default function Header() {
               </Link>
             ))}
 
-            {/* WhatsApp Button */}
             <a
               href={whatsappUrl}
               target="_blank"
@@ -125,7 +138,7 @@ export default function Header() {
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden text-white hover:text-yellow-500 p-2 transition"
