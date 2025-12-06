@@ -45,10 +45,11 @@ export default function Home() {
           ].map((src, index) => (
             <div
               key={index}
-              className="absolute inset-0 bg-cover bg-center transition-opacity duration-[1500ms]"
+              className="absolute inset-0 bg-cover bg-center transition-opacity"
               style={{
                 backgroundImage: `url(${src})`,
-                opacity: `var(--slide-${index})`
+                opacity: `var(--slide-${index})`,
+                transitionDuration: '1500ms'
               }}
             />
           ))}

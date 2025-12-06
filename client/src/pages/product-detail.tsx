@@ -1,12 +1,17 @@
+// ProductDetail.tsx
 import { useRoute, Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
 import { products } from "@/data/products";
+import { useState, useEffect, useRef } from "react";
 
 export default function ProductDetail() {
   const [, params] = useRoute("/product/:id");
-  const product = products.find(p => String(p.id) === params?.id);
+  const product = products.find((p) => String(p.id) === params?.id);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   if (!product) {
     return (
@@ -23,6 +28,41 @@ export default function ProductDetail() {
     );
   }
 
+  const images = Array.isArray(product.image) ? product.image : [product.image];
+
+  // Automatic slideshow
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 2000);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [images.length]);
+
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    resetInterval();
+  };
+
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+    resetInterval();
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentIndex(index);
+    resetInterval();
+  };
+
+  const resetInterval = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 2000);
+  };
+
   const whatsappNumber = "971503821352";
   const whatsappMessage = `Hello, I would like to know more about ${product.name}.`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -31,8 +71,8 @@ export default function ProductDetail() {
     <div className="min-h-screen pt-16 bg-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <Link href="/products">
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             className="mb-8 text-neutral-300 hover:text-yellow-500 hover:text-black"
             data-testid="button-back-to-products"
           >
@@ -42,14 +82,59 @@ export default function ProductDetail() {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="aspect-square overflow-hidden rounded-lg bg-neutral-900" data-testid="product-detail-image">
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-full object-cover"
-            />
+          {/* Carousel */}
+          <div className="relative aspect-square overflow-hidden rounded-lg bg-white" data-testid="product-detail-image">
+            <div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {images.map((img, i) => (
+                <img
+                  key={i}
+                  src={img}
+                  alt={`${product.name} ${i + 1}`}
+                  className="w-full h-full flex-shrink-0 object-cover"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+
+            {/* Left/Right Arrows */}
+            {images.length > 1 && (
+              <>
+                <button
+                  onClick={prevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-70"
+                  aria-label="Previous Image"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-70"
+                  aria-label="Next Image"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+
+                {/* Progress Dots */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+                  {images.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => goToImage(i)}
+                      className={`w-3 h-3 rounded-full transition-colors ${
+                        i === currentIndex ? "bg-yellow-500" : "bg-black bg-opacity-20"
+                      }`}
+                      aria-label={`Go to image ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </div>
 
+          {/* Product Info */}
           <div className="space-y-6">
             <div>
               <div className="inline-block px-4 py-2 bg-yellow-500 text-black font-semibold rounded-md mb-4" data-testid="product-detail-category">
