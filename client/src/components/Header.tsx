@@ -51,13 +51,11 @@ export default function Header() {
       const current = window.scrollY;
       const last = lastScrollRef.current;
 
-      if (isMenuOpen) {
-        setIsMenuOpen(false);
-        return;
-      }
+      if (isMenuOpen) return;
 
       setShrink(forceMobile || current > 40);
       setHidden(current > last && current > 100);
+
       lastScrollRef.current = current;
     };
 
@@ -76,10 +74,9 @@ export default function Header() {
         ${hidden ? "-translate-y-full" : "translate-y-0"}
       `}
     >
-      {/* Yellow glow */}
       <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-yellow-500/70 to-transparent" />
 
-      <div ref={containerRef} className="w-full px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="w-full px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         <div
           className={`
             flex items-center justify-between w-full
@@ -111,9 +108,9 @@ export default function Header() {
             </span>
           </Link>
 
-          {/* DESKTOP NAV */}
+          {/* DESKTOP NAV — only rendered when forceMobile = false */}
           {!forceMobile && (
-            <div ref={desktopNavRef} className="hidden md:flex items-center space-x-10">
+            <div ref={desktopNavRef} className="flex items-center space-x-10">
               {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
@@ -146,13 +143,12 @@ export default function Header() {
             </div>
           )}
 
-          {/* MOBILE HAMBURGER BUTTON */}
+          {/* MOBILE HAMBURGER */}
           {forceMobile && (
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white hover:text-yellow-500 p-2 transition"
               aria-label="Toggle menu"
-              data-testid="mobile-menu-button"
             >
               {isMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
             </button>
@@ -168,7 +164,6 @@ export default function Header() {
                 href={item.href}
                 onClick={closeMenu}
                 className="block px-2 py-2 text-base font-medium text-neutral-300 hover:text-yellow-500 hover:bg-neutral-800/50 rounded-md transition"
-                data-testid={`mobile-link-${item.label.toLowerCase()}`}
               >
                 {item.label}
               </Link>
@@ -179,7 +174,6 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 rounded-md bg-yellow-500 px-4 py-3 text-sm font-semibold text-black hover:bg-yellow-400 transition shadow-md mt-2"
-              data-testid="mobile-whatsapp-button"
             >
               <FaWhatsapp className="h-5 w-5" />
               WhatsApp
