@@ -186,7 +186,7 @@ export default function About() {
 
       
 
-      <section className="py-20 bg-secondary" data-testid="values-section">
+      <section className="py-20 bg-background" data-testid="values-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2
@@ -237,7 +237,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-background" data-testid="facilities-section">
+      <section className="py-20 bg-secondary" data-testid="facilities-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2
@@ -315,7 +315,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-secondary" data-testid="visit-section">
+      <section className="py-20 bg-background" data-testid="visit-section">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2
