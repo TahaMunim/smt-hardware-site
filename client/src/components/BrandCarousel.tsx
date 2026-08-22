@@ -18,7 +18,7 @@ export default function BrandCarousel() {
 
   const allBrands = [...brands, ...brands];
 
-  const trackRef = useRef(null);
+  const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const track = trackRef.current;

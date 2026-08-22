@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "wouter";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import ProductCard from "@/components/ProductCard";
@@ -6,15 +7,46 @@ import { products } from "@/data/products";
 import { Search } from "lucide-react";
 
 export default function Products() {
+  const [location] = useLocation();
+
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const categories = ["All", ...Array.from(new Set(products.map(p => p.category)))];
 
-  const filteredProducts = products.filter(product => {
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === "All" || product.category === selectedCategory;
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    const search = params.get("search") || "";
+    const category = params.get("category") || "All";
+
+    setSearchTerm(search);
+
+    if (categories.includes(category)) {
+      setSelectedCategory(category);
+    } else {
+      setSelectedCategory("All");
+    }
+  }, [location]);
+
+  const filteredProducts = products.filter((product) => {
+    const search = searchTerm.trim().toLowerCase();
+
+    const matchesSearch =
+      !search ||
+      product.name.toLowerCase().includes(search) ||
+      product.description.toLowerCase().includes(search) ||
+      product.brand.toLowerCase().includes(search) ||
+      product.category.toLowerCase().includes(search) ||
+      product.subcategory?.toLowerCase().includes(search) ||
+      product.keywords?.some((keyword) =>
+        keyword.toLowerCase().includes(search)
+      );
+
+    const matchesCategory =
+      selectedCategory === "All" ||
+      product.category === selectedCategory;
+
     return matchesSearch && matchesCategory;
   });
 
