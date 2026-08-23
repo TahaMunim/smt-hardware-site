@@ -1,418 +1,1250 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import {
-  Building2,
-  Clock,
-  MapPin,
-  TrendingUp,
-  Award,
-  Users,
-  Package,
-  Shield,
-  Heart,
-} from "lucide-react";
 import { Link } from "wouter";
-import { teamMembers } from "@/data/team";
+
+import {
+  ArrowRight,
+  Boxes,
+  Building2,
+  CheckCircle2,
+  Factory,
+  Handshake,
+  HardHat,
+  MapPin,
+  MessageSquareText,
+  PackageSearch,
+  Store,
+  Target,
+  Wrench
+} from "lucide-react";
+
+const WHATSAPP_NUMBER = "971503821352";
+
+const WHATSAPP_URL =
+  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
+  encodeURIComponent(
+    "Hello SMT, I would like to know more about your products and supply services."
+  );
+
+const strengths = [
+  {
+    icon: PackageSearch,
+    title: "Broad Product Sourcing",
+    description:
+      "Tools, construction consumables, safety products and industrial supplies across multiple categories."
+  },
+  {
+    icon: MessageSquareText,
+    title: "Practical Sales Support",
+    description:
+      "Direct communication for product enquiries, quotations, model references and material requirements."
+  },
+  {
+    icon: Boxes,
+    title: "Trade & Project Supply",
+    description:
+      "Support for individual items, bulk quantities, BOQs and multi-product purchasing requirements."
+  },
+  {
+    icon: Handshake,
+    title: "Relationship Focused",
+    description:
+      "A trading approach built around responsive service and long-term customer relationships."
+  }
+];
+
+const buyerTypes = [
+  {
+    icon: Building2,
+    title: "Contractors",
+    description:
+      "Construction tools, consumables, safety products and project material requirements."
+  },
+  {
+    icon: Wrench,
+    title: "Workshops & Fabricators",
+    description:
+      "Professional tools, welding products, abrasives and workshop supplies."
+  },
+  {
+    icon: Factory,
+    title: "Factories & Industrial Buyers",
+    description:
+      "Maintenance tools, PPE, consumables and general industrial purchasing requirements."
+  },
+  {
+    icon: Store,
+    title: "Hardware & Trade Buyers",
+    description:
+      "Product sourcing, quantity enquiries and multi-category supply support."
+  }
+];
+
+const categories = [
+  "Power Tools",
+  "Hand Tools",
+  "Safety Equipment & PPE",
+  "Construction Consumables",
+  "Adhesives & Chemicals",
+  "Abrasives",
+  "Fasteners & Fixings",
+  "Painting Accessories",
+  "Measuring Equipment",
+  "Packaging Materials"
+];
 
 export default function About() {
-  const stats = [
-    {
-      icon: Building2,
-      label: "SMT Warehouse",
-      value: "Since 2012",
-    },
-    {
-      icon: MapPin,
-      label: "Serving UAE",
-      value: "12+ Years",
-    },
-    {
-      icon: Users,
-      label: "Satisfied Clients",
-      value: "2000+",
-    },
-    {
-      icon: Package,
-      label: "Products Range",
-      value: "5000+",
-    },
-  ];
-
-  const values = [
-    {
-      icon: Award,
-      title: "Quality Assurance",
-      description:
-        "We partner exclusively with trusted global brands like Sika, Tuffix, Stanley, and DeWalt to ensure every product meets the highest industry standards. Our rigorous quality control process guarantees that you receive authentic, certified materials for your projects.",
-    },
-    {
-      icon: Shield,
-      title: "Trust & Reliability",
-      description:
-        "Since 2012, we've built our reputation on consistent delivery, transparent pricing, and honest business practices. Our clients know they can count on us for accurate product information, realistic timelines, and dependable supply chains.",
-    },
-    {
-      icon: Heart,
-      title: "Customer Focus",
-      description:
-        "Your success is our priority. We invest time to understand your specific project requirements and provide tailored solutions, expert recommendations, and responsive support. From initial consultation to after-sales service, we're here for you.",
-    },
-    {
-      icon: TrendingUp,
-      title: "Continuous Growth",
-      description:
-        "We continuously expand our product range, upgrade our facilities, and enhance our services to meet evolving market demands. By staying current with industry trends and technological advancements, we ensure our clients have access to the latest construction solutions.",
-    },
-  ];
-
   return (
-    <div className="min-h-screen pt-20">
-      <section className="relative py-28 bg-[#0b0b0b] overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#f5c51822,transparent_70%)]" />
+    <main className="min-h-screen bg-black">
 
-        <div className="absolute top-0 left-0 right-0 h-1 bg-[#F5C518]" />
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#F5C518]" />
+      {/* =================================================
+          HERO
+      ================================================== */}
+      <section
+        className="
+          relative
+          overflow-hidden
 
-        <div className="container relative mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white tracking-tight drop-shadow-[0_6px_20px_rgba(245,197,24,0.45)]">
-            About Saleh Mohsin Trading
-          </h1>
+          border-b
+          border-neutral-800
 
-          <p className="mt-6 text-gray-300 text-lg max-w-2xl mx-auto">
-            Your trusted partner in construction supplies, serving professionals
-            across the UAE since 2012
+          bg-neutral-950
+        "
+        data-testid="about-hero"
+      >
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -left-40
+            -top-40
+
+            h-[450px]
+            w-[450px]
+
+            rounded-full
+
+            bg-yellow-500/10
+
+            blur-[130px]
+          "
+        />
+
+        <div
+          className="
+            relative
+
+            mx-auto
+            grid
+            max-w-7xl
+
+            gap-12
+
+            px-4
+            py-14
+
+            sm:px-6
+            sm:py-16
+
+            lg:grid-cols-[1fr_0.9fr]
+            lg:items-center
+            lg:gap-16
+            lg:py-20
+          "
+        >
+          {/* Hero Copy */}
+          <div>
+            <p
+              className="
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.18em]
+                text-yellow-500
+              "
+            >
+              About SMT
+            </p>
+
+            <h1
+              className="
+                mt-3
+
+                max-w-3xl
+
+                text-4xl
+                font-black
+                leading-tight
+                tracking-tight
+                text-white
+
+                sm:text-5xl
+                lg:text-6xl
+              "
+            >
+              A Practical Supply Partner for
+              <span className="text-yellow-500">
+                {" "}
+                UAE Businesses
+              </span>
+            </h1>
+
+            <p
+              className="
+                mt-6
+                max-w-2xl
+
+                text-base
+                leading-7
+                text-neutral-400
+
+                sm:text-lg
+              "
+            >
+              Saleh Mohsin Trading LLC supplies professional
+              tools, construction products, industrial
+              consumables and workplace essentials to
+              businesses across a wide range of trades.
+            </p>
+
+            <p
+              className="
+                mt-4
+                max-w-2xl
+
+                leading-7
+                text-neutral-500
+              "
+            >
+              Based in Al Sajaa, Sharjah, SMT supports
+              contractors, workshops, factories, hardware
+              buyers and other professional customers with
+              product enquiries, sourcing and quotation
+              requirements.
+            </p>
+
+            <div
+              className="
+                mt-7
+                flex
+                flex-col
+                gap-3
+
+                sm:flex-row
+              "
+            >
+              <Link
+                href="/products"
+                className="
+                  inline-flex
+                  h-12
+                  items-center
+                  justify-center
+                  gap-2
+
+                  rounded-md
+
+                  bg-yellow-500
+
+                  px-6
+
+                  text-sm
+                  font-bold
+                  text-black
+
+                  transition-colors
+
+                  hover:bg-yellow-400
+                "
+              >
+                Browse Products
+
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  h-12
+                  items-center
+                  justify-center
+                  gap-2
+
+                  rounded-md
+
+                  border
+                  border-neutral-700
+
+                  px-6
+
+                  text-sm
+                  font-semibold
+                  text-white
+
+                  transition-colors
+
+                  hover:border-yellow-500
+                  hover:text-yellow-500
+                "
+              >
+                <MessageSquareText className="h-4 w-4" />
+
+                Talk to SMT
+              </a>
+            </div>
+          </div>
+
+          {/* Company Card */}
+          <div
+            className="
+              rounded-xl
+
+              border
+              border-neutral-800
+
+              bg-black
+
+              p-6
+
+              shadow-2xl
+              shadow-black/30
+
+              sm:p-7
+            "
+          >
+            <div
+              className="
+                flex
+                items-center
+                gap-4
+              "
+            >
+              <div
+                className="
+                  flex
+                  h-12
+                  w-12
+                  flex-shrink-0
+                  items-center
+                  justify-center
+
+                  rounded-md
+
+                  bg-yellow-500
+
+                  text-black
+                "
+              >
+                <Building2 className="h-6 w-6" />
+              </div>
+
+              <div>
+                <p
+                  className="
+                    text-sm
+                    font-semibold
+                    text-white
+                  "
+                >
+                  Saleh Mohsin Trading LLC
+                </p>
+
+                <p
+                  className="
+                    mt-1
+                    text-xs
+                    text-neutral-500
+                  "
+                >
+                  Industrial & Building Materials Trading
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="
+                mt-6
+                space-y-4
+
+                border-t
+                border-neutral-800
+
+                pt-6
+              "
+            >
+              <div
+                className="
+                  flex
+                  items-start
+                  gap-3
+                "
+              >
+                <MapPin
+                  className="
+                    mt-0.5
+                    h-5
+                    w-5
+                    flex-shrink-0
+                    text-yellow-500
+                  "
+                />
+
+                <div>
+                  <p
+                    className="
+                      text-sm
+                      font-semibold
+                      text-neutral-200
+                    "
+                  >
+                    Location
+                  </p>
+
+                  <p
+                    className="
+                      mt-1
+                      text-sm
+                      text-neutral-500
+                    "
+                  >
+                    Al Sajaa, Sharjah, United Arab Emirates
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="
+                  flex
+                  items-start
+                  gap-3
+                "
+              >
+                <Target
+                  className="
+                    mt-0.5
+                    h-5
+                    w-5
+                    flex-shrink-0
+                    text-yellow-500
+                  "
+                />
+
+                <div>
+                  <p
+                    className="
+                      text-sm
+                      font-semibold
+                      text-neutral-200
+                    "
+                  >
+                    Focus
+                  </p>
+
+                  <p
+                    className="
+                      mt-1
+                      text-sm
+                      leading-6
+                      text-neutral-500
+                    "
+                  >
+                    Professional tools, industrial supplies,
+                    construction products and trade
+                    consumables.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="
+                  flex
+                  items-start
+                  gap-3
+                "
+              >
+                <Handshake
+                  className="
+                    mt-0.5
+                    h-5
+                    w-5
+                    flex-shrink-0
+                    text-yellow-500
+                  "
+                />
+
+                <div>
+                  <p
+                    className="
+                      text-sm
+                      font-semibold
+                      text-neutral-200
+                    "
+                  >
+                    Customer Approach
+                  </p>
+
+                  <p
+                    className="
+                      mt-1
+                      text-sm
+                      leading-6
+                      text-neutral-500
+                    "
+                  >
+                    Responsive enquiries, competitive supply
+                    support and long-term business
+                    relationships.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================
+          WHO WE ARE
+      ================================================== */}
+      <section
+        className="
+          border-b
+          border-neutral-800
+
+          bg-black
+
+          py-16
+          md:py-20
+        "
+      >
+        <div
+          className="
+            mx-auto
+            grid
+            max-w-7xl
+
+            gap-12
+
+            px-4
+            sm:px-6
+
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-16
+          "
+        >
+          <div>
+            <p
+              className="
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.18em]
+                text-yellow-500
+              "
+            >
+              Who We Are
+            </p>
+
+            <h2
+              className="
+                mt-3
+
+                text-3xl
+                font-bold
+                tracking-tight
+                text-white
+
+                sm:text-4xl
+              "
+            >
+              Trading Built Around Real Purchasing Needs
+            </h2>
+          </div>
+
+          <div
+            className="
+              space-y-5
+
+              leading-7
+              text-neutral-400
+            "
+          >
+            <p>
+              SMT operates as a multi-category supplier for
+              customers who need reliable access to tools,
+              equipment, construction consumables and
+              industrial products.
+            </p>
+
+            <p>
+              Rather than limiting enquiries to what is
+              displayed online, customers can also send
+              product references, model numbers, images,
+              BOQs or complete material lists for review.
+            </p>
+
+            <p>
+              The online catalogue is being developed as a
+              practical product-discovery tool while SMT's
+              sales team continues to handle broader sourcing
+              and quotation requirements directly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================
+          STRENGTHS
+      ================================================== */}
+      <section
+        className="
+          border-b
+          border-neutral-800
+
+          bg-neutral-950
+
+          py-16
+          md:py-20
+        "
+      >
+        <div
+          className="
+            mx-auto
+            max-w-7xl
+
+            px-4
+            sm:px-6
+          "
+        >
+          <div
+            className="
+              mb-10
+              max-w-2xl
+            "
+          >
+            <p
+              className="
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.18em]
+                text-yellow-500
+              "
+            >
+              How We Work
+            </p>
+
+            <h2
+              className="
+                mt-3
+
+                text-3xl
+                font-bold
+                tracking-tight
+                text-white
+
+                sm:text-4xl
+              "
+            >
+              Practical Support from Enquiry to Supply
+            </h2>
+          </div>
+
+          <div
+            className="
+              grid
+              gap-3
+
+              sm:grid-cols-2
+              lg:grid-cols-4
+            "
+          >
+            {strengths.map((strength) => {
+              const Icon =
+                strength.icon;
+
+              return (
+                <article
+                  key={strength.title}
+                  className="
+                    group
+
+                    rounded-lg
+
+                    border
+                    border-neutral-800
+
+                    bg-black
+
+                    p-6
+
+                    transition-all
+                    duration-300
+
+                    hover:-translate-y-0.5
+                    hover:border-yellow-500/50
+                  "
+                >
+                  <div
+                    className="
+                      flex
+                      h-11
+                      w-11
+                      items-center
+                      justify-center
+
+                      rounded-md
+
+                      bg-yellow-500/10
+
+                      text-yellow-500
+
+                      transition-colors
+
+                      group-hover:bg-yellow-500
+                      group-hover:text-black
+                    "
+                  >
+                    <Icon className="h-5 w-5" />
+                  </div>
+
+                  <h3
+                    className="
+                      mt-5
+
+                      text-lg
+                      font-semibold
+                      text-white
+                    "
+                  >
+                    {strength.title}
+                  </h3>
+
+                  <p
+                    className="
+                      mt-3
+
+                      text-sm
+                      leading-6
+                      text-neutral-500
+                    "
+                  >
+                    {strength.description}
+                  </p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================
+          PRODUCT RANGE
+      ================================================== */}
+      <section
+        className="
+          border-b
+          border-neutral-800
+
+          bg-black
+
+          py-16
+          md:py-20
+        "
+      >
+        <div
+          className="
+            mx-auto
+            grid
+            max-w-7xl
+
+            gap-10
+
+            px-4
+            sm:px-6
+
+            lg:grid-cols-[0.8fr_1.2fr]
+            lg:gap-16
+          "
+        >
+          <div>
+            <p
+              className="
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.18em]
+                text-yellow-500
+              "
+            >
+              Product Range
+            </p>
+
+            <h2
+              className="
+                mt-3
+
+                text-3xl
+                font-bold
+                tracking-tight
+                text-white
+
+                sm:text-4xl
+              "
+            >
+              Multiple Categories, One Supply Contact
+            </h2>
+
+            <p
+              className="
+                mt-4
+                max-w-lg
+
+                leading-7
+                text-neutral-400
+              "
+            >
+              SMT supplies across several product groups,
+              helping professional buyers consolidate more
+              of their requirements through a single trading
+              partner.
+            </p>
+
+            <Link
+              href="/products"
+              className="
+                mt-6
+                inline-flex
+                items-center
+                gap-2
+
+                text-sm
+                font-semibold
+                text-yellow-500
+
+                transition-colors
+
+                hover:text-yellow-400
+              "
+            >
+              Explore online catalogue
+
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div
+            className="
+              grid
+              gap-2
+
+              sm:grid-cols-2
+            "
+          >
+            {categories.map(
+              (category) => (
+                <div
+                  key={category}
+                  className="
+                    flex
+                    items-center
+                    gap-3
+
+                    rounded-md
+
+                    border
+                    border-neutral-800
+
+                    bg-neutral-950
+
+                    px-4
+                    py-3.5
+                  "
+                >
+                  <CheckCircle2
+                    className="
+                      h-4
+                      w-4
+                      flex-shrink-0
+                      text-yellow-500
+                    "
+                  />
+
+                  <span
+                    className="
+                      text-sm
+                      font-medium
+                      text-neutral-300
+                    "
+                  >
+                    {category}
+                  </span>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================
+          CUSTOMERS
+      ================================================== */}
+      <section
+        className="
+          border-b
+          border-neutral-800
+
+          bg-neutral-950
+
+          py-16
+          md:py-20
+        "
+      >
+        <div
+          className="
+            mx-auto
+            max-w-7xl
+
+            px-4
+            sm:px-6
+          "
+        >
+          <div
+            className="
+              mb-10
+              text-center
+            "
+          >
+            <p
+              className="
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.18em]
+                text-yellow-500
+              "
+            >
+              Our Customers
+            </p>
+
+            <h2
+              className="
+                mt-3
+
+                text-3xl
+                font-bold
+                text-white
+
+                sm:text-4xl
+              "
+            >
+              Supporting Professional Buyers Across Trades
+            </h2>
+          </div>
+
+          <div
+            className="
+              grid
+              gap-3
+
+              sm:grid-cols-2
+              lg:grid-cols-4
+            "
+          >
+            {buyerTypes.map(
+              (buyer) => {
+                const Icon =
+                  buyer.icon;
+
+                return (
+                  <article
+                    key={buyer.title}
+                    className="
+                      rounded-lg
+
+                      border
+                      border-neutral-800
+
+                      bg-black
+
+                      p-6
+                    "
+                  >
+                    <Icon className="h-7 w-7 text-yellow-500" />
+
+                    <h3
+                      className="
+                        mt-4
+
+                        font-semibold
+                        text-white
+                      "
+                    >
+                      {buyer.title}
+                    </h3>
+
+                    <p
+                      className="
+                        mt-2
+
+                        text-sm
+                        leading-6
+                        text-neutral-500
+                      "
+                    >
+                      {buyer.description}
+                    </p>
+                  </article>
+                );
+              }
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* =================================================
+          PRINCIPLE
+      ================================================== */}
+      <section
+        className="
+          border-b
+          border-neutral-800
+
+          bg-black
+
+          py-16
+          md:py-20
+        "
+      >
+        <div
+          className="
+            mx-auto
+            max-w-5xl
+
+            px-4
+            text-center
+
+            sm:px-6
+          "
+        >
+          <div
+            className="
+              mx-auto
+
+              flex
+              h-12
+              w-12
+              items-center
+              justify-center
+
+              rounded-md
+
+              bg-yellow-500
+
+              text-black
+            "
+          >
+            <Handshake className="h-6 w-6" />
+          </div>
+
+          <h2
+            className="
+              mt-6
+
+              text-3xl
+              font-bold
+              tracking-tight
+              text-white
+
+              sm:text-4xl
+            "
+          >
+            Business Is Built on Reliable Relationships
+          </h2>
+
+          <p
+            className="
+              mx-auto
+              mt-5
+              max-w-3xl
+
+              text-base
+              leading-8
+              text-neutral-400
+
+              sm:text-lg
+            "
+          >
+            SMT's approach is straightforward: understand
+            what the customer needs, help identify suitable
+            products, communicate clearly and support the
+            requirement through quotation and supply.
           </p>
         </div>
       </section>
 
+      {/* =================================================
+          FINAL CTA
+      ================================================== */}
       <section
-        className="py-20 bg-background"
-        data-testid="company-story-section"
+        className="
+          relative
+          overflow-hidden
+
+          bg-yellow-500
+        "
       >
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-8 text-center"
-              data-testid="company-story-title"
-            >
-              Our Story
-            </h2>
-            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-              <p>
-                Founded in 2012, Saleh Mohsin Trading LLC began with a clear
-                mission: to provide contractors and construction professionals
-                with reliable access to high-quality tools, sealants, and
-                adhesives. What started as a focused endeavor in Sharjah has
-                evolved into one of the UAE's most trusted suppliers of
-                comprehensive construction materials.
-              </p>
-              <p>
-                Over the past twelve years, we've established ourselves as
-                specialists in construction chemicals, particularly sealants and
-                adhesives from industry leaders such as Sika and Tuffix. Our
-                product range has expanded to include premium power tools and
-                hand tools from Stanley, DeWalt, and other renowned
-                manufacturers, ensuring our clients have access to everything
-                they need under one roof.
-              </p>
-              <p>
-                Our growth has been driven by an unwavering commitment to three
-                core principles: uncompromising quality, steadfast reliability,
-                and exceptional customer service. We don't just supply
-                products, we build lasting partnerships with our clients by
-                understanding their unique needs and delivering solutions that
-                help them succeed.
-              </p>
-              <p>
-                Today, SMT serves a diverse clientele including contractors,
-                construction companies, maintenance professionals, and
-                individual builders across the UAE. Our strategic location in
-                Sharjah, combined with our efficient distribution network,
-                enables us to provide prompt delivery and responsive service
-                throughout the Emirates.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        <div
+          className="
+            pointer-events-none
+            absolute
+            -right-24
+            -top-28
 
-      <section className="py-20 bg-secondary" data-testid="stats-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              data-testid="stats-title"
+            h-96
+            w-96
+
+            rounded-full
+
+            border-[70px]
+            border-black/5
+          "
+        />
+
+        <div
+          className="
+            relative
+
+            mx-auto
+            flex
+            max-w-7xl
+
+            flex-col
+            gap-7
+
+            px-4
+            py-12
+
+            sm:px-6
+
+            lg:flex-row
+            lg:items-center
+            lg:justify-between
+          "
+        >
+          <div className="max-w-2xl">
+            <p
+              className="
+                text-xs
+                font-black
+                uppercase
+                tracking-[0.18em]
+                text-black/60
+              "
             >
-              SMT at a Glance
+              Work With SMT
+            </p>
+
+            <h2
+              className="
+                mt-2
+
+                text-3xl
+                font-black
+                tracking-tight
+                text-black
+
+                sm:text-4xl
+              "
+            >
+              Looking for Tools or Industrial Supplies?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Proven track record of excellence in the UAE construction supply
-              industry
+
+            <p
+              className="
+                mt-3
+
+                leading-7
+                text-black/70
+              "
+            >
+              Browse the catalogue or send your product
+              requirement directly to our team.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon;
-              return (
-                <Card
-                  key={stat.label}
-                  className="bg-card text-center card-hover"
-                  data-testid={`stat-card-${index}`}
-                >
-                  <CardContent className="p-8">
-                    <div className="bg-accent text-accent-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8" />
-                    </div>
-                    <div
-                      className="text-4xl font-bold text-accent mb-2"
-                      data-testid={`stat-value-${index}`}
-                    >
-                      {stat.value}
-                    </div>
-                    <h3
-                      className="text-lg font-semibold text-white"
-                      data-testid={`stat-label-${index}`}
-                    >
-                      {stat.label}
-                    </h3>
-                  </CardContent>
-                </Card>
-              );
-            })}
+          <div
+            className="
+              flex
+              flex-col
+              gap-3
+
+              sm:flex-row
+            "
+          >
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex
+                h-12
+                items-center
+                justify-center
+                gap-2
+
+                rounded-md
+
+                bg-black
+
+                px-6
+
+                text-sm
+                font-bold
+                text-white
+
+                transition-colors
+
+                hover:bg-neutral-800
+              "
+            >
+              <MessageSquareText className="h-4 w-4" />
+
+              Contact SMT
+            </a>
+
+            <Link
+              href="/products"
+              className="
+                inline-flex
+                h-12
+                items-center
+                justify-center
+                gap-2
+
+                rounded-md
+
+                border
+                border-black/30
+
+                px-6
+
+                text-sm
+                font-bold
+                text-black
+
+                transition-colors
+
+                hover:bg-black/10
+              "
+            >
+              Browse Products
+
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </div>
       </section>
-
-      
-
-      <section className="py-20 bg-background" data-testid="values-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              data-testid="values-title"
-            >
-              Our Values
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              The principles that guide everything we do at SMT
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <Card
-                  key={value.title}
-                  className="bg-card card-hover"
-                  data-testid={`value-card-${index}`}
-                >
-                  <CardContent className="p-8">
-                    <div className="flex items-start space-x-4">
-                      <div className="bg-accent text-accent-foreground w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <h3
-                          className="text-xl font-semibold mb-3 text-accent"
-                          data-testid={`value-title-${index}`}
-                        >
-                          {value.title}
-                        </h3>
-                        <p
-                          className="text-muted-foreground leading-relaxed"
-                          data-testid={`value-description-${index}`}
-                        >
-                          {value.description}
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-secondary" data-testid="facilities-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              data-testid="facilities-title"
-            >
-              Our Facilities
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Modern infrastructure to serve your construction supply needs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card
-              className="bg-card card-hover"
-              data-testid="facility-warehouse"
-            >
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-accent text-accent-foreground w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <Building2 className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-accent">
-                    SMT Warehouse
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Our strategically located warehouse in Al Sajaa, Sharjah
-                  serves as the heart of our operations. This expansive facility
-                  houses our comprehensive inventory of construction materials,
-                  tools, and equipment, ensuring we can meet the diverse needs
-                  of our clients.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  The warehouse features organized storage systems,
-                  climate-controlled zones for sensitive materials, and
-                  efficient loading docks for quick order fulfillment. Our
-                  location provides easy access to major highways, enabling
-                  swift distribution across the UAE.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card
-              className="bg-card card-hover"
-              data-testid="facility-showroom"
-            >
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-accent text-accent-foreground w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <Package className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-accent">
-                    SMT Showroom
-                  </h3>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Visit our showroom and office to experience our products
-                  firsthand and consult with our knowledgeable team. We've
-                  designed this space to showcase our extensive product range,
-                  allowing you to see, touch, and evaluate materials before
-                  making purchasing decisions.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our sales and technical teams are on-site to provide expert
-                  guidance, answer questions, and help you select the right
-                  products for your specific applications. Whether you need
-                  sealants, adhesives, power tools, or construction supplies,
-                  our showroom offers a comprehensive shopping experience.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-background" data-testid="visit-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold mb-6"
-              data-testid="visit-title"
-            >
-              Visit Us
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Come see us at our Sharjah location
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <Card className="bg-card mb-8" data-testid="address-card">
-                <CardContent className="p-8">
-                  <div className="flex items-start mb-6">
-                    <MapPin className="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0" />
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-accent">
-                        Our Address
-                      </h3>
-                      <p className="text-muted-foreground text-lg">
-                        Old Tasheel Street, Al Sajaa
-                        <br />
-                        Sharjah, United Arab Emirates
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card" data-testid="hours-card">
-                <CardContent className="p-8">
-                  <div className="flex items-start mb-6">
-                    <Clock className="w-6 h-6 text-accent mr-4 mt-1 flex-shrink-0" />
-                    <div className="w-full">
-                      <h3 className="text-xl font-semibold mb-4 text-accent">
-                        Business Hours
-                      </h3>
-                      <div className="space-y-3">
-                        <div className="flex justify-between items-center border-b border-border pb-2">
-                          <span className="text-muted-foreground">
-                            Saturday - Thursday
-                          </span>
-                          <span className="text-white font-medium">
-                            7:00 AM - 8:00 PM
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center border-b border-border pb-2">
-                          <span className="text-muted-foreground">Friday</span>
-                          <span className="text-white font-medium">
-                            2:00 PM - 8:00 PM
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-muted-foreground">
-                            Public Holidays
-                          </span>
-                          <span className="text-white font-medium">Closed</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div>
-              <Card className="bg-card h-full" data-testid="map-card">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold mb-4 text-accent">
-                    Location Map
-                  </h3>
-                  <div className="w-full rounded-xl overflow-hidden border border-[#2a2a2a]">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.1992443301974!2d55.626973576211384!3d25.331094326262775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f59553b5c87a9%3A0xbd9b77d912131ab7!2sSaleh%20Mohsin%20Trdg%20LLC!5e0!3m2!1sen!2sae!4v1763149764499!5m2!1sen!2sae"
-                      width="100%"
-                      height="420"
-                      style={{ border: 0 }}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Saleh Mohsin Trading Location"
-                    ></iframe>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-4 text-center">
-                    Interactive map showing our exact location in Al Sajaa,
-                    Sharjah
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+    </main>
   );
 }
