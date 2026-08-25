@@ -23,6 +23,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
 import Products from "@/pages/products";
 import ProductDetail from "@/pages/product-detail";
+import Quote from "@/pages/quote";
 import About from "@/pages/about";
 import Services from "@/pages/services";
 import Contact from "@/pages/contact";
@@ -31,30 +32,18 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import SEO from "@/components/SEO";
+import {
+  QuoteProvider
+} from "@/context/QuoteContext";
 
 function Router() {
   return (
     <div
-      className="
-        flex
-        min-h-screen
-        flex-col
-        text-foreground
-      "
+      className="flex min-h-screen flex-col text-foreground"
     >
-      {/*
-        Centralized route-aware SEO.
-
-        It renders nothing visually.
-      */}
       <SEO />
 
-      <div
-        className="
-          flex-1
-          bg-background
-        "
-      >
+      <div className="flex-1 bg-background">
         <Header />
 
         <Switch>
@@ -71,6 +60,11 @@ function Router() {
           <Route
             path="/product/:id"
             component={ProductDetail}
+          />
+
+          <Route
+            path="/quote"
+            component={Quote}
           />
 
           <Route
@@ -105,11 +99,11 @@ export default function App() {
       client={queryClient}
     >
       <TooltipProvider>
-        <Toaster />
-
-        <ScrollToTop />
-
-        <Router />
+        <QuoteProvider>
+          <Toaster />
+          <ScrollToTop />
+          <Router />
+        </QuoteProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );

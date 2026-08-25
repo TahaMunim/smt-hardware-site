@@ -11,7 +11,9 @@ import {
 } from "wouter";
 
 import {
+  ArrowRight,
   ChevronDown,
+  ClipboardList,
   Menu,
   Search,
   X
@@ -19,21 +21,14 @@ import {
 
 import { FaWhatsapp } from "react-icons/fa";
 
-import { products } from "@/data/products";
+import { useQuote } from "@/context/QuoteContext";
 
-const WHATSAPP_NUMBER =
-  "971503821352";
+const WHATSAPP_NUMBER = "971503821352";
 
 const WHATSAPP_URL =
   `https://wa.me/${WHATSAPP_NUMBER}?text=` +
   encodeURIComponent(
     "Hello, I would like to inquire about your products."
-  );
-
-const REQUEST_QUOTE_URL =
-  `https://wa.me/${WHATSAPP_NUMBER}?text=` +
-  encodeURIComponent(
-    "Hello SMT, I would like to request a quotation."
   );
 
 const NAV_ITEMS = [
@@ -51,23 +46,44 @@ const NAV_ITEMS = [
   }
 ] as const;
 
-const CATEGORIES = Array.from(
-  new Set(
-    products.map(
-      (product) =>
-        product.category
-    )
-  )
-).sort();
+/*
+  IMPORTANT:
 
-const BRANDS = Array.from(
-  new Set(
-    products.map(
-      (product) =>
-        product.brand
-    )
-  )
-).sort();
+  The header intentionally uses a curated set of top-level
+  catalogue destinations instead of generating navigation
+  from every category in the database.
+
+  This means adding hundreds of categories or thousands of
+  products will not make the header larger or unusable.
+*/
+const FEATURED_CATEGORIES = [
+  "Power Tools",
+  "Hand Tools",
+  "Safety Equipment",
+  "Electrical Accessories",
+  "Lighting",
+  "Fasteners & Fixings",
+  "Abrasives",
+  "Construction Equipment",
+  "Measuring Tools",
+  "Cable Management",
+  "Switches & Sockets",
+  "Tool Storage",
+  "Cables & Wires",
+  "Outdoor Power Equipment"
+] as const;
+
+const FEATURED_BRANDS = [
+  "STANLEY",
+  "DONGCHENG",
+  "TUF-FIX",
+  "ALFA",
+  "RELITE",
+  "DEWALT",
+  "SIKA",
+  "SPIT",
+  "RIDGID"
+] as const;
 
 type DesktopMenu =
   | "products"
@@ -75,8 +91,13 @@ type DesktopMenu =
   | null;
 
 export default function Header() {
-  const [, navigate] =
+  const [location, navigate] =
     useLocation();
+
+  const {
+    uniqueCount,
+    totalQuantity
+  } = useQuote();
 
   const headerRef =
     useRef<HTMLElement | null>(
@@ -94,10 +115,9 @@ export default function Header() {
   const [
     openDesktopMenu,
     setOpenDesktopMenu
-  ] =
-    useState<DesktopMenu>(
-      null
-    );
+  ] = useState<DesktopMenu>(
+    null
+  );
 
   const [
     searchTerm,
@@ -109,14 +129,23 @@ export default function Header() {
 
   const closeMenus =
     useCallback(() => {
-      setIsMobileMenuOpen(
-        false
-      );
-
-      setOpenDesktopMenu(
-        null
-      );
+      setIsMobileMenuOpen(false);
+      setOpenDesktopMenu(null);
     }, []);
+
+  const categoryUrl = (
+    category: string
+  ) =>
+    `/products?category=${encodeURIComponent(
+      category
+    )}`;
+
+  const brandUrl = (
+    brand: string
+  ) =>
+    `/products?brand=${encodeURIComponent(
+      brand
+    )}`;
 
   // =====================================================
   // SEARCH
@@ -145,30 +174,10 @@ export default function Header() {
   };
 
   // =====================================================
-  // LINKS
-  // =====================================================
-  const categoryUrl = (
-    category: string
-  ) =>
-    `/products?category=${encodeURIComponent(
-      category
-    )}`;
-
-  const brandUrl = (
-    brand: string
-  ) =>
-    `/products?search=${encodeURIComponent(
-      brand
-    )}`;
-
-  // =====================================================
-  // DESKTOP DROPDOWN
+  // DESKTOP MENUS
   // =====================================================
   const toggleDesktopMenu = (
-    menu: Exclude<
-      DesktopMenu,
-      null
-    >
+    menu: Exclude<DesktopMenu, null>
   ) => {
     setHidden(false);
 
@@ -183,91 +192,75 @@ export default function Header() {
   // =====================================================
   // MOBILE MENU
   // =====================================================
-  const toggleMobileMenu =
-    () => {
-      setHidden(false);
+  const toggleMobileMenu = () => {
+    setHidden(false);
+    setOpenDesktopMenu(null);
 
-      setOpenDesktopMenu(
-        null
-      );
+    setIsMobileMenuOpen(
+      (current) => !current
+    );
+  };
 
-      setIsMobileMenuOpen(
-        (current) =>
-          !current
-      );
-    };
+  // Close menus when the route changes.
+  useEffect(() => {
+    closeMenus();
+  }, [location, closeMenus]);
 
   // =====================================================
-  // STABLE SCROLL BEHAVIOUR
-  //
-  // IMPORTANT:
-  // The header NEVER changes height.
-  // We only translate the whole fixed-height header.
+  // STABLE SHOW / HIDE ON PAGE SCROLL
   // =====================================================
   useEffect(() => {
-    const handleScroll =
-      () => {
-        const currentScroll =
-          Math.max(
-            window.scrollY,
-            0
-          );
+    const handleScroll = () => {
+      const currentScroll =
+        Math.max(
+          window.scrollY,
+          0
+        );
 
-        const lastScroll =
-          lastScrollRef.current;
+      const lastScroll =
+        lastScrollRef.current;
 
-        if (
-          isMobileMenuOpen ||
-          openDesktopMenu
-        ) {
-          setHidden(false);
-
-          lastScrollRef.current =
-            currentScroll;
-
-          return;
-        }
-
-        const difference =
-          currentScroll -
-          lastScroll;
-
-        /*
-          Ignore tiny movements.
-
-          Trackpads frequently create
-          tiny ±1px / ±2px movements,
-          which can otherwise make
-          navigation feel nervous.
-        */
-        if (
-          Math.abs(
-            difference
-          ) < 6
-        ) {
-          return;
-        }
-
-        if (
-          difference > 0 &&
-          currentScroll > 180
-        ) {
-          setHidden(true);
-        }
-
-        if (difference < 0) {
-          setHidden(false);
-        }
-
-        if (
-          currentScroll < 80
-        ) {
-          setHidden(false);
-        }
+      if (
+        isMobileMenuOpen ||
+        openDesktopMenu
+      ) {
+        setHidden(false);
 
         lastScrollRef.current =
           currentScroll;
-      };
+
+        return;
+      }
+
+      const difference =
+        currentScroll -
+        lastScroll;
+
+      // Ignore tiny trackpad movements.
+      if (
+        Math.abs(difference) < 6
+      ) {
+        return;
+      }
+
+      if (
+        difference > 0 &&
+        currentScroll > 180
+      ) {
+        setHidden(true);
+      }
+
+      if (difference < 0) {
+        setHidden(false);
+      }
+
+      if (currentScroll < 80) {
+        setHidden(false);
+      }
+
+      lastScrollRef.current =
+        currentScroll;
+    };
 
     window.addEventListener(
       "scroll",
@@ -289,7 +282,7 @@ export default function Header() {
   ]);
 
   // =====================================================
-  // CLOSE DROPDOWNS WHEN CLICKING OUTSIDE
+  // CLOSE WHEN CLICKING OUTSIDE HEADER / MENUS
   // =====================================================
   useEffect(() => {
     const handlePointerDown = (
@@ -329,8 +322,7 @@ export default function Header() {
       event: KeyboardEvent
     ) => {
       if (
-        event.key ===
-        "Escape"
+        event.key === "Escape"
       ) {
         closeMenus();
       }
@@ -350,24 +342,18 @@ export default function Header() {
   }, [closeMenus]);
 
   // =====================================================
-  // DESKTOP RESIZE
+  // RESPONSIVE MENU RESET
   // =====================================================
   useEffect(() => {
-    const handleResize =
-      () => {
-        if (
-          window.innerWidth >=
-          1280
-        ) {
-          setIsMobileMenuOpen(
-            false
-          );
-        } else {
-          setOpenDesktopMenu(
-            null
-          );
-        }
-      };
+    const handleResize = () => {
+      if (
+        window.innerWidth >= 1280
+      ) {
+        setIsMobileMenuOpen(false);
+      } else {
+        setOpenDesktopMenu(null);
+      }
+    };
 
     handleResize();
 
@@ -391,22 +377,16 @@ export default function Header() {
         sticky
         top-0
         z-50
-
         w-full
-
         border-b
         border-neutral-800
-
         bg-black/95
         backdrop-blur-xl
-
         shadow-lg
         shadow-black/20
-
         transition-transform
         duration-300
         ease-out
-
         ${
           hidden
             ? "-translate-y-full"
@@ -423,18 +403,14 @@ export default function Header() {
           h-[72px]
           w-full
           items-center
-
           gap-3
-
           px-4
           sm:px-6
           xl:px-7
           2xl:px-10
         "
       >
-        {/* ===============================================
-            LOGO
-        ================================================ */}
+        {/* Logo */}
         <Link
           href="/"
           onClick={closeMenus}
@@ -456,12 +432,7 @@ export default function Header() {
             "
           />
 
-          <div
-            className="
-              hidden
-              2xl:block
-            "
-          >
+          <div className="hidden 2xl:block">
             <p
               className="
                 whitespace-nowrap
@@ -489,21 +460,20 @@ export default function Header() {
           </div>
         </Link>
 
-        {/* ===============================================
-            DESKTOP NAV
-        ================================================ */}
+        {/* Desktop Navigation */}
         <nav
           className="
             hidden
             flex-shrink-0
             items-center
             gap-1
-
             xl:flex
           "
           aria-label="Main navigation"
         >
-          {/* Browse Products */}
+          {/* ===========================================
+              PRODUCTS MEGA MENU
+          ============================================ */}
           <div className="relative">
             <button
               type="button"
@@ -512,26 +482,25 @@ export default function Header() {
                   "products"
                 )
               }
+              aria-expanded={
+                openDesktopMenu ===
+                "products"
+              }
               className={`
                 flex
                 h-10
                 items-center
                 gap-1.5
-
                 rounded-md
-
                 px-3
-
                 text-sm
                 font-semibold
-
                 transition-colors
-
                 ${
                   openDesktopMenu ===
                   "products"
                     ? "bg-yellow-500 text-black"
-                    : "text-neutral-200 hover:bg-neutral-900 hover:text-yellow-500"
+                    : "text-neutral-300 hover:bg-neutral-900 hover:text-white"
                 }
               `}
             >
@@ -542,7 +511,6 @@ export default function Header() {
                   h-4
                   w-4
                   transition-transform
-
                   ${
                     openDesktopMenu ===
                     "products"
@@ -560,111 +528,230 @@ export default function Header() {
                   absolute
                   left-0
                   top-[calc(100%+12px)]
-
-                  w-[560px]
-
-                  rounded-lg
+                  w-[760px]
+                  max-w-[calc(100vw-2rem)]
+                  overflow-hidden
+                  rounded-xl
                   border
                   border-neutral-800
-
                   bg-neutral-950
-
-                  p-5
-
                   shadow-2xl
-                  shadow-black/60
+                  shadow-black/50
                 "
               >
                 <div
                   className="
-                    mb-4
-                    flex
-                    items-center
-                    justify-between
-
-                    border-b
-                    border-neutral-800
-
-                    pb-4
-                  "
-                >
-                  <div>
-                    <p className="font-semibold text-white">
-                      Browse Products
-                    </p>
-
-                    <p className="mt-1 text-xs text-neutral-500">
-                      Select a product
-                      category
-                    </p>
-                  </div>
-
-                  <Link
-                    href="/products"
-                    onClick={
-                      closeMenus
-                    }
-                    className="
-                      text-sm
-                      font-semibold
-                      text-yellow-500
-
-                      hover:text-yellow-400
-                    "
-                  >
-                    View All →
-                  </Link>
-                </div>
-
-                <div
-                  className="
                     grid
-                    grid-cols-2
-                    gap-2
+                    grid-cols-[1fr_230px]
                   "
                 >
-                  {CATEGORIES.map(
-                    (category) => (
+                  <div className="p-5">
+                    <div
+                      className="
+                        mb-4
+                        flex
+                        items-end
+                        justify-between
+                        gap-4
+                      "
+                    >
+                      <div>
+                        <p
+                          className="
+                            text-xs
+                            font-bold
+                            uppercase
+                            tracking-[0.15em]
+                            text-yellow-500
+                          "
+                        >
+                          Browse Products
+                        </p>
+
+                        <p
+                          className="
+                            mt-1
+                            text-sm
+                            text-neutral-500
+                          "
+                        >
+                          Popular trade categories
+                        </p>
+                      </div>
+
                       <Link
-                        key={
-                          category
-                        }
-                        href={categoryUrl(
-                          category
-                        )}
-                        onClick={
-                          closeMenus
-                        }
+                        href="/products"
+                        onClick={closeMenus}
                         className="
-                          rounded-md
-
-                          border
-                          border-transparent
-
-                          px-4
-                          py-3
-
-                          text-sm
-                          font-medium
-                          text-neutral-300
-
+                          inline-flex
+                          items-center
+                          gap-1.5
+                          whitespace-nowrap
+                          text-xs
+                          font-semibold
+                          text-neutral-400
                           transition-colors
-
-                          hover:border-neutral-700
-                          hover:bg-neutral-900
                           hover:text-yellow-500
                         "
                       >
-                        {category}
+                        Full catalogue
+                        <ArrowRight className="h-3.5 w-3.5" />
                       </Link>
-                    )
-                  )}
+                    </div>
+
+                    <div
+                      className="
+                        grid
+                        grid-cols-3
+                        gap-2
+                      "
+                    >
+                      {FEATURED_CATEGORIES.map(
+                        (category) => (
+                          <Link
+                            key={category}
+                            href={categoryUrl(
+                              category
+                            )}
+                            onClick={closeMenus}
+                            className="
+                              rounded-md
+                              border
+                              border-neutral-800
+                              bg-black
+                              px-3
+                              py-3
+                              text-sm
+                              font-medium
+                              leading-5
+                              text-neutral-300
+                              transition-colors
+                              hover:border-yellow-500/60
+                              hover:text-yellow-500
+                            "
+                          >
+                            {category}
+                          </Link>
+                        )
+                      )}
+                    </div>
+                  </div>
+
+                  <div
+                    className="
+                      border-l
+                      border-neutral-800
+                      bg-black
+                      p-5
+                    "
+                  >
+                    <p
+                      className="
+                        text-xs
+                        font-bold
+                        uppercase
+                        tracking-[0.15em]
+                        text-neutral-500
+                      "
+                    >
+                      Find Something Fast
+                    </p>
+
+                    <p
+                      className="
+                        mt-3
+                        text-sm
+                        leading-6
+                        text-neutral-400
+                      "
+                    >
+                      Search by product name,
+                      model, SKU, brand or
+                      category from the full
+                      catalogue.
+                    </p>
+
+                    <form
+                      onSubmit={handleSearch}
+                      className="mt-5"
+                    >
+                      <div
+                        className="
+                          flex
+                          h-10
+                          items-center
+                          overflow-hidden
+                          rounded-md
+                          border
+                          border-neutral-700
+                          bg-neutral-950
+                          focus-within:border-yellow-500
+                        "
+                      >
+                        <Search
+                          className="
+                            ml-3
+                            h-4
+                            w-4
+                            flex-shrink-0
+                            text-neutral-500
+                          "
+                        />
+
+                        <input
+                          type="search"
+                          value={searchTerm}
+                          onChange={(event) =>
+                            setSearchTerm(
+                              event.target.value
+                            )
+                          }
+                          placeholder="Model or SKU..."
+                          className="
+                            min-w-0
+                            flex-1
+                            bg-transparent
+                            px-2.5
+                            text-sm
+                            text-white
+                            outline-none
+                            placeholder:text-neutral-600
+                          "
+                        />
+                      </div>
+                    </form>
+
+                    <Link
+                      href="/products"
+                      onClick={closeMenus}
+                      className="
+                        mt-4
+                        flex
+                        items-center
+                        justify-between
+                        rounded-md
+                        bg-yellow-500
+                        px-4
+                        py-3
+                        text-sm
+                        font-bold
+                        text-black
+                        transition-colors
+                        hover:bg-yellow-400
+                      "
+                    >
+                      Browse All Products
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             )}
           </div>
 
-          {/* Brands */}
+          {/* ===========================================
+              BRANDS MENU
+          ============================================ */}
           <div className="relative">
             <button
               type="button"
@@ -673,26 +760,25 @@ export default function Header() {
                   "brands"
                 )
               }
+              aria-expanded={
+                openDesktopMenu ===
+                "brands"
+              }
               className={`
                 flex
                 h-10
                 items-center
-                gap-1
-
+                gap-1.5
                 rounded-md
-
                 px-3
-
                 text-sm
-                font-medium
-
+                font-semibold
                 transition-colors
-
                 ${
                   openDesktopMenu ===
                   "brands"
-                    ? "bg-neutral-900 text-yellow-500"
-                    : "text-neutral-300 hover:bg-neutral-900 hover:text-yellow-500"
+                    ? "bg-yellow-500 text-black"
+                    : "text-neutral-300 hover:bg-neutral-900 hover:text-white"
                 }
               `}
             >
@@ -703,7 +789,6 @@ export default function Header() {
                   h-4
                   w-4
                   transition-transform
-
                   ${
                     openDesktopMenu ===
                     "brands"
@@ -721,66 +806,102 @@ export default function Header() {
                   absolute
                   left-0
                   top-[calc(100%+12px)]
-
-                  w-[400px]
-
-                  rounded-lg
+                  w-[520px]
+                  max-w-[calc(100vw-2rem)]
+                  rounded-xl
                   border
                   border-neutral-800
-
                   bg-neutral-950
-
                   p-5
-
                   shadow-2xl
-                  shadow-black/60
+                  shadow-black/50
                 "
               >
-                <p
+                <div
                   className="
-                    mb-4
-                    border-b
-                    border-neutral-800
-
-                    pb-4
-
-                    font-semibold
-                    text-white
+                    flex
+                    items-end
+                    justify-between
+                    gap-4
                   "
                 >
-                  Brands We Supply
-                </p>
+                  <div>
+                    <p
+                      className="
+                        text-xs
+                        font-bold
+                        uppercase
+                        tracking-[0.15em]
+                        text-yellow-500
+                      "
+                    >
+                      Popular Brands
+                    </p>
+
+                    <p
+                      className="
+                        mt-1
+                        text-sm
+                        text-neutral-500
+                      "
+                    >
+                      Quick access to key ranges
+                    </p>
+                  </div>
+
+                  <Link
+                    href="/products"
+                    onClick={closeMenus}
+                    className="
+                      inline-flex
+                      items-center
+                      gap-1.5
+                      whitespace-nowrap
+                      text-xs
+                      font-semibold
+                      text-neutral-400
+                      transition-colors
+                      hover:text-yellow-500
+                    "
+                  >
+                    View all
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                </div>
 
                 <div
                   className="
+                    mt-4
                     grid
-                    grid-cols-2
-                    gap-1
+                    grid-cols-3
+                    gap-2
                   "
                 >
-                  {BRANDS.map(
+                  {FEATURED_BRANDS.map(
                     (brand) => (
                       <Link
                         key={brand}
                         href={brandUrl(
                           brand
                         )}
-                        onClick={
-                          closeMenus
-                        }
+                        onClick={closeMenus}
                         className="
+                          flex
+                          min-h-11
+                          items-center
+                          justify-center
                           rounded-md
-
+                          border
+                          border-neutral-800
+                          bg-black
                           px-3
                           py-2.5
-
-                          text-sm
-                          font-medium
+                          text-center
+                          text-xs
+                          font-bold
                           text-neutral-300
-
                           transition-colors
-
-                          hover:bg-neutral-900
+                          hover:border-yellow-500/60
                           hover:text-yellow-500
                         "
                       >
@@ -789,60 +910,64 @@ export default function Header() {
                     )
                   )}
                 </div>
+
+                <div
+                  className="
+                    mt-4
+                    border-t
+                    border-neutral-800
+                    pt-4
+                  "
+                >
+                  <p
+                    className="
+                      text-xs
+                      leading-5
+                      text-neutral-600
+                    "
+                  >
+                    The complete brand list remains
+                    available through the searchable
+                    filters on the Products page.
+                  </p>
+                </div>
               </div>
             )}
           </div>
 
-          {NAV_ITEMS.map(
-            (item) => (
-              <Link
-                key={
-                  item.href
-                }
-                href={
-                  item.href
-                }
-                onClick={
-                  closeMenus
-                }
-                className="
-                  flex
-                  h-10
-                  items-center
-
-                  rounded-md
-
-                  px-3
-
-                  text-sm
-                  font-medium
-                  text-neutral-300
-
-                  transition-colors
-
-                  hover:bg-neutral-900
-                  hover:text-yellow-500
-                "
-              >
-                {item.label}
-              </Link>
-            )
-          )}
+          {NAV_ITEMS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={closeMenus}
+              className="
+                flex
+                h-10
+                items-center
+                rounded-md
+                px-3
+                text-sm
+                font-semibold
+                text-neutral-300
+                transition-colors
+                hover:bg-neutral-900
+                hover:text-white
+              "
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
 
-        {/* ===============================================
-            DESKTOP SEARCH
-        ================================================ */}
+        {/* Desktop Search */}
         <form
           onSubmit={handleSearch}
           className="
             ml-auto
             hidden
-
-            min-w-[220px]
-            max-w-[440px]
+            min-w-0
+            max-w-md
             flex-1
-
             xl:block
           "
         >
@@ -850,75 +975,58 @@ export default function Header() {
             className="
               flex
               h-10
+              items-center
               overflow-hidden
-
               rounded-md
               border
-              border-neutral-700
-
-              bg-neutral-900
-
+              border-neutral-800
+              bg-neutral-950
               transition-colors
-
               focus-within:border-yellow-500
             "
           >
-            <div
+            <Search
               className="
-                flex
-                items-center
-
-                pl-3
-
+                ml-3
+                h-4
+                w-4
+                flex-shrink-0
                 text-neutral-500
               "
-            >
-              <Search className="h-4 w-4" />
-            </div>
+            />
 
             <input
               type="search"
-              value={
-                searchTerm
-              }
-              onChange={(
-                event
-              ) =>
+              value={searchTerm}
+              onChange={(event) =>
                 setSearchTerm(
-                  event.target
-                    .value
+                  event.target.value
                 )
               }
-              placeholder="Search catalogue..."
-              aria-label="Search catalogue"
+              placeholder="Search products, models or SKUs..."
               className="
                 min-w-0
                 flex-1
-
                 bg-transparent
-
                 px-3
-
                 text-sm
                 text-white
-
                 outline-none
-
-                placeholder:text-neutral-500
+                placeholder:text-neutral-600
               "
             />
 
             <button
               type="submit"
               className="
-                px-4
-
-                text-sm
-                font-semibold
-                text-yellow-500
-
+                h-full
+                border-l
+                border-neutral-800
+                px-3
+                text-xs
+                font-bold
+                text-neutral-400
                 transition-colors
-
                 hover:bg-yellow-500
                 hover:text-black
               "
@@ -928,16 +1036,13 @@ export default function Header() {
           </div>
         </form>
 
-        {/* ===============================================
-            DESKTOP ACTIONS
-        ================================================ */}
+        {/* Desktop Actions */}
         <div
           className="
             hidden
             flex-shrink-0
             items-center
             gap-2
-
             xl:flex
           "
         >
@@ -945,23 +1050,18 @@ export default function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="WhatsApp SMT"
+            aria-label="Contact SMT on WhatsApp"
             className="
               flex
               h-10
               w-10
               items-center
               justify-center
-
               rounded-md
-
               border
-              border-neutral-700
-
-              text-neutral-200
-
+              border-neutral-800
+              text-neutral-300
               transition-colors
-
               hover:border-yellow-500
               hover:text-yellow-500
             "
@@ -969,45 +1069,45 @@ export default function Header() {
             <FaWhatsapp className="h-5 w-5" />
           </a>
 
-          <a
-            href={REQUEST_QUOTE_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/quote"
+            onClick={closeMenus}
+            aria-label={`Quote list with ${uniqueCount} products and ${totalQuantity} total units`}
             className="
+              relative
               flex
               h-10
               items-center
               justify-center
-
+              gap-2
               whitespace-nowrap
-
               rounded-md
-
               bg-yellow-500
-
               px-4
-
               text-sm
               font-bold
               text-black
-
               transition-colors
-
               hover:bg-yellow-400
             "
           >
-            Request Quote
-          </a>
+            <ClipboardList className="h-4 w-4" />
+            Quote List
+
+            {uniqueCount > 0 && (
+              <span className="flex min-w-5 items-center justify-center rounded-full bg-black px-1.5 py-0.5 text-[10px] font-black leading-none text-yellow-500">
+                {uniqueCount > 99
+                  ? "99+"
+                  : uniqueCount}
+              </span>
+            )}
+          </Link>
         </div>
 
-        {/* ===============================================
-            MOBILE / TABLET MENU BUTTON
-        ================================================ */}
+        {/* Mobile / Tablet Menu Button */}
         <button
           type="button"
-          onClick={
-            toggleMobileMenu
-          }
+          onClick={toggleMobileMenu}
           aria-label={
             isMobileMenuOpen
               ? "Close navigation"
@@ -1018,26 +1118,19 @@ export default function Header() {
           }
           className="
             ml-auto
-
             flex
             h-10
             w-10
             flex-shrink-0
             items-center
             justify-center
-
             rounded-md
-
             border
             border-neutral-800
-
             text-white
-
             transition-colors
-
             hover:border-yellow-500
             hover:text-yellow-500
-
             xl:hidden
           "
         >
@@ -1057,38 +1150,30 @@ export default function Header() {
           className="
             max-h-[calc(100vh-72px)]
             overflow-y-auto
-
             border-t
             border-neutral-800
-
             bg-neutral-950
-
             px-4
             pb-6
             pt-4
-
             xl:hidden
           "
+          aria-label="Mobile navigation"
         >
           {/* Search */}
           <form
-            onSubmit={
-              handleSearch
-            }
-            className="mb-6"
+            onSubmit={handleSearch}
+            className="mb-5"
           >
             <div
               className="
                 flex
                 h-11
                 overflow-hidden
-
                 rounded-md
                 border
                 border-neutral-700
-
                 bg-neutral-900
-
                 focus-within:border-yellow-500
               "
             >
@@ -1104,31 +1189,21 @@ export default function Header() {
 
               <input
                 type="search"
-                value={
-                  searchTerm
-                }
-                onChange={(
-                  event
-                ) =>
+                value={searchTerm}
+                onChange={(event) =>
                   setSearchTerm(
-                    event.target
-                      .value
+                    event.target.value
                   )
                 }
                 placeholder="Search products, brands or models..."
                 className="
                   min-w-0
                   flex-1
-
                   bg-transparent
-
                   px-3
-
                   text-sm
                   text-white
-
                   outline-none
-
                   placeholder:text-neutral-500
                 "
               />
@@ -1137,9 +1212,7 @@ export default function Header() {
                 type="submit"
                 className="
                   bg-yellow-500
-
                   px-4
-
                   text-sm
                   font-bold
                   text-black
@@ -1150,22 +1223,19 @@ export default function Header() {
             </div>
           </form>
 
-          {/* Main links */}
+          {/* Main Navigation */}
           <div className="space-y-1">
             <Link
               href="/"
-              onClick={
-                closeMenus
-              }
+              onClick={closeMenus}
               className="
                 block
                 rounded-md
                 px-3
                 py-3
-
                 font-medium
                 text-neutral-300
-
+                transition-colors
                 hover:bg-neutral-900
                 hover:text-yellow-500
               "
@@ -1175,46 +1245,39 @@ export default function Header() {
 
             <Link
               href="/products"
-              onClick={
-                closeMenus
-              }
+              onClick={closeMenus}
               className="
-                block
+                flex
+                items-center
+                justify-between
                 rounded-md
                 px-3
                 py-3
-
                 font-medium
                 text-neutral-300
-
+                transition-colors
                 hover:bg-neutral-900
                 hover:text-yellow-500
               "
             >
               All Products
+              <ArrowRight className="h-4 w-4" />
             </Link>
 
             {NAV_ITEMS.map(
               (item) => (
                 <Link
-                  key={
-                    item.href
-                  }
-                  href={
-                    item.href
-                  }
-                  onClick={
-                    closeMenus
-                  }
+                  key={item.href}
+                  href={item.href}
+                  onClick={closeMenus}
                   className="
                     block
                     rounded-md
                     px-3
                     py-3
-
                     font-medium
                     text-neutral-300
-
+                    transition-colors
                     hover:bg-neutral-900
                     hover:text-yellow-500
                   "
@@ -1225,7 +1288,7 @@ export default function Header() {
             )}
           </div>
 
-          {/* Categories */}
+          {/* Curated Categories */}
           <div
             className="
               mt-5
@@ -1234,18 +1297,39 @@ export default function Header() {
               pt-5
             "
           >
-            <p
+            <div
               className="
                 mb-3
-                text-xs
-                font-bold
-                uppercase
-                tracking-[0.15em]
-                text-neutral-500
+                flex
+                items-center
+                justify-between
+                gap-4
               "
             >
-              Product Categories
-            </p>
+              <p
+                className="
+                  text-xs
+                  font-bold
+                  uppercase
+                  tracking-[0.15em]
+                  text-neutral-500
+                "
+              >
+                Popular Categories
+              </p>
+
+              <Link
+                href="/products"
+                onClick={closeMenus}
+                className="
+                  text-xs
+                  font-semibold
+                  text-yellow-500
+                "
+              >
+                View all
+              </Link>
+            </div>
 
             <div
               className="
@@ -1254,30 +1338,25 @@ export default function Header() {
                 gap-2
               "
             >
-              {CATEGORIES.map(
+              {FEATURED_CATEGORIES.map(
                 (category) => (
                   <Link
-                    key={
-                      category
-                    }
+                    key={category}
                     href={categoryUrl(
                       category
                     )}
-                    onClick={
-                      closeMenus
-                    }
+                    onClick={closeMenus}
                     className="
                       rounded-md
-
                       border
                       border-neutral-800
-
+                      bg-black
                       px-3
                       py-3
-
                       text-sm
+                      leading-5
                       text-neutral-300
-
+                      transition-colors
                       hover:border-yellow-500
                       hover:text-yellow-500
                     "
@@ -1289,7 +1368,7 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Brands */}
+          {/* Curated Brands */}
           <div
             className="
               mt-5
@@ -1298,49 +1377,71 @@ export default function Header() {
               pt-5
             "
           >
-            <p
+            <div
               className="
                 mb-3
-                text-xs
-                font-bold
-                uppercase
-                tracking-[0.15em]
-                text-neutral-500
+                flex
+                items-center
+                justify-between
+                gap-4
               "
             >
-              Brands
-            </p>
+              <p
+                className="
+                  text-xs
+                  font-bold
+                  uppercase
+                  tracking-[0.15em]
+                  text-neutral-500
+                "
+              >
+                Popular Brands
+              </p>
+
+              <Link
+                href="/products"
+                onClick={closeMenus}
+                className="
+                  text-xs
+                  font-semibold
+                  text-yellow-500
+                "
+              >
+                View all
+              </Link>
+            </div>
 
             <div
               className="
-                flex
-                flex-wrap
+                grid
+                grid-cols-3
                 gap-2
               "
             >
-              {BRANDS.map(
+              {FEATURED_BRANDS.map(
                 (brand) => (
                   <Link
                     key={brand}
                     href={brandUrl(
                       brand
                     )}
-                    onClick={
-                      closeMenus
-                    }
+                    onClick={closeMenus}
                     className="
+                      flex
+                      min-h-10
+                      items-center
+                      justify-center
                       rounded-md
-
                       border
                       border-neutral-800
-
-                      px-3
-                      py-2
-
-                      text-xs
-                      font-semibold
+                      bg-black
+                      px-2
+                      py-2.5
+                      text-center
+                      text-[11px]
+                      font-bold
                       text-neutral-300
-
+                      transition-colors
                       hover:border-yellow-500
                       hover:text-yellow-500
                     "
@@ -1362,9 +1463,7 @@ export default function Header() {
             "
           >
             <a
-              href={
-                WHATSAPP_URL
-              }
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="
@@ -1372,55 +1471,53 @@ export default function Header() {
                 items-center
                 justify-center
                 gap-2
-
                 rounded-md
-
                 border
                 border-neutral-700
-
                 px-4
                 py-3
-
                 text-sm
                 font-semibold
                 text-white
-
+                transition-colors
                 hover:border-yellow-500
                 hover:text-yellow-500
               "
             >
               <FaWhatsapp className="h-5 w-5" />
-
               WhatsApp
             </a>
 
-            <a
-              href={
-                REQUEST_QUOTE_URL
-              }
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/quote"
+              onClick={closeMenus}
               className="
                 flex
                 items-center
                 justify-center
-
+                gap-2
                 rounded-md
-
                 bg-yellow-500
-
                 px-4
                 py-3
-
                 text-sm
                 font-bold
                 text-black
-
+                transition-colors
                 hover:bg-yellow-400
               "
             >
-              Request Quote
-            </a>
+              <ClipboardList className="h-5 w-5" />
+              Quote List
+
+              {uniqueCount > 0 && (
+                <span className="flex min-w-5 items-center justify-center rounded-full bg-black px-1.5 py-0.5 text-[10px] font-black leading-none text-yellow-500">
+                  {uniqueCount > 99
+                    ? "99+"
+                    : uniqueCount}
+                </span>
+              )}
+            </Link>
           </div>
         </nav>
       )}
@@ -1432,9 +1529,7 @@ export default function Header() {
           absolute
           inset-x-0
           bottom-0
-
           h-[2px]
-
           bg-gradient-to-r
           from-transparent
           via-yellow-500/70

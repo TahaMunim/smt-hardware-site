@@ -1,11 +1,17 @@
-// ProductCard.tsx
-
-import { useRef, useState } from "react";
+import {
+  useRef,
+  useState
+} from "react";
 import { Link } from "wouter";
-import { FaWhatsapp } from "react-icons/fa";
-import { Package } from "lucide-react";
+import {
+  Check,
+  ClipboardList,
+  Package,
+  Plus
+} from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
+import { useQuote } from "@/context/QuoteContext";
 import type { Product } from "@/data/products";
 
 interface ProductCardProps {
@@ -35,7 +41,8 @@ function ProductImage({
   alt,
   className = ""
 }: ProductImageProps) {
-  const [failed, setFailed] = useState(false);
+  const [failed, setFailed] =
+    useState(false);
 
   if (!src || failed) {
     return <ProductPlaceholder />;
@@ -47,7 +54,9 @@ function ProductImage({
       alt={alt}
       className={className}
       loading="lazy"
-      onError={() => setFailed(true)}
+      onError={() =>
+        setFailed(true)
+      }
     />
   );
 }
@@ -59,7 +68,8 @@ function HoverCarousel({
   images: string[];
   productName: string;
 }) {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] =
+    useState(0);
 
   const intervalRef = useRef<
     ReturnType<typeof setInterval> | null
@@ -71,19 +81,27 @@ function HoverCarousel({
     }
 
     if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+      clearInterval(
+        intervalRef.current
+      );
     }
 
-    intervalRef.current = setInterval(() => {
-      setIndex((currentIndex) =>
-        (currentIndex + 1) % images.length
-      );
-    }, 1800);
+    intervalRef.current =
+      setInterval(() => {
+        setIndex(
+          (currentIndex) =>
+            (currentIndex + 1) %
+            images.length
+        );
+      }, 1800);
   };
 
   const stopCarousel = () => {
     if (intervalRef.current) {
-      clearInterval(intervalRef.current);
+      clearInterval(
+        intervalRef.current
+      );
+
       intervalRef.current = null;
     }
 
@@ -106,18 +124,20 @@ function HoverCarousel({
           transform: `translateX(-${index * 100}%)`
         }}
       >
-        {images.map((image, imageIndex) => (
-          <div
-            key={`${image}-${imageIndex}`}
-            className="h-full w-full flex-shrink-0"
-          >
-            <ProductImage
-              src={image}
-              alt={`${productName} - ${imageIndex + 1}`}
-              className="h-full w-full object-contain"
-            />
-          </div>
-        ))}
+        {images.map(
+          (image, imageIndex) => (
+            <div
+              key={`${image}-${imageIndex}`}
+              className="h-full w-full flex-shrink-0"
+            >
+              <ProductImage
+                src={image}
+                alt={`${productName} - ${imageIndex + 1}`}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          )
+        )}
       </div>
     </div>
   );
@@ -126,17 +146,20 @@ function HoverCarousel({
 export default function ProductCard({
   product
 }: ProductCardProps) {
-  const whatsappNumber = "971503821352";
+  const {
+    addProduct,
+    getQuantity
+  } = useQuote();
 
-  const whatsappMessage =
-    `Hello, I would like to know more about ${product.name}.`;
+  const quoteQuantity =
+    getQuantity(product.id);
 
-  const whatsappUrl =
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
+  const isInQuote =
+    quoteQuantity > 0;
 
-  const images = Array.isArray(product.image)
+  const images = Array.isArray(
+    product.image
+  )
     ? product.image.filter(Boolean)
     : [];
 
@@ -161,6 +184,10 @@ export default function ProductCard({
         className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105"
       />
     );
+  };
+
+  const addToQuote = () => {
+    addProduct(product.id, 1);
   };
 
   return (
@@ -188,7 +215,9 @@ export default function ProductCard({
               {product.brand}
             </Badge>
 
-            <Link href={`/product/${product.id}`}>
+            <Link
+              href={`/product/${product.id}`}
+            >
               <h3
                 className="line-clamp-1 text-sm font-semibold text-white transition-colors group-hover:text-yellow-500"
                 data-testid={`product-name-${product.id}`}
@@ -212,16 +241,26 @@ export default function ProductCard({
             </p>
           </div>
 
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-2 flex w-full items-center justify-center gap-1 rounded-md bg-yellow-500 px-2 py-1.5 text-xs font-semibold text-black transition-colors hover:bg-yellow-400"
-            data-testid={`button-whatsapp-inquiry-${product.id}`}
-          >
-            <FaWhatsapp className="h-3 w-3" />
-            Inquire
-          </a>
+          {isInQuote ? (
+            <Link
+              href="/quote"
+              className="mt-2 flex w-full items-center justify-center gap-1.5 rounded-md border border-yellow-500/60 bg-yellow-500/10 px-2 py-1.5 text-xs font-semibold text-yellow-500 transition-colors hover:bg-yellow-500 hover:text-black"
+              data-testid={`button-view-quote-${product.id}`}
+            >
+              <Check className="h-3.5 w-3.5" />
+              In Quote · Qty {quoteQuantity}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={addToQuote}
+              className="mt-2 flex w-full items-center justify-center gap-1.5 rounded-md bg-yellow-500 px-2 py-1.5 text-xs font-semibold text-black transition-colors hover:bg-yellow-400"
+              data-testid={`button-add-to-quote-${product.id}`}
+            >
+              <Plus className="h-3.5 w-3.5" />
+              Add to Quote
+            </button>
+          )}
         </div>
       </div>
 
@@ -242,7 +281,9 @@ export default function ProductCard({
           </Badge>
 
           <div>
-            <Link href={`/product/${product.id}`}>
+            <Link
+              href={`/product/${product.id}`}
+            >
               <h3
                 className="line-clamp-1 text-base font-semibold text-white transition-colors group-hover:text-yellow-500 md:text-lg"
                 data-testid={`product-name-${product.id}`}
@@ -266,16 +307,26 @@ export default function ProductCard({
               product.description}
           </p>
 
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex w-full items-center justify-center gap-2 rounded-md bg-yellow-500 px-3 py-2 text-xs font-semibold text-black transition-colors hover:bg-yellow-400 md:px-4 md:py-2.5 md:text-sm"
-            data-testid={`button-whatsapp-inquiry-${product.id}`}
-          >
-            <FaWhatsapp className="h-4 w-4 md:h-5 md:w-5" />
-            WhatsApp Inquiry
-          </a>
+          {isInQuote ? (
+            <Link
+              href="/quote"
+              className="flex w-full items-center justify-center gap-2 rounded-md border border-yellow-500/60 bg-yellow-500/10 px-3 py-2 text-xs font-semibold text-yellow-500 transition-colors hover:bg-yellow-500 hover:text-black md:px-4 md:py-2.5 md:text-sm"
+              data-testid={`button-view-quote-${product.id}`}
+            >
+              <ClipboardList className="h-4 w-4" />
+              In Quote · Qty {quoteQuantity}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={addToQuote}
+              className="flex w-full items-center justify-center gap-2 rounded-md bg-yellow-500 px-3 py-2 text-xs font-semibold text-black transition-colors hover:bg-yellow-400 md:px-4 md:py-2.5 md:text-sm"
+              data-testid={`button-add-to-quote-${product.id}`}
+            >
+              <Plus className="h-4 w-4" />
+              Add to Quote
+            </button>
+          )}
         </div>
       </div>
     </div>

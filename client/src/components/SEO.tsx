@@ -392,6 +392,38 @@ function getSEOData(
   }
 
   /*
+    QUOTE LIST
+
+    This page contains visitor-specific
+    local quote data, so it should not
+    be indexed by search engines.
+  */
+  if (
+    pathname ===
+    "/quote"
+  ) {
+    return {
+      title:
+        "Quote List | Saleh Mohsin Trading LLC",
+
+      description:
+        "Build a product quote list and send your complete RFQ to Saleh Mohsin Trading LLC through WhatsApp.",
+
+      canonical:
+        `${SITE_URL}/quote`,
+
+      image:
+        DEFAULT_IMAGE,
+
+      type:
+        "website",
+
+      noIndex:
+        true
+    };
+  }
+
+  /*
     PRODUCT DETAIL
 
     Example:

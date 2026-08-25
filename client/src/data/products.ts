@@ -1,5 +1,8 @@
 import type { Product } from "./productTypes";
 import { tuffixProducts } from "./catalogues/tuffix";
+import { stanleyProducts } from "./catalogues/stanley";
+import { alfaProducts } from "./catalogues/alfa";
+import { dongchengProducts } from "./catalogues/dongcheng";
 
 export type { Product } from "./productTypes";
 
@@ -467,5 +470,8 @@ const legacyProducts: Product[] = [
 */
 export const products: Product[] = [
   ...legacyProducts,
-  ...tuffixProducts
+  ...tuffixProducts,
+  ...stanleyProducts,
+  ...alfaProducts,
+  ...dongchengProducts
 ];

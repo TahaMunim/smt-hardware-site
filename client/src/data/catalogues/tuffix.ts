@@ -1,508 +1,1827 @@
 import type { Product } from "../productTypes";
 
-const TUF_FIX_CATALOGUE_SOURCE = {
+const source = (page: number) => ({
   type: "catalogue" as const,
   document: "TUF-FIX Product Catalogue 2025-26",
-  page: 4,
+  page,
   year: 2025
-};
+});
 
 export const tuffixProducts: Product[] = [
   {
-    id: "tuffix-hm007",
-    name: "TUF-FIX Safety Helmet HM007",
+    id: "tuffix-drywall-screws",
+    name: "TUF-FIX Drywall Screws",
     brand: "TUF-FIX",
-    model: "HM007",
-
-    category: "Safety Equipment",
-    subcategory: "Head Protection",
-    productFamily: "Safety Helmets",
-
-    description:
-      "TUF-FIX safety helmet HM007 with chin strip for workplace head protection.",
-
-    shortDescription:
-      "Safety helmet with chin strip.",
-
-    features: [
-      "Chin strip"
-    ],
-
+    category: "Fasteners & Fixings",
+    subcategory: "Screws",
+    description: "TUF-FIX drywall screws listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety helmet",
-      "helmet",
-      "hard hat",
-      "head protection",
-      "ppe",
-      "hm007",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["screws", "fasteners & fixings", "drywall screws", "tuf-fix"],
+    source: source(2),
     dataQuality: "catalogue"
   },
-
   {
-    id: "tuffix-hm010",
-    name: "TUF-FIX Safety Helmet HM010",
+    id: "tuffix-sds-ifi-hex-washer-head",
+    name: "TUF-FIX SDS IFI Hex Washer Head",
     brand: "TUF-FIX",
-    model: "HM010",
-
-    category: "Safety Equipment",
-    subcategory: "Head Protection",
-    productFamily: "Safety Helmets",
-
-    description:
-      "TUF-FIX safety helmet HM010 with ratchet inner fibre.",
-
-    shortDescription:
-      "Safety helmet with ratchet inner fibre.",
-
-    features: [
-      "Ratchet inner fibre"
-    ],
-
+    category: "Fasteners & Fixings",
+    subcategory: "Self Drilling Screws",
+    description: "TUF-FIX sds ifi hex washer head listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety helmet",
-      "helmet",
-      "hard hat",
-      "head protection",
-      "ppe",
-      "hm010",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["self drilling screws", "fasteners & fixings", "sds ifi hex washer head", "tuf-fix"],
+    source: source(2),
     dataQuality: "catalogue"
   },
-
   {
-    id: "tuffix-hm011",
-    name: "TUF-FIX Safety Helmet HM011",
+    id: "tuffix-sds-truss-phillip-head",
+    name: "TUF-FIX SDS Truss Phillip Head",
     brand: "TUF-FIX",
-    model: "HM011",
-
-    category: "Safety Equipment",
-    subcategory: "Head Protection",
-    productFamily: "Safety Helmets",
-
-    description:
-      "TUF-FIX safety helmet HM011 with ratchet inner plastic.",
-
-    shortDescription:
-      "Safety helmet with ratchet inner plastic.",
-
-    features: [
-      "Ratchet inner plastic"
-    ],
-
+    category: "Fasteners & Fixings",
+    subcategory: "Self Drilling Screws",
+    description: "TUF-FIX sds truss phillip head listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety helmet",
-      "helmet",
-      "hard hat",
-      "head protection",
-      "ppe",
-      "hm011",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["self drilling screws", "fasteners & fixings", "sds truss phillip head", "tuf-fix"],
+    source: source(2),
     dataQuality: "catalogue"
   },
-
   {
-    id: "tuffix-hm012",
-    name: "TUF-FIX Safety Helmet HM012",
+    id: "tuffix-sds-countersunk-head",
+    name: "TUF-FIX SDS Countersunk Head",
     brand: "TUF-FIX",
-    model: "HM012",
-
-    category: "Safety Equipment",
-    subcategory: "Head Protection",
-    productFamily: "Safety Helmets",
-
-    description:
-      "TUF-FIX safety helmet HM012 with ratchet inner plastic.",
-
-    shortDescription:
-      "Safety helmet with ratchet inner plastic.",
-
-    features: [
-      "Ratchet inner plastic"
-    ],
-
+    category: "Fasteners & Fixings",
+    subcategory: "Self Drilling Screws",
+    description: "TUF-FIX sds countersunk head listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety helmet",
-      "helmet",
-      "hard hat",
-      "head protection",
-      "ppe",
-      "hm012",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["self drilling screws", "fasteners & fixings", "sds countersunk head", "tuf-fix"],
+    source: source(2),
     dataQuality: "catalogue"
   },
-
+  {
+    id: "tuffix-sds-pan-phillip-head",
+    name: "TUF-FIX SDS Pan Phillip Head",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Self Drilling Screws",
+    description: "TUF-FIX sds pan phillip head listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["self drilling screws", "fasteners & fixings", "sds pan phillip head", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-self-tapping-screws-csk-head",
+    name: "TUF-FIX Self Tapping Screws CSK Head",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Self Tapping Screws",
+    description: "TUF-FIX self tapping screws csk head listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["self tapping screws", "fasteners & fixings", "self tapping screws csk head", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-wood-screws-phillips",
+    name: "TUF-FIX Wood Screws (Phillips)",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Wood Screws",
+    description: "TUF-FIX wood screws (phillips) listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["wood screws", "fasteners & fixings", "wood screws (phillips)", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-concrete-steel-nails",
+    name: "TUF-FIX Concrete Steel Nails",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Nails",
+    description: "TUF-FIX concrete steel nails listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["nails", "fasteners & fixings", "concrete steel nails", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-aluminum-blind-rivets",
+    name: "TUF-FIX Aluminum Blind Rivets",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Rivets",
+    description: "TUF-FIX aluminum blind rivets listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["rivets", "fasteners & fixings", "aluminum blind rivets", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-expansion-plug",
+    name: "TUF-FIX Expansion Plug",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Anchors & Plugs",
+    description: "TUF-FIX expansion plug listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["anchors & plugs", "fasteners & fixings", "expansion plug", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-frame-and-hammer-fixings",
+    name: "TUF-FIX Frame & Hammer Fixings",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Anchors & Fixings",
+    description: "TUF-FIX frame & hammer fixings listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["anchors & fixings", "fasteners & fixings", "frame & hammer fixings", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-fix-bolt",
+    name: "TUF-FIX Fix Bolt",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Anchors & Fixings",
+    description: "TUF-FIX fix bolt listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["anchors & fixings", "fasteners & fixings", "fix bolt", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-through-bolt",
+    name: "TUF-FIX Through Bolt",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Anchors & Fixings",
+    description: "TUF-FIX through bolt listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["anchors & fixings", "fasteners & fixings", "through bolt", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-drop-in-anchor",
+    name: "TUF-FIX Drop In Anchor",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Anchors & Fixings",
+    description: "TUF-FIX drop in anchor listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["anchors & fixings", "fasteners & fixings", "drop in anchor", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-wedge-anchor",
+    name: "TUF-FIX Wedge Anchor",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Anchors & Fixings",
+    description: "TUF-FIX wedge anchor listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["anchors & fixings", "fasteners & fixings", "wedge anchor", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-ceiling-wedge-anchor",
+    name: "TUF-FIX Ceiling Wedge Anchor",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Anchors & Fixings",
+    description: "TUF-FIX ceiling wedge anchor listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["anchors & fixings", "fasteners & fixings", "ceiling wedge anchor", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-magnetic-screw-bits",
+    name: "TUF-FIX Magnetic Screw Bits",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Driver Bits",
+    description: "TUF-FIX magnetic screw bits listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["driver bits", "fasteners & fixings", "magnetic screw bits", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-magnetic-torsion-bits",
+    name: "TUF-FIX Magnetic Torsion Bits",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Driver Bits",
+    description: "TUF-FIX magnetic torsion bits listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["driver bits", "fasteners & fixings", "magnetic torsion bits", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-coach-screws",
+    name: "TUF-FIX Coach Screws",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Screws",
+    description: "TUF-FIX coach screws listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["screws", "fasteners & fixings", "coach screws", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-chipboard-screws",
+    name: "TUF-FIX Chipboard Screws",
+    brand: "TUF-FIX",
+    category: "Fasteners & Fixings",
+    subcategory: "Screws",
+    description: "TUF-FIX chipboard screws listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["screws", "fasteners & fixings", "chipboard screws", "tuf-fix"],
+    source: source(2),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-cage-roller",
+    name: "TUF-FIX Cage Roller",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Paint Rollers",
+    description: "TUF-FIX cage roller listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["paint rollers", "painting equipment", "cage roller", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-plastic-cage-roller",
+    name: "TUF-FIX Plastic Cage Roller",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Paint Rollers",
+    description: "TUF-FIX plastic cage roller listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["paint rollers", "painting equipment", "plastic cage roller", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-cage-roller-frame",
+    name: "TUF-FIX Cage Roller Frame",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Roller Frames",
+    description: "TUF-FIX cage roller frame listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["roller frames", "painting equipment", "cage roller frame", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-radiator-roller",
+    name: "TUF-FIX Radiator Roller",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Paint Rollers",
+    description: "TUF-FIX radiator roller listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["paint rollers", "painting equipment", "radiator roller", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-radiator-roller-frame",
+    name: "TUF-FIX Radiator Roller Frame",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Roller Frames",
+    description: "TUF-FIX radiator roller frame listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["roller frames", "painting equipment", "radiator roller frame", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-extension-pole",
+    name: "TUF-FIX Extension Pole",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Painting Accessories",
+    description: "TUF-FIX extension pole listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["painting accessories", "painting equipment", "extension pole", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-blue-polyester-refill",
+    name: "TUF-FIX Blue Polyester Refill",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Roller Refills",
+    description: "TUF-FIX blue polyester refill listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["roller refills", "painting equipment", "blue polyester refill", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-yellow-polyester-refill",
+    name: "TUF-FIX Yellow Polyester Refill",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Roller Refills",
+    description: "TUF-FIX yellow polyester refill listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["roller refills", "painting equipment", "yellow polyester refill", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-texture-sponge-refill",
+    name: "TUF-FIX Texture Sponge Refill",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Roller Refills",
+    description: "TUF-FIX texture sponge refill listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["roller refills", "painting equipment", "texture sponge refill", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-yellow-acrylic-mini-refill",
+    name: "TUF-FIX Yellow Acrylic Mini Refill",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Roller Refills",
+    description: "TUF-FIX yellow acrylic mini refill listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["roller refills", "painting equipment", "yellow acrylic mini refill", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-velour-mini-refill",
+    name: "TUF-FIX Velour Mini Refill",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Roller Refills",
+    description: "TUF-FIX velour mini refill listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["roller refills", "painting equipment", "velour mini refill", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-paint-brush-wooden-handle",
+    name: "TUF-FIX Paint Brush Wooden Handle",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Paint Brushes",
+    description: "TUF-FIX paint brush wooden handle listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["paint brushes", "painting equipment", "paint brush wooden handle", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-angle-paint-brush-wooden-handle",
+    name: "TUF-FIX Angle Paint Brush Wooden Handle",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Paint Brushes",
+    description: "TUF-FIX angle paint brush wooden handle listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["paint brushes", "painting equipment", "angle paint brush wooden handle", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-paint-brush-plastic-handle",
+    name: "TUF-FIX Paint Brush Plastic Handle",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Paint Brushes",
+    description: "TUF-FIX paint brush plastic handle listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["paint brushes", "painting equipment", "paint brush plastic handle", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-paint-brush-plastic-handle-heavy-duty",
+    name: "TUF-FIX Paint Brush Plastic Handle Heavy Duty",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Paint Brushes",
+    description: "TUF-FIX paint brush plastic handle heavy duty listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["paint brushes", "painting equipment", "paint brush plastic handle heavy duty", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-painting-tray",
+    name: "TUF-FIX Painting Tray",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Painting Accessories",
+    description: "TUF-FIX painting tray listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["painting accessories", "painting equipment", "painting tray", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-paint-scrapers",
+    name: "TUF-FIX Paint Scrapers",
+    brand: "TUF-FIX",
+    category: "Painting Equipment",
+    subcategory: "Scrapers",
+    description: "TUF-FIX paint scrapers listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["scrapers", "painting equipment", "paint scrapers", "tuf-fix"],
+    source: source(3),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-face-shield-visor",
+    name: "TUF-FIX Face Shield Visor",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Face Protection",
+    description: "TUF-FIX face shield visor listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["face protection", "safety equipment", "face shield visor", "tuf-fix"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
   {
     id: "tuffix-f011",
     name: "TUF-FIX Shield Visor F011",
     brand: "TUF-FIX",
     model: "F011",
-
     category: "Safety Equipment",
     subcategory: "Face Protection",
-    productFamily: "Face Protection",
-
-    description:
-      "TUF-FIX shield visor model F011 for workplace face protection.",
-
-    shortDescription:
-      "Protective shield visor.",
-
+    description: "TUF-FIX shield visor f011 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "shield visor",
-      "face visor",
-      "visor",
-      "face protection",
-      "ppe",
-      "f011",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["face protection", "safety equipment", "shield visor f011", "tuf-fix", "f011"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
+  {
+    id: "tuffix-safety-spectacles",
+    name: "TUF-FIX Safety Spectacles",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Eye Protection",
+    description: "TUF-FIX safety spectacles listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["eye protection", "safety equipment", "safety spectacles", "tuf-fix"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-respirators",
+    name: "TUF-FIX Respirators",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Respiratory Protection",
+    description: "TUF-FIX respirators listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["respiratory protection", "safety equipment", "respirators", "tuf-fix"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
   {
     id: "tuffix-em011",
     name: "TUF-FIX Earmuff EM011",
     brand: "TUF-FIX",
     model: "EM011",
-
     category: "Safety Equipment",
     subcategory: "Hearing Protection",
-    productFamily: "Ear Safety",
-
-    description:
-      "TUF-FIX earmuff model EM011 for workplace hearing protection.",
-
-    shortDescription:
-      "Protective workplace earmuff.",
-
+    description: "TUF-FIX earmuff em011 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "earmuff",
-      "ear muffs",
-      "ear protection",
-      "hearing protection",
-      "ppe",
-      "em011",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hearing protection", "safety equipment", "earmuff em011", "tuf-fix", "em011"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-ep007",
-    name: "TUF-FIX Earplugs EP007",
+    name: "TUF-FIX Ear Plug EP007",
     brand: "TUF-FIX",
     model: "EP007",
-
     category: "Safety Equipment",
     subcategory: "Hearing Protection",
-    productFamily: "Ear Safety",
-
-    description:
-      "TUF-FIX earplugs model EP007 for workplace hearing protection.",
-
-    shortDescription:
-      "Workplace hearing-protection earplugs.",
-
+    description: "TUF-FIX ear plug ep007 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "ear plug",
-      "earplug",
-      "earplugs",
-      "ear protection",
-      "hearing protection",
-      "ppe",
-      "ep007",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hearing protection", "safety equipment", "ear plug ep007", "tuf-fix", "ep007"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
+  {
+    id: "tuffix-safety-harness",
+    name: "TUF-FIX Safety Harness",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Fall Protection",
+    description: "TUF-FIX safety harness listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["fall protection", "safety equipment", "safety harness", "tuf-fix"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-hm007",
+    name: "TUF-FIX Safety Helmet HM007",
+    brand: "TUF-FIX",
+    model: "HM007",
+    category: "Safety Equipment",
+    subcategory: "Head Protection",
+    description: "Safety helmet with chin strip.",
+    shortDescription: "Safety helmet with chin strip.",
+    features: ["with Chin Strip"],
+    image: [],
+    keywords: ["head protection", "safety equipment", "safety helmet hm007", "tuf-fix", "hm007"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-hm010",
+    name: "TUF-FIX Safety Helmet HM010",
+    brand: "TUF-FIX",
+    model: "HM010",
+    category: "Safety Equipment",
+    subcategory: "Head Protection",
+    description: "Safety helmet with ratchet inner fibre.",
+    shortDescription: "Safety helmet with ratchet inner fibre.",
+    features: ["with Ratchet Inner Fibre"],
+    image: [],
+    keywords: ["head protection", "safety equipment", "safety helmet hm010", "tuf-fix", "hm010"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-hm011",
+    name: "TUF-FIX Safety Helmet HM011",
+    brand: "TUF-FIX",
+    model: "HM011",
+    category: "Safety Equipment",
+    subcategory: "Head Protection",
+    description: "Safety helmet with ratchet inner plastic.",
+    shortDescription: "Safety helmet with ratchet inner plastic.",
+    features: ["with Ratchet Inner Plastic"],
+    image: [],
+    keywords: ["head protection", "safety equipment", "safety helmet hm011", "tuf-fix", "hm011"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-hm012",
+    name: "TUF-FIX Safety Helmet HM012",
+    brand: "TUF-FIX",
+    model: "HM012",
+    category: "Safety Equipment",
+    subcategory: "Head Protection",
+    description: "Safety helmet with ratchet inner plastic.",
+    shortDescription: "Safety helmet with ratchet inner plastic.",
+    features: ["with Ratchet Inner Plastic"],
+    image: [],
+    keywords: ["head protection", "safety equipment", "safety helmet hm012", "tuf-fix", "hm012"],
+    source: source(4),
+    dataQuality: "catalogue"
+  },
   {
     id: "tuffix-lgbg05",
     name: "TUF-FIX Safety Gloves Latex LGBG05",
     brand: "TUF-FIX",
     model: "LGBG05",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX latex safety gloves model LGBG05 for workplace hand protection.",
-
-    shortDescription:
-      "Latex safety gloves.",
-
+    description: "TUF-FIX safety gloves latex lgbg05 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "latex gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "lgbg05",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves latex lgbg05", "tuf-fix", "lgbg05"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-ni1401",
     name: "TUF-FIX Safety Gloves Nitrile NI1401",
     brand: "TUF-FIX",
     model: "NI1401",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX nitrile safety gloves model NI1401 for workplace hand protection.",
-
-    shortDescription:
-      "Nitrile safety gloves.",
-
+    description: "TUF-FIX safety gloves nitrile ni1401 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "nitrile gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "ni1401",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves nitrile ni1401", "tuf-fix", "ni1401"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-pu1501",
     name: "TUF-FIX Safety Gloves PU PU1501",
     brand: "TUF-FIX",
     model: "PU1501",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX PU safety gloves model PU1501 for workplace hand protection.",
-
-    shortDescription:
-      "PU safety gloves.",
-
+    description: "TUF-FIX safety gloves pu pu1501 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "pu gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "pu1501",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves pu pu1501", "tuf-fix", "pu1501"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-pu1301",
     name: "TUF-FIX Safety Gloves Cut 5 PU1301",
     brand: "TUF-FIX",
     model: "PU1301",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX Safety Gloves Cut 5 model PU1301.",
-
-    shortDescription:
-      "Cut 5 safety gloves.",
-
+    description: "TUF-FIX safety gloves cut 5 pu1301 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "cut 5 gloves",
-      "cut gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "pu1301",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves cut 5 pu1301", "tuf-fix", "pu1301"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-ng1001",
     name: "TUF-FIX Safety Gloves Nitrile NG1001",
     brand: "TUF-FIX",
     model: "NG1001",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX nitrile safety gloves model NG1001 for workplace hand protection.",
-
-    shortDescription:
-      "Nitrile safety gloves.",
-
+    description: "TUF-FIX safety gloves nitrile ng1001 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "nitrile gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "ng1001",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves nitrile ng1001", "tuf-fix", "ng1001"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-lt1601",
     name: "TUF-FIX Safety Gloves Latex LT1601",
     brand: "TUF-FIX",
     model: "LT1601",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX latex safety gloves model LT1601 for workplace hand protection.",
-
-    shortDescription:
-      "Latex safety gloves.",
-
+    description: "TUF-FIX safety gloves latex lt1601 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "latex gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "lt1601",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves latex lt1601", "tuf-fix", "lt1601"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-ni1701",
     name: "TUF-FIX Safety Gloves Nitrile NI1701",
     brand: "TUF-FIX",
     model: "NI1701",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX nitrile safety gloves model NI1701 for workplace hand protection.",
-
-    shortDescription:
-      "Nitrile safety gloves.",
-
+    description: "TUF-FIX safety gloves nitrile ni1701 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "nitrile gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "ni1701",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves nitrile ni1701", "tuf-fix", "ni1701"],
+    source: source(4),
     dataQuality: "catalogue"
   },
-
   {
     id: "tuffix-cg011",
     name: "TUF-FIX Safety Gloves Dotted CG011",
     brand: "TUF-FIX",
     model: "CG011",
-
     category: "Safety Equipment",
     subcategory: "Hand Protection",
-    productFamily: "Safety Gloves",
-
-    description:
-      "TUF-FIX dotted safety gloves model CG011 for workplace hand protection.",
-
-    shortDescription:
-      "Dotted safety work gloves.",
-
+    description: "TUF-FIX safety gloves dotted cg011 listed in the TUF-FIX Product Catalogue 2025-26.",
     image: [],
-
-    keywords: [
-      "safety gloves",
-      "dotted gloves",
-      "work gloves",
-      "hand protection",
-      "ppe",
-      "cg011",
-      "tuf-fix"
-    ],
-
-    source: TUF_FIX_CATALOGUE_SOURCE,
+    keywords: ["hand protection", "safety equipment", "safety gloves dotted cg011", "tuf-fix", "cg011"],
+    source: source(4),
     dataQuality: "catalogue"
-  }
+  },
+  {
+    id: "tuffix-tf07",
+    name: "TUF-FIX Safety Shoes - High Ankle TF07",
+    brand: "TUF-FIX",
+    model: "TF07",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle tf07 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle tf07", "tuf-fix", "tf07"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tf08",
+    name: "TUF-FIX Safety Shoes - Low Ankle TF08",
+    brand: "TUF-FIX",
+    model: "TF08",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle tf08 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle tf08", "tuf-fix", "tf08"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tf03",
+    name: "TUF-FIX Safety Shoes - High Ankle TF03",
+    brand: "TUF-FIX",
+    model: "TF03",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle tf03 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle tf03", "tuf-fix", "tf03"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tf04",
+    name: "TUF-FIX Safety Shoes - Low Ankle TF04",
+    brand: "TUF-FIX",
+    model: "TF04",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle tf04 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle tf04", "tuf-fix", "tf04"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tf05",
+    name: "TUF-FIX Safety Shoes - High Ankle TF05",
+    brand: "TUF-FIX",
+    model: "TF05",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle tf05 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle tf05", "tuf-fix", "tf05"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tf06",
+    name: "TUF-FIX Safety Shoes - Low Ankle TF06",
+    brand: "TUF-FIX",
+    model: "TF06",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle tf06 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle tf06", "tuf-fix", "tf06"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tf11dd",
+    name: "TUF-FIX Safety Shoes - High Ankle TF11DD",
+    brand: "TUF-FIX",
+    model: "TF11DD",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle tf11dd listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle tf11dd", "tuf-fix", "tf11dd"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tf12dd",
+    name: "TUF-FIX Safety Shoes - Low Ankle TF12DD",
+    brand: "TUF-FIX",
+    model: "TF12DD",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle tf12dd listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle tf12dd", "tuf-fix", "tf12dd"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-eblmf12",
+    name: "TUF-FIX Safety Shoes - Low Ankle EBLMF12",
+    brand: "TUF-FIX",
+    model: "EBLMF12",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle eblmf12 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle eblmf12", "tuf-fix", "eblmf12"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-eblmf13",
+    name: "TUF-FIX Safety Shoes - Low Ankle EBLMF13",
+    brand: "TUF-FIX",
+    model: "EBLMF13",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle eblmf13 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle eblmf13", "tuf-fix", "eblmf13"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pup10",
+    name: "TUF-FIX Safety Shoes - High Ankle PUP10",
+    brand: "TUF-FIX",
+    model: "PUP10",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle pup10 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle pup10", "tuf-fix", "pup10"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pup11",
+    name: "TUF-FIX Safety Shoes - Low Ankle PUP11",
+    brand: "TUF-FIX",
+    model: "PUP11",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle pup11 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle pup11", "tuf-fix", "pup11"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-vtb70",
+    name: "TUF-FIX Safety Shoes - Low Ankle VTB70",
+    brand: "TUF-FIX",
+    model: "VTB70",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle vtb70 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle vtb70", "tuf-fix", "vtb70"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-jh003-l",
+    name: "TUF-FIX Safety Gum Boots JH003-L",
+    brand: "TUF-FIX",
+    model: "JH003-L",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety gum boots jh003-l listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety gum boots jh003-l", "tuf-fix", "jh003-l"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-jh004-s",
+    name: "TUF-FIX Safety Gum Boots JH004-S",
+    brand: "TUF-FIX",
+    model: "JH004-S",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety gum boots jh004-s listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety gum boots jh004-s", "tuf-fix", "jh004-s"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-xz90",
+    name: "TUF-FIX Safety Shoes - High Ankle XZ90",
+    brand: "TUF-FIX",
+    model: "XZ90",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle xz90 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle xz90", "tuf-fix", "xz90"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-kp3808",
+    name: "TUF-FIX Safety Shoes - Low Ankle KP3808",
+    brand: "TUF-FIX",
+    model: "KP3808",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle kp3808 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle kp3808", "tuf-fix", "kp3808"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-xz81",
+    name: "TUF-FIX Safety Shoes - High Ankle XZ81",
+    brand: "TUF-FIX",
+    model: "XZ81",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle xz81 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle xz81", "tuf-fix", "xz81"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-xz73",
+    name: "TUF-FIX Safety Shoes - High Ankle XZ73",
+    brand: "TUF-FIX",
+    model: "XZ73",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - high ankle xz73 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - high ankle xz73", "tuf-fix", "xz73"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-xz91",
+    name: "TUF-FIX Safety Shoes - Low Ankle XZ91",
+    brand: "TUF-FIX",
+    model: "XZ91",
+    category: "Safety Equipment",
+    subcategory: "Safety Footwear",
+    description: "TUF-FIX safety shoes - low ankle xz91 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["safety footwear", "safety equipment", "safety shoes - low ankle xz91", "tuf-fix", "xz91"],
+    source: source(5),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-whd005",
+    name: "TUF-FIX Safety Vest WHD005",
+    brand: "TUF-FIX",
+    model: "WHD005",
+    category: "Safety Equipment",
+    subcategory: "High Visibility Clothing",
+    description: "TUF-FIX safety vest whd005 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["high visibility clothing", "safety equipment", "safety vest whd005", "tuf-fix", "whd005"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-sv029",
+    name: "TUF-FIX Safety Vest SV029 Four Tapes",
+    brand: "TUF-FIX",
+    model: "SV029",
+    category: "Safety Equipment",
+    subcategory: "High Visibility Clothing",
+    description: "TUF-FIX safety vest sv029 four tapes listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["high visibility clothing", "safety equipment", "safety vest sv029 four tapes", "tuf-fix", "sv029"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-sv026",
+    name: "TUF-FIX Safety Vest SV026 Two Tapes",
+    brand: "TUF-FIX",
+    model: "SV026",
+    category: "Safety Equipment",
+    subcategory: "High Visibility Clothing",
+    description: "TUF-FIX safety vest sv026 two tapes listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["high visibility clothing", "safety equipment", "safety vest sv026 two tapes", "tuf-fix", "sv026"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-svg100",
+    name: "TUF-FIX Safety Vest SVG100",
+    brand: "TUF-FIX",
+    model: "SVG100",
+    category: "Safety Equipment",
+    subcategory: "High Visibility Clothing",
+    description: "TUF-FIX safety vest svg100 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["high visibility clothing", "safety equipment", "safety vest svg100", "tuf-fix", "svg100"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-sv001",
+    name: "TUF-FIX Safety Vest SV001",
+    brand: "TUF-FIX",
+    model: "SV001",
+    category: "Safety Equipment",
+    subcategory: "High Visibility Clothing",
+    description: "TUF-FIX safety vest sv001 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["high visibility clothing", "safety equipment", "safety vest sv001", "tuf-fix", "sv001"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-cab110",
+    name: "TUF-FIX Coverall CAB110",
+    brand: "TUF-FIX",
+    model: "CAB110",
+    category: "Safety Equipment",
+    subcategory: "Workwear",
+    description: "TUF-FIX coverall cab110 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["workwear", "safety equipment", "coverall cab110", "tuf-fix", "cab110"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-car190",
+    name: "TUF-FIX Coverall CAR190",
+    brand: "TUF-FIX",
+    model: "CAR190",
+    category: "Safety Equipment",
+    subcategory: "Workwear",
+    description: "TUF-FIX coverall car190 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["workwear", "safety equipment", "coverall car190", "tuf-fix", "car190"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pnsh190",
+    name: "TUF-FIX Pant Shirt PNSH190",
+    brand: "TUF-FIX",
+    model: "PNSH190",
+    category: "Safety Equipment",
+    subcategory: "Workwear",
+    description: "TUF-FIX pant shirt pnsh190 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["workwear", "safety equipment", "pant shirt pnsh190", "tuf-fix", "pnsh190"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-solar-warning-light",
+    name: "TUF-FIX Solar Warning Light",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Traffic Safety",
+    description: "TUF-FIX solar warning light listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["traffic safety", "safety equipment", "solar warning light", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-solar-traffic-cone-light",
+    name: "TUF-FIX Solar Traffic Cone Light",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Traffic Safety",
+    description: "TUF-FIX solar traffic cone light listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["traffic safety", "safety equipment", "solar traffic cone light", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-traffic-cone",
+    name: "TUF-FIX Traffic Cone",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Traffic Safety",
+    description: "TUF-FIX traffic cone listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["traffic safety", "safety equipment", "traffic cone", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-traffic-baton",
+    name: "TUF-FIX Traffic Baton",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Traffic Safety",
+    description: "TUF-FIX traffic baton listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["traffic safety", "safety equipment", "traffic baton", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-warning-tape",
+    name: "TUF-FIX Warning Tape",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Traffic Safety",
+    description: "TUF-FIX warning tape listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["traffic safety", "safety equipment", "warning tape", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-convex-mirror",
+    name: "TUF-FIX Convex Mirror",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Traffic Safety",
+    description: "TUF-FIX convex mirror listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["traffic safety", "safety equipment", "convex mirror", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-plastic-chain",
+    name: "TUF-FIX Plastic Chain",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Traffic Safety",
+    description: "TUF-FIX plastic chain listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["traffic safety", "safety equipment", "plastic chain", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tarpaulin-80-gsm",
+    name: "TUF-FIX Tarpaulin 80 GSM",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Tarpaulins",
+    description: "TUF-FIX tarpaulin 80 gsm listed in the TUF-FIX Product Catalogue 2025-26.",
+    specifications: [{"label": "Weight", "value": "80", "unit": "GSM"}],
+    image: [],
+    keywords: ["tarpaulins", "construction equipment", "tarpaulin 80 gsm", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tarpaulin-100-gsm",
+    name: "TUF-FIX Tarpaulin 100 GSM",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Tarpaulins",
+    description: "TUF-FIX tarpaulin 100 gsm listed in the TUF-FIX Product Catalogue 2025-26.",
+    specifications: [{"label": "Weight", "value": "100", "unit": "GSM"}],
+    image: [],
+    keywords: ["tarpaulins", "construction equipment", "tarpaulin 100 gsm", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-tarpaulin-200-gsm",
+    name: "TUF-FIX Tarpaulin 200 GSM",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Tarpaulins",
+    description: "TUF-FIX tarpaulin 200 gsm listed in the TUF-FIX Product Catalogue 2025-26.",
+    specifications: [{"label": "Weight", "value": "200", "unit": "GSM"}],
+    image: [],
+    keywords: ["tarpaulins", "construction equipment", "tarpaulin 200 gsm", "tuf-fix"],
+    source: source(6),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-hand-shovel",
+    name: "TUF-FIX Hand Shovel",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Shovels",
+    description: "TUF-FIX hand shovel listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["shovels", "hand tools", "hand shovel", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pick-axe",
+    name: "TUF-FIX Pick Axe",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Pick Axes",
+    description: "TUF-FIX pick axe listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["pick axes", "hand tools", "pick axe", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-hdpe-rope-4mm-14mm",
+    name: "TUF-FIX HDPE Rope 4mm-14mm",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Ropes",
+    description: "TUF-FIX hdpe rope 4mm-14mm listed in the TUF-FIX Product Catalogue 2025-26.",
+    specifications: [{"label": "Diameter range", "value": "4-14", "unit": "mm"}],
+    image: [],
+    keywords: ["ropes", "construction equipment", "hdpe rope 4mm-14mm", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pvc-hose-pipe",
+    name: "TUF-FIX PVC Hose Pipe",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Hoses",
+    description: "TUF-FIX pvc hose pipe listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["hoses", "construction equipment", "pvc hose pipe", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-wall-scraper",
+    name: "TUF-FIX Wall Scraper",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Scrapers",
+    description: "TUF-FIX wall scraper listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["scrapers", "hand tools", "wall scraper", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-notched-trowel",
+    name: "TUF-FIX Notched Trowel",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Trowels",
+    description: "TUF-FIX notched trowel listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["trowels", "hand tools", "notched trowel", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-wooden-handle-trowel",
+    name: "TUF-FIX Wooden Handle Trowel",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Trowels",
+    description: "TUF-FIX wooden handle trowel listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["trowels", "hand tools", "wooden handle trowel", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-plastic-hand-sander",
+    name: "TUF-FIX Plastic Hand Sander",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Sanding Tools",
+    description: "TUF-FIX plastic hand sander listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["sanding tools", "hand tools", "plastic hand sander", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-profile-channel",
+    name: "TUF-FIX Profile Channel",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Profiles & Channels",
+    description: "TUF-FIX profile channel listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["profiles & channels", "construction equipment", "profile channel", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-magnetic-nut-setter",
+    name: "TUF-FIX Magnetic Nut Setter",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Driver Bits",
+    description: "TUF-FIX magnetic nut setter listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["driver bits", "hand tools", "magnetic nut setter", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-trolley",
+    name: "TUF-FIX Trolley",
+    brand: "TUF-FIX",
+    category: "Material Handling",
+    subcategory: "Trolleys",
+    description: "TUF-FIX trolley listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["trolleys", "material handling", "trolley", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-hand-trolley",
+    name: "TUF-FIX Hand Trolley",
+    brand: "TUF-FIX",
+    category: "Material Handling",
+    subcategory: "Trolleys",
+    description: "TUF-FIX hand trolley listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["trolleys", "material handling", "hand trolley", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-wheel-barrow",
+    name: "TUF-FIX Wheel Barrow",
+    brand: "TUF-FIX",
+    category: "Material Handling",
+    subcategory: "Wheelbarrows",
+    description: "TUF-FIX wheel barrow listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["wheelbarrows", "material handling", "wheel barrow", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-cargo-belt",
+    name: "TUF-FIX Cargo Belt",
+    brand: "TUF-FIX",
+    category: "Material Handling",
+    subcategory: "Cargo & Lashing",
+    description: "TUF-FIX cargo belt listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["cargo & lashing", "material handling", "cargo belt", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pvc-bucket",
+    name: "TUF-FIX PVC Bucket",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Buckets",
+    description: "TUF-FIX pvc bucket listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["buckets", "construction equipment", "pvc bucket", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mushroom-cap",
+    name: "TUF-FIX Mushroom Cap",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Rebar Safety Caps",
+    description: "TUF-FIX mushroom cap listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["rebar safety caps", "construction equipment", "mushroom cap", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-water-bottle",
+    name: "TUF-FIX Water Bottle",
+    brand: "TUF-FIX",
+    category: "Construction Equipment",
+    subcategory: "Site Accessories",
+    description: "TUF-FIX water bottle listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["site accessories", "construction equipment", "water bottle", "tuf-fix"],
+    source: source(7),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-aluminium-oxide-flap-disc",
+    name: "TUF-FIX Aluminium Oxide Flap Disc",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Flap Discs",
+    description: "TUF-FIX aluminium oxide flap disc listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["flap discs", "abrasives", "aluminium oxide flap disc", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-zirconium-flap-disc",
+    name: "TUF-FIX Zirconium Flap Disc",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Flap Discs",
+    description: "TUF-FIX zirconium flap disc listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["flap discs", "abrasives", "zirconium flap disc", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-fiber-disc",
+    name: "TUF-FIX Fiber Disc",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Fibre Discs",
+    description: "TUF-FIX fiber disc listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["fibre discs", "abrasives", "fiber disc", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-velcro-disc",
+    name: "TUF-FIX Velcro Disc",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Hook & Loop Discs",
+    description: "TUF-FIX velcro disc listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["hook & loop discs", "abrasives", "velcro disc", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-electro-coated-paper",
+    name: "TUF-FIX Electro Coated Paper",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Abrasive Paper",
+    description: "TUF-FIX electro coated paper listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["abrasive paper", "abrasives", "electro coated paper", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-water-proof-paper",
+    name: "TUF-FIX Water Proof Paper",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Abrasive Paper",
+    description: "TUF-FIX water proof paper listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["abrasive paper", "abrasives", "water proof paper", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-steel-wire-brush",
+    name: "TUF-FIX Steel Wire Brush",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Wire Brushes",
+    description: "TUF-FIX steel wire brush listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["wire brushes", "abrasives", "steel wire brush", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-ceiling-brush",
+    name: "TUF-FIX Ceiling Brush",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Brushes",
+    description: "TUF-FIX ceiling brush listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["brushes", "abrasives", "ceiling brush", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-wire-cup-brush",
+    name: "TUF-FIX Wire Cup Brush",
+    brand: "TUF-FIX",
+    category: "Abrasives",
+    subcategory: "Wire Brushes",
+    description: "TUF-FIX wire cup brush listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["wire brushes", "abrasives", "wire cup brush", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pvc-glue",
+    name: "TUF-FIX PVC Glue",
+    brand: "TUF-FIX",
+    category: "Adhesives & Sealants",
+    subcategory: "PVC Cement",
+    description: "TUF-FIX pvc glue listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["pvc cement", "adhesives & sealants", "pvc glue", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mma200k-igbt",
+    name: "TUF-FIX Welding Machine MMA200K-IGBT",
+    brand: "TUF-FIX",
+    model: "MMA200K-IGBT",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine mma200k-igbt listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine mma200k-igbt", "tuf-fix", "mma200k-igbt"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mma-3005",
+    name: "TUF-FIX Welding Machine MMA-3005",
+    brand: "TUF-FIX",
+    model: "MMA-3005",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine mma-3005 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine mma-3005", "tuf-fix", "mma-3005"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mma-400",
+    name: "TUF-FIX Welding Machine MMA-400",
+    brand: "TUF-FIX",
+    model: "MMA-400",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine mma-400 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine mma-400", "tuf-fix", "mma-400"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mmt180",
+    name: "TUF-FIX Welding Machine MMT180",
+    brand: "TUF-FIX",
+    model: "MMT180",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine mmt180 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine mmt180", "tuf-fix", "mmt180"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mma200",
+    name: "TUF-FIX Welding Machine MMA200",
+    brand: "TUF-FIX",
+    model: "MMA200",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine mma200 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine mma200", "tuf-fix", "mma200"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mma240",
+    name: "TUF-FIX Welding Machine MMA240",
+    brand: "TUF-FIX",
+    model: "MMA240",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine mma240 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine mma240", "tuf-fix", "mma240"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-win250",
+    name: "TUF-FIX Welding Machine WIN250",
+    brand: "TUF-FIX",
+    model: "WIN250",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine win250 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine win250", "tuf-fix", "win250"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-welmig2701",
+    name: "TUF-FIX Welding Machine WELMIG2701",
+    brand: "TUF-FIX",
+    model: "WELMIG2701",
+    category: "Power Tools",
+    subcategory: "Welding Machines",
+    description: "TUF-FIX welding machine welmig2701 listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding machines", "power tools", "welding machine welmig2701", "tuf-fix", "welmig2701"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-electrodes-holder",
+    name: "TUF-FIX Electrodes Holder",
+    brand: "TUF-FIX",
+    category: "Power Tools",
+    subcategory: "Welding Accessories",
+    description: "TUF-FIX electrodes holder listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding accessories", "power tools", "electrodes holder", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-welding-shields",
+    name: "TUF-FIX Welding Shields",
+    brand: "TUF-FIX",
+    category: "Safety Equipment",
+    subcategory: "Welding Protection",
+    description: "TUF-FIX welding shields listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["welding protection", "safety equipment", "welding shields", "tuf-fix"],
+    source: source(8),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-polyurethane-foam",
+    name: "TUF-FIX Polyurethane Foam",
+    brand: "TUF-FIX",
+    category: "Adhesives & Sealants",
+    subcategory: "PU Foam",
+    description: "TUF-FIX polyurethane foam listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["pu foam", "adhesives & sealants", "polyurethane foam", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-pu-foam-fire-rated",
+    name: "TUF-FIX PU Foam Fire Rated",
+    brand: "TUF-FIX",
+    category: "Adhesives & Sealants",
+    subcategory: "PU Foam",
+    description: "TUF-FIX pu foam fire rated listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["pu foam", "adhesives & sealants", "pu foam fire rated", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-silicon-sealants",
+    name: "TUF-FIX Silicon Sealants",
+    brand: "TUF-FIX",
+    category: "Adhesives & Sealants",
+    subcategory: "Sealants",
+    description: "TUF-FIX silicon sealants listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["sealants", "adhesives & sealants", "silicon sealants", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-caulking-gun",
+    name: "TUF-FIX Caulking Gun",
+    brand: "TUF-FIX",
+    category: "Hand Tools",
+    subcategory: "Caulking Guns",
+    description: "TUF-FIX caulking gun listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["caulking guns", "hand tools", "caulking gun", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-cabinet-hinges",
+    name: "TUF-FIX Cabinet Hinges",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Cabinet Hardware",
+    description: "TUF-FIX cabinet hinges listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["cabinet hardware", "hardware & security", "cabinet hinges", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-cabinet-hinges-hydraulic",
+    name: "TUF-FIX Cabinet Hinges - Hydraulic",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Cabinet Hardware",
+    description: "TUF-FIX cabinet hinges - hydraulic listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["cabinet hardware", "hardware & security", "cabinet hinges - hydraulic", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-door-closers",
+    name: "TUF-FIX Door Closers",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Door Closers",
+    description: "TUF-FIX door closers listed in the TUF-FIX Product Catalogue 2025-26.",
+    variants: [{"name": "80 kg"}, {"name": "60 kg"}, {"name": "45 kg"}],
+    image: [],
+    keywords: ["door closers", "hardware & security", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-sliding-channel-soft",
+    name: "TUF-FIX Sliding Channel - Soft",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Drawer Slides",
+    description: "TUF-FIX sliding channel - soft listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["drawer slides", "hardware & security", "sliding channel - soft", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-sliding-channel-push",
+    name: "TUF-FIX Sliding Channel - Push",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Drawer Slides",
+    description: "TUF-FIX sliding channel - push listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["drawer slides", "hardware & security", "sliding channel - push", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-sliding-channel",
+    name: "TUF-FIX Sliding Channel",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Drawer Slides",
+    description: "TUF-FIX sliding channel listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["drawer slides", "hardware & security", "sliding channel", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-mortise-locks",
+    name: "TUF-FIX Mortise Locks",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Locks",
+    description: "TUF-FIX mortise locks listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["locks", "hardware & security", "mortise locks", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-lock-body-with-cylinder",
+    name: "TUF-FIX Lock Body with Cylinder",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Locks",
+    description: "TUF-FIX lock body with cylinder listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["locks", "hardware & security", "lock body with cylinder", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-knobsets",
+    name: "TUF-FIX Knobsets",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Door Hardware",
+    description: "TUF-FIX knobsets listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["door hardware", "hardware & security", "knobsets", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-key-and-turn-cylinders",
+    name: "TUF-FIX Key & Turn Cylinders",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Lock Cylinders",
+    description: "TUF-FIX key & turn cylinders listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["lock cylinders", "hardware & security", "key & turn cylinders", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
+  {
+    id: "tuffix-traditional-cylinders",
+    name: "TUF-FIX Traditional Cylinders",
+    brand: "TUF-FIX",
+    category: "Hardware & Security",
+    subcategory: "Lock Cylinders",
+    description: "TUF-FIX traditional cylinders listed in the TUF-FIX Product Catalogue 2025-26.",
+    image: [],
+    keywords: ["lock cylinders", "hardware & security", "traditional cylinders", "tuf-fix"],
+    source: source(9),
+    dataQuality: "catalogue"
+  },
 ];

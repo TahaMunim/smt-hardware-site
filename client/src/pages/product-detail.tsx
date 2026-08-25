@@ -4,13 +4,18 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useRoute } from "wouter";
 import {
   ArrowLeft,
+  Check,
   ChevronLeft,
   ChevronRight,
-  Package
+  ClipboardList,
+  Minus,
+  Package,
+  Plus
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 import { Button } from "@/components/ui/button";
+import { useQuote } from "@/context/QuoteContext";
 import { products } from "@/data/products";
 
 export default function ProductDetail() {
@@ -22,6 +27,19 @@ export default function ProductDetail() {
 
   const images =
     product?.image?.filter((image) => Boolean(image)) ?? [];
+
+  const {
+    getQuantity,
+    setQuantity
+  } = useQuote();
+
+  const existingQuoteQuantity =
+    product
+      ? getQuantity(product.id)
+      : 0;
+
+  const [quoteQuantity, setQuoteQuantity] =
+    useState(1);
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -62,6 +80,14 @@ export default function ProductDetail() {
       clearSlideshow();
     };
   }, [product?.id, images.length]);
+
+  useEffect(() => {
+    setQuoteQuantity(
+      existingQuoteQuantity > 0
+        ? existingQuoteQuantity
+        : 1
+    );
+  }, [product?.id, existingQuoteQuantity]);
 
   const resetSlideshow = () => {
     if (images.length > 1) {
@@ -387,22 +413,118 @@ export default function ProductDetail() {
               </p>
             </div>
 
-            {/* Inquiry Buttons */}
-            <div className="space-y-4 pt-2">
+            {/* Quote List */}
+            <div className="border-t border-neutral-800 pt-6">
+              <div className="mb-4 flex items-center justify-between gap-4">
+                <div>
+                  <h2 className="text-xl font-semibold text-white">
+                    Add to Quote List
+                  </h2>
+
+                  <p className="mt-1 text-sm text-neutral-500">
+                    Set the required quantity now. You can change it again before sending the final RFQ.
+                  </p>
+                </div>
+
+                {existingQuoteQuantity > 0 && (
+                  <div className="hidden items-center gap-1.5 rounded-md border border-yellow-500/40 bg-yellow-500/10 px-3 py-2 text-xs font-semibold text-yellow-500 sm:flex">
+                    <Check className="h-4 w-4" />
+                    In Quote
+                  </div>
+                )}
+              </div>
+
+              <div className="grid gap-3 sm:grid-cols-[150px_1fr]">
+                <div className="flex h-12 items-center overflow-hidden rounded-md border border-neutral-700 bg-neutral-950">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setQuoteQuantity((current) =>
+                        Math.max(1, current - 1)
+                      )
+                    }
+                    aria-label="Decrease quantity"
+                    className="flex h-full w-12 items-center justify-center text-neutral-400 transition-colors hover:bg-neutral-900 hover:text-yellow-500"
+                  >
+                    <Minus className="h-4 w-4" />
+                  </button>
+
+                  <input
+                    type="number"
+                    min={1}
+                    max={9999}
+                    value={quoteQuantity}
+                    onChange={(event) => {
+                      const next = Number(event.target.value);
+
+                      if (Number.isFinite(next) && next >= 1) {
+                        setQuoteQuantity(
+                          Math.min(9999, Math.floor(next))
+                        );
+                      }
+                    }}
+                    aria-label="Quote quantity"
+                    className="h-full min-w-0 flex-1 border-x border-neutral-800 bg-neutral-950 text-center font-bold text-white outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                  />
+
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setQuoteQuantity((current) =>
+                        Math.min(9999, current + 1)
+                      )
+                    }
+                    aria-label="Increase quantity"
+                    className="flex h-full w-12 items-center justify-center text-neutral-400 transition-colors hover:bg-neutral-900 hover:text-yellow-500"
+                  >
+                    <Plus className="h-4 w-4" />
+                  </button>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    setQuantity(
+                      product.id,
+                      quoteQuantity
+                    )
+                  }
+                  className="flex h-12 w-full items-center justify-center gap-2 rounded-md bg-yellow-500 px-6 text-sm font-bold text-black transition-colors hover:bg-yellow-400"
+                  data-testid="button-add-to-quote-detail"
+                >
+                  <ClipboardList className="h-5 w-5" />
+                  {existingQuoteQuantity > 0
+                    ? "Update Quote List"
+                    : "Add to Quote List"}
+                </button>
+              </div>
+
+              {existingQuoteQuantity > 0 && (
+                <Link
+                  href="/quote"
+                  className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-yellow-500 transition-colors hover:text-yellow-400"
+                >
+                  View Quote List ({existingQuoteQuantity} of this product)
+                </Link>
+              )}
+            </div>
+
+            {/* Direct Inquiry Buttons */}
+            <div className="space-y-3 pt-2">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex w-full items-center justify-center gap-2 rounded-md bg-yellow-500 px-6 py-4 text-lg font-semibold text-black transition-colors hover:bg-yellow-400"
+                className="flex w-full items-center justify-center gap-2 rounded-md border border-neutral-700 bg-neutral-950 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:border-yellow-500 hover:text-yellow-500"
                 data-testid="button-whatsapp-inquiry-detail"
               >
-                <FaWhatsapp className="h-6 w-6" />
-                WhatsApp Inquiry
+                <FaWhatsapp className="h-5 w-5" />
+                Ask About This Product
               </a>
 
               <Button
                 variant="outline"
-                className="w-full border-2 border-neutral-700 py-6 text-lg text-neutral-300 hover:border-yellow-500 hover:text-black"
+                className="w-full border-neutral-700 py-6 text-sm text-neutral-300 hover:border-yellow-500 hover:text-black"
                 asChild
               >
                 <a
