@@ -9,8 +9,8 @@ import {
   MessageSquareText,
   PackageSearch,
   Phone,
-  Search,
-  Truck
+  Truck,
+  Wrench
 } from "lucide-react";
 
 const WHATSAPP_NUMBER = "971503821352";
@@ -109,7 +109,7 @@ const buyerTypes = [
       "Project tools, consumables, safety products and construction supply requirements."
   },
   {
-    icon: Search,
+    icon: Wrench,
     title: "Workshops & Fabricators",
     description:
       "Tools, abrasives, welding products, accessories and workshop consumables."
@@ -130,7 +130,7 @@ const buyerTypes = [
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen overflow-x-clip bg-black">
 
       {/* =================================================
           HERO
@@ -164,7 +164,7 @@ export default function Services() {
             mx-auto
             max-w-7xl
             px-4
-            py-14
+            py-12
             sm:px-6
             sm:py-16
             lg:py-20
@@ -186,12 +186,13 @@ export default function Services() {
             <h1
               className="
                 mt-3
-                text-4xl
+                text-[34px]
                 font-black
-                leading-tight
+                leading-[1.08]
                 tracking-tight
                 text-white
                 sm:text-5xl
+                sm:leading-tight
                 lg:text-6xl
               "
             >
@@ -204,7 +205,7 @@ export default function Services() {
 
             <p
               className="
-                mt-5
+                mt-4
                 max-w-2xl
                 text-base
                 leading-7
@@ -219,7 +220,7 @@ export default function Services() {
 
             <div
               className="
-                mt-7
+                mt-6
                 flex
                 flex-col
                 gap-3
@@ -286,7 +287,8 @@ export default function Services() {
           border-b
           border-neutral-800
           bg-black
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
         data-testid="services-list-section"
@@ -299,7 +301,7 @@ export default function Services() {
             sm:px-6
           "
         >
-          <div className="mb-10 max-w-2xl">
+          <div className="mb-8 max-w-2xl sm:mb-10">
             <p
               className="
                 text-xs
@@ -358,12 +360,13 @@ export default function Services() {
                     border
                     border-neutral-800
                     bg-neutral-950
-                    p-6
+                    p-5
                     transition-all
                     duration-300
                     hover:-translate-y-0.5
                     hover:border-yellow-500/50
                     hover:bg-neutral-900
+                    sm:p-6
                     md:p-7
                   "
                   data-testid={`service-card-${index}`}
@@ -449,7 +452,8 @@ export default function Services() {
           border-b
           border-neutral-800
           bg-neutral-950
-          py-12
+          py-10
+          sm:py-12
           md:py-14
         "
       >
@@ -470,7 +474,7 @@ export default function Services() {
               border
               border-neutral-800
               bg-black
-              p-6
+              p-5
               sm:p-8
               lg:flex-row
               lg:items-center
@@ -487,19 +491,20 @@ export default function Services() {
             >
               <div
                 className="
-                  hidden
-                  h-12
-                  w-12
+                  flex
+                  h-10
+                  w-10
                   flex-shrink-0
                   items-center
                   justify-center
                   rounded-md
                   bg-yellow-500
                   text-black
-                  sm:flex
+                  sm:h-12
+                  sm:w-12
                 "
               >
-                <PackageSearch className="h-6 w-6" />
+                <PackageSearch className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
 
               <div>
@@ -566,7 +571,8 @@ export default function Services() {
           border-b
           border-neutral-800
           bg-black
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
         data-testid="process-section"
@@ -579,7 +585,7 @@ export default function Services() {
             sm:px-6
           "
         >
-          <div className="mb-12 text-center">
+          <div className="mb-8 text-center sm:mb-12">
             <p
               className="
                 text-xs
@@ -636,12 +642,13 @@ export default function Services() {
                   border
                   border-neutral-800
                   bg-neutral-950
-                  p-6
+                  p-5
+                  sm:p-6
                 "
                 data-testid={`process-step-${index}`}
               >
 
-                
+
                 <div
                   className="
                     relative
@@ -663,7 +670,7 @@ export default function Services() {
                 <h3
                   className="
                     relative
-                    mt-5
+                    mt-4
                     text-lg
                     font-semibold
                     text-white
@@ -699,7 +706,8 @@ export default function Services() {
           border-b
           border-neutral-800
           bg-neutral-950
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
       >
@@ -714,8 +722,9 @@ export default function Services() {
           <div
             className="
               grid
-              gap-10
+              gap-8
               lg:grid-cols-[0.75fr_1.25fr]
+              lg:gap-10
               lg:items-start
             "
           >
@@ -777,7 +786,8 @@ export default function Services() {
                       border
                       border-neutral-800
                       bg-black
-                      p-5
+                      p-4
+                      sm:p-5
                     "
                   >
                     <Icon className="h-6 w-6 text-yellow-500" />
@@ -842,10 +852,11 @@ export default function Services() {
             flex
             max-w-7xl
             flex-col
-            gap-7
+            gap-6
             px-4
-            py-12
+            py-10
             sm:px-6
+            sm:py-12
             lg:flex-row
             lg:items-center
             lg:justify-between

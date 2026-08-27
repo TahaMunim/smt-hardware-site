@@ -93,7 +93,7 @@ const categories = [
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen overflow-x-clip bg-black">
 
       {/* =================================================
           HERO
@@ -139,7 +139,7 @@ export default function About() {
             gap-12
 
             px-4
-            py-14
+            py-12
 
             sm:px-6
             sm:py-16
@@ -170,13 +170,14 @@ export default function About() {
 
                 max-w-3xl
 
-                text-4xl
+                text-[34px]
                 font-black
-                leading-tight
+                leading-[1.08]
                 tracking-tight
                 text-white
 
                 sm:text-5xl
+                sm:leading-tight
                 lg:text-6xl
               "
             >
@@ -189,7 +190,7 @@ export default function About() {
 
             <p
               className="
-                mt-6
+                mt-5
                 max-w-2xl
 
                 text-base
@@ -223,7 +224,7 @@ export default function About() {
 
             <div
               className="
-                mt-7
+                mt-6
                 flex
                 flex-col
                 gap-3
@@ -305,7 +306,7 @@ export default function About() {
 
               bg-black
 
-              p-6
+              p-5
 
               shadow-2xl
               shadow-black/30
@@ -513,7 +514,8 @@ export default function About() {
 
           bg-black
 
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
       >
@@ -523,7 +525,8 @@ export default function About() {
             grid
             max-w-7xl
 
-            gap-12
+            gap-8
+            lg:gap-12
 
             px-4
             sm:px-6
@@ -603,7 +606,8 @@ export default function About() {
 
           bg-neutral-950
 
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
       >
@@ -618,8 +622,9 @@ export default function About() {
         >
           <div
             className="
-              mb-10
+              mb-8
               max-w-2xl
+              sm:mb-10
             "
           >
             <p
@@ -676,7 +681,8 @@ export default function About() {
 
                     bg-black
 
-                    p-6
+                    p-5
+                    sm:p-6
 
                     transition-all
                     duration-300
@@ -748,7 +754,8 @@ export default function About() {
 
           bg-black
 
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
       >
@@ -758,7 +765,8 @@ export default function About() {
             grid
             max-w-7xl
 
-            gap-10
+            gap-8
+            lg:gap-10
 
             px-4
             sm:px-6
@@ -896,7 +904,8 @@ export default function About() {
 
           bg-neutral-950
 
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
       >
@@ -911,8 +920,9 @@ export default function About() {
         >
           <div
             className="
-              mb-10
+              mb-8
               text-center
+              sm:mb-10
             "
           >
             <p
@@ -967,7 +977,8 @@ export default function About() {
 
                       bg-black
 
-                      p-6
+                      p-5
+                      sm:p-6
                     "
                   >
                     <Icon className="h-7 w-7 text-yellow-500" />
@@ -1012,7 +1023,8 @@ export default function About() {
 
           bg-black
 
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
       >
@@ -1049,7 +1061,7 @@ export default function About() {
 
           <h2
             className="
-              mt-6
+              mt-5
 
               text-3xl
               font-bold
@@ -1065,7 +1077,7 @@ export default function About() {
           <p
             className="
               mx-auto
-              mt-5
+              mt-4
               max-w-3xl
 
               text-base
@@ -1120,12 +1132,13 @@ export default function About() {
             max-w-7xl
 
             flex-col
-            gap-7
+            gap-6
 
             px-4
-            py-12
+            py-10
 
             sm:px-6
+            sm:py-12
 
             lg:flex-row
             lg:items-center

@@ -7,8 +7,7 @@ import {
   Mail,
   MapPin,
   MessageSquareText,
-  Phone,
-  Send
+  Phone
 } from "lucide-react";
 
 import { FaWhatsapp } from "react-icons/fa";
@@ -150,7 +149,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen overflow-x-clip bg-black">
 
       {/* =================================================
           HERO
@@ -192,7 +191,7 @@ export default function Contact() {
             max-w-7xl
 
             px-4
-            py-14
+            py-12
 
             sm:px-6
             sm:py-16
@@ -217,13 +216,14 @@ export default function Contact() {
               className="
                 mt-3
 
-                text-4xl
+                text-[34px]
                 font-black
-                leading-tight
+                leading-[1.08]
                 tracking-tight
                 text-white
 
                 sm:text-5xl
+                sm:leading-tight
                 lg:text-6xl
               "
             >
@@ -254,7 +254,7 @@ export default function Contact() {
 
             <div
               className="
-                mt-7
+                mt-6
                 flex
                 flex-col
                 gap-3
@@ -390,7 +390,8 @@ export default function Contact() {
 
                     bg-neutral-950
 
-                    p-5
+                    p-4
+                    sm:p-5
 
                     transition-all
                     duration-300
@@ -449,7 +450,7 @@ export default function Contact() {
 
                   <p
                     className="
-                      mt-5
+                      mt-4
 
                       text-xs
                       font-bold
@@ -503,7 +504,8 @@ export default function Contact() {
 
           bg-neutral-950
 
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
         data-testid="contact-info-section"
@@ -514,7 +516,8 @@ export default function Contact() {
             grid
             max-w-7xl
 
-            gap-10
+            gap-8
+            lg:gap-10
 
             px-4
             sm:px-6
@@ -571,7 +574,8 @@ export default function Contact() {
 
             <div
               className="
-                mt-8
+                mt-6
+                sm:mt-8
 
                 rounded-lg
 
@@ -640,16 +644,16 @@ export default function Contact() {
 
               bg-black
 
-              p-5
+              p-4
+              sm:p-7
 
               shadow-xl
               shadow-black/20
 
-              sm:p-7
               lg:p-8
             "
           >
-            <div className="mb-7">
+            <div className="mb-6 sm:mb-7">
               <h2
                 className="
                   text-2xl
@@ -707,6 +711,7 @@ export default function Contact() {
                         <FormControl>
                           <Input
                             placeholder="Your name"
+                            autoComplete="name"
                             className="
                               h-11
 
@@ -714,9 +719,12 @@ export default function Contact() {
 
                               bg-neutral-950
 
+                              text-base
                               text-white
 
                               placeholder:text-neutral-600
+
+                              sm:text-sm
 
                               focus-visible:ring-yellow-500
                             "
@@ -746,6 +754,8 @@ export default function Contact() {
                         <FormControl>
                           <Input
                             type="tel"
+                            inputMode="tel"
+                            autoComplete="tel"
                             placeholder="+971 50 123 4567"
                             className="
                               h-11
@@ -754,9 +764,12 @@ export default function Contact() {
 
                               bg-neutral-950
 
+                              text-base
                               text-white
 
                               placeholder:text-neutral-600
+
+                              sm:text-sm
 
                               focus-visible:ring-yellow-500
                             "
@@ -795,6 +808,7 @@ export default function Contact() {
                         <FormControl>
                           <Input
                             type="email"
+                            autoComplete="email"
                             placeholder="your@email.com"
                             className="
                               h-11
@@ -803,9 +817,12 @@ export default function Contact() {
 
                               bg-neutral-950
 
+                              text-base
                               text-white
 
                               placeholder:text-neutral-600
+
+                              sm:text-sm
 
                               focus-visible:ring-yellow-500
                             "
@@ -842,9 +859,12 @@ export default function Contact() {
 
                               bg-neutral-950
 
+                              text-base
                               text-white
 
                               placeholder:text-neutral-600
+
+                              sm:text-sm
 
                               focus-visible:ring-yellow-500
                             "
@@ -875,7 +895,7 @@ export default function Contact() {
                       <FormControl>
                         <Textarea
                           placeholder="Tell us what you need — products, models, quantities, brands, specifications, etc."
-                          rows={6}
+                          rows={5}
                           className="
                             resize-none
 
@@ -883,11 +903,14 @@ export default function Contact() {
 
                             bg-neutral-950
 
+                            text-base
                             text-white
 
                             placeholder:text-neutral-600
 
                             focus-visible:ring-yellow-500
+
+                            sm:text-sm
                           "
                           data-testid="textarea-contact-message"
                           {...field}
@@ -961,7 +984,8 @@ export default function Contact() {
 
           bg-black
 
-          py-16
+          py-12
+          sm:py-16
           md:py-20
         "
         data-testid="maps-section"
@@ -1070,7 +1094,7 @@ export default function Contact() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.1992443301974!2d55.626973576211384!3d25.331094326262775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f59553b5c87a9%3A0xbd9b77d912131ab7!2sSaleh%20Mohsin%20Trdg%20LLC!5e0!3m2!1sen!2sae!4v1763149764499!5m2!1sen!2sae"
               width="100%"
-              height="450"
+              className="h-[320px] w-full sm:h-[400px] lg:h-[450px]"
               style={{
                 border: 0
               }}
@@ -1120,12 +1144,13 @@ export default function Contact() {
             max-w-7xl
 
             flex-col
-            gap-7
+            gap-6
 
             px-4
-            py-12
+            py-10
 
             sm:px-6
+            sm:py-12
 
             lg:flex-row
             lg:items-center

@@ -1,9 +1,17 @@
-import { useEffect } from "react";
-import { useLocation } from "wouter";
+import {
+  useEffect
+} from "react";
 
-import { products } from "@/data/products";
+import {
+  useLocation
+} from "wouter";
 
-const SITE_URL = "https://www.salehmohsin.com";
+import {
+  products
+} from "@/data/products";
+
+const SITE_URL =
+  "https://www.salehmohsin.com";
 
 const DEFAULT_IMAGE =
   `${SITE_URL}/SMTLogo.png`;
@@ -14,6 +22,12 @@ const DEFAULT_TITLE =
 const DEFAULT_DESCRIPTION =
   "Saleh Mohsin Trading LLC supplies professional tools, construction supplies, safety equipment, industrial products and trade consumables to businesses across the UAE.";
 
+const ORGANIZATION_SCHEMA_ID =
+  "smt-organization-schema";
+
+const PRODUCT_SCHEMA_ID =
+  "smt-product-schema";
+
 interface SEOData {
   title: string;
   description: string;
@@ -22,6 +36,10 @@ interface SEOData {
   type?: "website" | "product";
   noIndex?: boolean;
 }
+
+/* =========================================================
+   META HELPERS
+========================================================= */
 
 function setMetaByName(
   name: string,
@@ -34,7 +52,9 @@ function setMetaByName(
 
   if (!element) {
     element =
-      document.createElement("meta");
+      document.createElement(
+        "meta"
+      );
 
     element.setAttribute(
       "name",
@@ -63,7 +83,9 @@ function setMetaByProperty(
 
   if (!element) {
     element =
-      document.createElement("meta");
+      document.createElement(
+        "meta"
+      );
 
     element.setAttribute(
       "property",
@@ -91,7 +113,9 @@ function setCanonical(
 
   if (!element) {
     element =
-      document.createElement("link");
+      document.createElement(
+        "link"
+      );
 
     element.setAttribute(
       "rel",
@@ -108,6 +132,10 @@ function setCanonical(
     href
   );
 }
+
+/* =========================================================
+   URL / TEXT HELPERS
+========================================================= */
 
 function makeAbsoluteUrl(
   path?: string
@@ -127,7 +155,9 @@ function makeAbsoluteUrl(
     return path;
   }
 
-  if (path.startsWith("/")) {
+  if (
+    path.startsWith("/")
+  ) {
     return `${SITE_URL}${path}`;
   }
 
@@ -140,7 +170,10 @@ function cleanDescription(
 ) {
   const cleaned =
     text
-      .replace(/\s+/g, " ")
+      .replace(
+        /\s+/g,
+        " "
+      )
       .trim();
 
   if (
@@ -150,18 +183,73 @@ function cleanDescription(
     return cleaned;
   }
 
-  return `${cleaned
-    .slice(
-      0,
-      maxLength - 3
-    )
-    .trim()}...`;
+  const shortened =
+    cleaned
+      .slice(
+        0,
+        maxLength - 3
+      )
+      .trim();
+
+  const lastSpace =
+    shortened.lastIndexOf(
+      " "
+    );
+
+  const safeText =
+    lastSpace > 100
+      ? shortened.slice(
+          0,
+          lastSpace
+        )
+      : shortened;
+
+  return `${safeText}...`;
 }
 
-function removeProductSchema() {
+/* =========================================================
+   JSON-LD HELPERS
+========================================================= */
+
+function setJsonLd(
+  id: string,
+  schema: Record<
+    string,
+    unknown
+  >
+) {
+  let script =
+    document.getElementById(
+      id
+    ) as HTMLScriptElement | null;
+
+  if (!script) {
+    script =
+      document.createElement(
+        "script"
+      );
+
+    script.id = id;
+    script.type =
+      "application/ld+json";
+
+    document.head.appendChild(
+      script
+    );
+  }
+
+  script.textContent =
+    JSON.stringify(
+      schema
+    );
+}
+
+function removeJsonLd(
+  id: string
+) {
   const existing =
     document.getElementById(
-      "smt-product-schema"
+      id
     );
 
   if (existing) {
@@ -169,15 +257,91 @@ function removeProductSchema() {
   }
 }
 
+/* =========================================================
+   ORGANIZATION STRUCTURED DATA
+
+   Kept deliberately factual:
+   no opening hours, ratings, pricing or other information
+   that is not explicitly maintained by SMT.
+========================================================= */
+
+function addOrganizationSchema() {
+  setJsonLd(
+    ORGANIZATION_SCHEMA_ID,
+    {
+      "@context":
+        "https://schema.org",
+
+      "@type":
+        "Organization",
+
+      name:
+        "Saleh Mohsin Trading LLC",
+
+      url:
+        SITE_URL,
+
+      logo:
+        DEFAULT_IMAGE,
+
+      telephone:
+        "+971503821352",
+
+      email:
+        "sales@salehmohsin.com",
+
+      address: {
+        "@type":
+          "PostalAddress",
+
+        streetAddress:
+          "Old Tasheel Street",
+
+        addressLocality:
+          "Al Sajaa",
+
+        addressRegion:
+          "Sharjah",
+
+        addressCountry:
+          "AE"
+      },
+
+      sameAs: [
+        "https://www.instagram.com/smtr.ae"
+      ]
+    }
+  );
+}
+
+/* =========================================================
+   PRODUCT STRUCTURED DATA
+
+   We intentionally do NOT invent:
+   - price
+   - availability
+   - ratings
+   - reviews
+
+   Those should only be added if SMT later maintains
+   reliable product-level commercial data.
+========================================================= */
+
 function addProductSchema(
   productId: string
 ) {
-  removeProductSchema();
+  removeJsonLd(
+    PRODUCT_SCHEMA_ID
+  );
 
   const product =
     products.find(
-      (item) =>
-        String(item.id) ===
+      (
+        item
+      ) =>
+        String(
+          item.id
+        ) ===
         productId
     );
 
@@ -189,6 +353,11 @@ function addProductSchema(
     product.image?.filter(
       Boolean
     ) ?? [];
+
+  const productUrl =
+    `${SITE_URL}/product/${encodeURIComponent(
+      productId
+    )}`;
 
   const schema: Record<
     string,
@@ -206,14 +375,22 @@ function addProductSchema(
     description:
       product.description,
 
-    brand: {
+    url:
+      productUrl,
+
+    category:
+      product.category
+  };
+
+  if (product.brand) {
+    schema.brand = {
       "@type":
         "Brand",
 
       name:
         product.brand
-    }
-  };
+    };
+  }
 
   if (product.model) {
     schema.model =
@@ -231,7 +408,9 @@ function addProductSchema(
   ) {
     schema.image =
       validImages.map(
-        (image) =>
+        (
+          image
+        ) =>
           makeAbsoluteUrl(
             image
           )
@@ -239,40 +418,49 @@ function addProductSchema(
   }
 
   if (
-    product.category
+    product.specifications &&
+    product.specifications
+      .length > 0
   ) {
-    schema.category =
-      product.category;
+    schema.additionalProperty =
+      product.specifications.map(
+        (
+          specification
+        ) => ({
+          "@type":
+            "PropertyValue",
+
+          name:
+            specification.label,
+
+          value:
+            specification.unit
+              ? `${specification.value} ${specification.unit}`
+              : specification.value
+        })
+      );
   }
 
-  const script =
-    document.createElement(
-      "script"
-    );
-
-  script.id =
-    "smt-product-schema";
-
-  script.type =
-    "application/ld+json";
-
-  script.textContent =
-    JSON.stringify(
-      schema
-    );
-
-  document.head.appendChild(
-    script
+  setJsonLd(
+    PRODUCT_SCHEMA_ID,
+    schema
   );
 }
 
+/* =========================================================
+   PAGE SEO DATA
+========================================================= */
+
 function getSEOData(
-  pathname: string
+  pathname: string,
+  search: string
 ): SEOData {
   /*
     HOME
   */
-  if (pathname === "/") {
+  if (
+    pathname === "/"
+  ) {
     return {
       title:
         DEFAULT_TITLE,
@@ -292,12 +480,30 @@ function getSEOData(
   }
 
   /*
-    PRODUCTS
+    PRODUCTS / CATALOGUE
+
+    Query-driven catalogue states such as:
+
+    /products?brand=STANLEY
+    /products?category=Power%20Tools
+    /products?search=drill
+    /products?page=3
+    /products?sort=name-asc
+
+    are useful for visitors but are not independent
+    SEO landing pages.
+
+    They canonicalize to /products AND use noindex
+    so search engines do not build an index full of
+    near-duplicate filter combinations.
   */
   if (
     pathname ===
     "/products"
   ) {
+    const hasCatalogueState =
+      search.length > 0;
+
     return {
       title:
         "Industrial Tools & Supplies Catalogue | Saleh Mohsin Trading LLC",
@@ -312,7 +518,10 @@ function getSEOData(
         DEFAULT_IMAGE,
 
       type:
-        "website"
+        "website",
+
+      noIndex:
+        hasCatalogueState
     };
   }
 
@@ -394,9 +603,8 @@ function getSEOData(
   /*
     QUOTE LIST
 
-    This page contains visitor-specific
-    local quote data, so it should not
-    be indexed by search engines.
+    Visitor-specific local quote data should
+    never become an indexed search result.
   */
   if (
     pathname ===
@@ -425,9 +633,6 @@ function getSEOData(
 
   /*
     PRODUCT DETAIL
-
-    Example:
-    /product/tuffix-hm007
   */
   if (
     pathname.startsWith(
@@ -455,10 +660,13 @@ function getSEOData(
 
     const product =
       products.find(
-        (item) =>
+        (
+          item
+        ) =>
           String(
             item.id
-          ) === productId
+          ) ===
+          productId
       );
 
     if (product) {
@@ -495,8 +703,7 @@ function getSEOData(
     }
 
     /*
-      Invalid / removed
-      product ID.
+      Invalid / removed product ID.
     */
     return {
       title:
@@ -520,7 +727,7 @@ function getSEOData(
   }
 
   /*
-    UNKNOWN ROUTE / 404
+    UNKNOWN ROUTE / CLIENT-SIDE 404
   */
   return {
     title:
@@ -543,73 +750,81 @@ function getSEOData(
   };
 }
 
+/* =========================================================
+   COMPONENT
+========================================================= */
+
 export default function SEO() {
   /*
-    useLocation makes this
-    component rerun whenever
-    the SPA route changes.
+    Wouter's location value changes with SPA navigation,
+    including catalogue query-state navigation, so the
+    effect is rerun as visitors move around the site.
   */
-  const [location] =
-    useLocation();
+  const [
+    location
+  ] = useLocation();
 
   useEffect(() => {
     const pathname =
       window.location.pathname;
 
+    const search =
+      window.location.search;
+
     const data =
       getSEOData(
-        pathname
+        pathname,
+        search
       );
 
-    /*
-      Browser title
-    */
+    /* Browser title */
+
     document.title =
       data.title;
 
-    /*
-      Standard SEO
-    */
+    /* Standard SEO */
+
     setMetaByName(
       "description",
       data.description
     );
 
+    /*
+      noindex, follow is preferable here to noindex, nofollow:
+      the page itself stays out of search results while links
+      on the page may still be discovered.
+    */
     setMetaByName(
       "robots",
       data.noIndex
-        ? "noindex, nofollow"
+        ? "noindex, follow"
         : "index, follow"
     );
 
-    /*
-      Canonical
+    /* Canonical */
 
-      Notice query filters such as:
-
-      /products?brand=STANLEY
-
-      still canonicalize to:
-
-      /products
-
-      This helps prevent every
-      catalogue-filter combination
-      becoming a duplicate indexed page.
-    */
     setCanonical(
       data.canonical
     );
 
-    /*
-      Open Graph
-    */
+    /* Open Graph */
+
     setMetaByProperty(
       "og:type",
       data.type ===
         "product"
         ? "product"
         : "website"
+    );
+
+    setMetaByProperty(
+      "og:site_name",
+      "Saleh Mohsin Trading LLC"
+    );
+
+    setMetaByProperty(
+      "og:locale",
+      "en_AE"
     );
 
     setMetaByProperty(
@@ -633,20 +848,22 @@ export default function SEO() {
         DEFAULT_IMAGE
     );
 
-    setMetaByProperty(
-      "og:image:alt",
+    const imageAlt =
       data.type ===
         "product"
         ? data.title.replace(
             " | Saleh Mohsin Trading LLC",
             ""
           )
-        : "Saleh Mohsin Trading LLC"
+        : "Saleh Mohsin Trading LLC";
+
+    setMetaByProperty(
+      "og:image:alt",
+      imageAlt
     );
 
-    /*
-      X / Twitter
-    */
+    /* X / Twitter */
+
     setMetaByName(
       "twitter:card",
       data.type ===
@@ -673,11 +890,18 @@ export default function SEO() {
         DEFAULT_IMAGE
     );
 
-    /*
-      Dynamic Product
-      structured data.
-    */
-    removeProductSchema();
+    setMetaByName(
+      "twitter:image:alt",
+      imageAlt
+    );
+
+    /* Structured data */
+
+    addOrganizationSchema();
+
+    removeJsonLd(
+      PRODUCT_SCHEMA_ID
+    );
 
     if (
       pathname.startsWith(
@@ -707,7 +931,9 @@ export default function SEO() {
         productId
       );
     }
-  }, [location]);
+  }, [
+    location
+  ]);
 
   return null;
 }

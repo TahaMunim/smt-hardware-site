@@ -1,22 +1,23 @@
 import type { Product } from "../productTypes";
 
-const ALFA_CATALOGUE = "Revise Alfa Catalogue New";
+const ELECTRICAL_CATALOGUE =
+  "Electrical Materials Catalogue 2025";
 
 const source = (page: number) => ({
   type: "catalogue" as const,
-  document: ALFA_CATALOGUE,
+  document: ELECTRICAL_CATALOGUE,
   page,
   year: 2025
 });
 
-export const alfaProducts: Product[] = [
+export const electricalProducts: Product[] = [
   {
     id: "kabal-low-voltage-cable",
     name: "Low Voltage Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "Low Voltage Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Low Voltage Cable from the Alfa Electrical Materials catalogue.",
+    description: "Low Voltage Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Low Voltage Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -31,8 +32,8 @@ export const alfaProducts: Product[] = [
     name: "Medium Voltage Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "Medium Voltage Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Medium Voltage Cable from the Alfa Electrical Materials catalogue.",
+    description: "Medium Voltage Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Medium Voltage Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -47,8 +48,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Wires",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "PVC Wires listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Wires from the Alfa Electrical Materials catalogue.",
+    description: "PVC Wires. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Wires.",
     image: [],
     keywords: [
       "KABAL",
@@ -63,8 +64,8 @@ export const alfaProducts: Product[] = [
     name: "LSZH Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "LSZH Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LSZH Cable from the Alfa Electrical Materials catalogue.",
+    description: "LSZH Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LSZH Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -79,8 +80,8 @@ export const alfaProducts: Product[] = [
     name: "Single Core LSZH Wire",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "Single Core LSZH Wire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Single Core LSZH Wire from the Alfa Electrical Materials catalogue.",
+    description: "Single Core LSZH Wire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Single Core LSZH Wire.",
     image: [],
     keywords: [
       "KABAL",
@@ -95,8 +96,8 @@ export const alfaProducts: Product[] = [
     name: "FP-400 / MICA Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "FP-400 / MICA Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "FP-400 / MICA Cable from the Alfa Electrical Materials catalogue.",
+    description: "FP-400 / MICA Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "FP-400 / MICA Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -111,8 +112,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Flex / 105° Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "PVC Flex / 105° Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Flex / 105° Cable from the Alfa Electrical Materials catalogue.",
+    description: "PVC Flex / 105° Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Flex / 105° Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -127,8 +128,8 @@ export const alfaProducts: Product[] = [
     name: "Fire Performance Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "Fire Performance Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Fire Performance Cable from the Alfa Electrical Materials catalogue.",
+    description: "Fire Performance Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Fire Performance Cable.",
     standards: [
       "BS 6387:2010 (Category CWZ)",
       "IEC 60331-21:1999",
@@ -151,8 +152,8 @@ export const alfaProducts: Product[] = [
     name: "MV/HV Cable up to 36kV",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "MV/HV Cable up to 36kV listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MV/HV Cable up to 36kV from the Alfa Electrical Materials catalogue.",
+    description: "MV/HV Cable up to 36kV. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MV/HV Cable up to 36kV.",
     image: [],
     keywords: [
       "KABAL",
@@ -167,8 +168,8 @@ export const alfaProducts: Product[] = [
     name: "VFD Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "VFD Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "VFD Cable from the Alfa Electrical Materials catalogue.",
+    description: "VFD Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "VFD Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -183,8 +184,8 @@ export const alfaProducts: Product[] = [
     name: "Panel Wire 105°",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "Panel Wire 105° listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Panel Wire 105° from the Alfa Electrical Materials catalogue.",
+    description: "Panel Wire 105°. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Panel Wire 105°.",
     image: [],
     keywords: [
       "KABAL",
@@ -199,8 +200,8 @@ export const alfaProducts: Product[] = [
     name: "Panel Wire LSZH",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "Panel Wire LSZH listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Panel Wire LSZH from the Alfa Electrical Materials catalogue.",
+    description: "Panel Wire LSZH. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Panel Wire LSZH.",
     image: [],
     keywords: [
       "KABAL",
@@ -215,8 +216,8 @@ export const alfaProducts: Product[] = [
     name: "Control Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "Control Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Control Cable from the Alfa Electrical Materials catalogue.",
+    description: "Control Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Control Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -231,8 +232,8 @@ export const alfaProducts: Product[] = [
     name: "LIYC Screened Cable",
     brand: "KABAL",
     category: "Cables & Wires",
-    description: "LIYC Screened Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LIYC Screened Cable from the Alfa Electrical Materials catalogue.",
+    description: "LIYC Screened Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LIYC Screened Cable.",
     image: [],
     keywords: [
       "KABAL",
@@ -248,8 +249,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "PVC Weatherproof Junction Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Weatherproof Junction Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Weatherproof Junction Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Weatherproof Junction Box.",
     image: [],
     keywords: [
       "KABAL",
@@ -266,8 +267,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "Metal Weatherproof Junction Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Weatherproof Junction Box from the Alfa Electrical Materials catalogue.",
+    description: "Metal Weatherproof Junction Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Weatherproof Junction Box.",
     image: [],
     keywords: [
       "KABAL",
@@ -284,8 +285,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "PG Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PG Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "PG Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PG Cable Gland.",
     image: [],
     keywords: [
       "KABAL",
@@ -302,8 +303,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "Metric Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metric Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "Metric Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metric Cable Gland.",
     image: [],
     keywords: [
       "KABAL",
@@ -320,8 +321,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "PVC Weatherproof Isolator listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Weatherproof Isolator from the Alfa Electrical Materials catalogue.",
+    description: "PVC Weatherproof Isolator. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Weatherproof Isolator.",
     image: [],
     keywords: [
       "KABAL",
@@ -338,8 +339,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "Metal Weatherproof Isolator listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Weatherproof Isolator from the Alfa Electrical Materials catalogue.",
+    description: "Metal Weatherproof Isolator. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Weatherproof Isolator.",
     image: [],
     keywords: [
       "KABAL",
@@ -356,8 +357,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "Weatherproof Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Switch from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Switch.",
     image: [],
     keywords: [
       "KABAL",
@@ -374,8 +375,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "Industrial Plug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Plug from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Plug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Plug.",
     image: [],
     keywords: [
       "KABAL",
@@ -392,8 +393,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "Industrial Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Socket from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Socket.",
     image: [],
     keywords: [
       "KABAL",
@@ -410,8 +411,8 @@ export const alfaProducts: Product[] = [
     brand: "KABAL",
     category: "Electrical Accessories",
     subcategory: "Weatherproof & Industrial",
-    description: "Interlocking Switched Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Interlocking Switched Socket from the Alfa Electrical Materials catalogue.",
+    description: "Interlocking Switched Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Interlocking Switched Socket.",
     image: [],
     keywords: [
       "KABAL",
@@ -423,15 +424,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-rubber-flexible-cable-h07rn-f",
+    id: "electrical-rubber-flexible-cable-h07rn-f",
     name: "Rubber Flexible Cable H07RN-F",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "Rubber Flexible Cable H07RN-F listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Rubber Flexible Cable H07RN-F from the Alfa Electrical Materials catalogue.",
+    description: "Rubber Flexible Cable H07RN-F. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Rubber Flexible Cable H07RN-F.",
     image: [],
     keywords: [
-      "ALFA",
       "Rubber Flexible Cable H07RN-F",
       "Cables & Wires"
     ],
@@ -439,15 +439,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-welding-cable",
+    id: "electrical-welding-cable",
     name: "Welding Cable",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "Welding Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Welding Cable from the Alfa Electrical Materials catalogue.",
+    description: "Welding Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Welding Cable.",
     image: [],
     keywords: [
-      "ALFA",
       "Welding Cable",
       "Cables & Wires"
     ],
@@ -455,16 +454,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-strip-connector",
+    id: "electrical-pvc-strip-connector",
     name: "PVC Strip Connector",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Wiring Accessories",
-    description: "PVC Strip Connector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Strip Connector from the Alfa Electrical Materials catalogue.",
+    description: "PVC Strip Connector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Strip Connector.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Strip Connector",
       "Electrical Accessories",
       "Wiring Accessories"
@@ -473,16 +471,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-electrical-pvc-insulation-tape",
+    id: "electrical-electrical-pvc-insulation-tape",
     name: "Electrical PVC Insulation Tape",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Wiring Accessories",
-    description: "Electrical PVC Insulation Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electrical PVC Insulation Tape from the Alfa Electrical Materials catalogue.",
+    description: "Electrical PVC Insulation Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electrical PVC Insulation Tape.",
     image: [],
     keywords: [
-      "ALFA",
       "Electrical PVC Insulation Tape",
       "Electrical Accessories",
       "Wiring Accessories"
@@ -491,16 +488,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-crimping-tool",
+    id: "electrical-crimping-tool",
     name: "Crimping Tool",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Tools",
     subcategory: "Cable Tools",
-    description: "Crimping Tool listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Crimping Tool from the Alfa Electrical Materials catalogue.",
+    description: "Crimping Tool. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Crimping Tool.",
     image: [],
     keywords: [
-      "ALFA",
       "Crimping Tool",
       "Electrical Tools",
       "Cable Tools"
@@ -509,16 +505,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hydraulic-crimping-tool",
+    id: "electrical-hydraulic-crimping-tool",
     name: "Hydraulic Crimping Tool",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Tools",
     subcategory: "Cable Tools",
-    description: "Hydraulic Crimping Tool listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hydraulic Crimping Tool from the Alfa Electrical Materials catalogue.",
+    description: "Hydraulic Crimping Tool. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hydraulic Crimping Tool.",
     image: [],
     keywords: [
-      "ALFA",
       "Hydraulic Crimping Tool",
       "Electrical Tools",
       "Cable Tools"
@@ -527,16 +522,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hydraulic-cable-cutter",
+    id: "electrical-hydraulic-cable-cutter",
     name: "Hydraulic Cable Cutter",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Tools",
     subcategory: "Cable Tools",
-    description: "Hydraulic Cable Cutter listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hydraulic Cable Cutter from the Alfa Electrical Materials catalogue.",
+    description: "Hydraulic Cable Cutter. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hydraulic Cable Cutter.",
     image: [],
     keywords: [
-      "ALFA",
       "Hydraulic Cable Cutter",
       "Electrical Tools",
       "Cable Tools"
@@ -545,16 +539,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-manual-cable-cutter",
+    id: "electrical-manual-cable-cutter",
     name: "Manual Cable Cutter",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Tools",
     subcategory: "Cable Tools",
-    description: "Manual Cable Cutter listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Manual Cable Cutter from the Alfa Electrical Materials catalogue.",
+    description: "Manual Cable Cutter. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Manual Cable Cutter.",
     image: [],
     keywords: [
-      "ALFA",
       "Manual Cable Cutter",
       "Electrical Tools",
       "Cable Tools"
@@ -563,15 +556,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-lamp",
+    id: "electrical-led-lamp",
     name: "LED Lamp",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Lamp from the Alfa Electrical Materials catalogue.",
+    description: "LED Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Lamp.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Lamp",
       "Lighting"
     ],
@@ -579,15 +571,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-luminaire",
+    id: "electrical-led-luminaire",
     name: "LED Luminaire",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Luminaire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Luminaire from the Alfa Electrical Materials catalogue.",
+    description: "LED Luminaire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Luminaire.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Luminaire",
       "Lighting"
     ],
@@ -595,15 +586,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-conventional-lighting",
+    id: "electrical-conventional-lighting",
     name: "Conventional Lighting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "Conventional Lighting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Conventional Lighting from the Alfa Electrical Materials catalogue.",
+    description: "Conventional Lighting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Conventional Lighting.",
     image: [],
     keywords: [
-      "ALFA",
       "Conventional Lighting",
       "Lighting"
     ],
@@ -611,15 +601,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-magnetic-control-gear",
+    id: "electrical-magnetic-control-gear",
     name: "Magnetic Control Gear",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "Magnetic Control Gear listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Magnetic Control Gear from the Alfa Electrical Materials catalogue.",
+    description: "Magnetic Control Gear. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Magnetic Control Gear.",
     image: [],
     keywords: [
-      "ALFA",
       "Magnetic Control Gear",
       "Lighting"
     ],
@@ -627,15 +616,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-electronic-control-gear",
+    id: "electrical-electronic-control-gear",
     name: "Electronic Control Gear",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "Electronic Control Gear listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electronic Control Gear from the Alfa Electrical Materials catalogue.",
+    description: "Electronic Control Gear. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electronic Control Gear.",
     image: [],
     keywords: [
-      "ALFA",
       "Electronic Control Gear",
       "Lighting"
     ],
@@ -643,15 +631,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hid-lamp",
+    id: "electrical-hid-lamp",
     name: "HID Lamp",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "HID Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "HID Lamp from the Alfa Electrical Materials catalogue.",
+    description: "HID Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "HID Lamp.",
     image: [],
     keywords: [
-      "ALFA",
       "HID Lamp",
       "Lighting"
     ],
@@ -659,15 +646,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hid-luminaire",
+    id: "electrical-hid-luminaire",
     name: "HID Luminaire",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "HID Luminaire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "HID Luminaire from the Alfa Electrical Materials catalogue.",
+    description: "HID Luminaire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "HID Luminaire.",
     image: [],
     keywords: [
-      "ALFA",
       "HID Luminaire",
       "Lighting"
     ],
@@ -675,16 +661,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-ballast",
+    id: "electrical-ballast",
     name: "Ballast",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting Control Gear",
-    description: "Ballast listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ballast from the Alfa Electrical Materials catalogue.",
+    description: "Ballast. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ballast.",
     image: [],
     keywords: [
-      "ALFA",
       "Ballast",
       "Lighting",
       "Lighting Control Gear"
@@ -693,16 +678,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-ignitor",
+    id: "electrical-ignitor",
     name: "Ignitor",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting Control Gear",
-    description: "Ignitor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ignitor from the Alfa Electrical Materials catalogue.",
+    description: "Ignitor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ignitor.",
     image: [],
     keywords: [
-      "ALFA",
       "Ignitor",
       "Lighting",
       "Lighting Control Gear"
@@ -711,16 +695,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-capacitor",
+    id: "electrical-capacitor",
     name: "Capacitor",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting Control Gear",
-    description: "Capacitor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Capacitor from the Alfa Electrical Materials catalogue.",
+    description: "Capacitor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Capacitor.",
     image: [],
     keywords: [
-      "ALFA",
       "Capacitor",
       "Lighting",
       "Lighting Control Gear"
@@ -729,16 +712,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cable-lug",
+    id: "electrical-cable-lug",
     name: "Cable Lug",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "Cable Lug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Lug from the Alfa Electrical Materials catalogue.",
+    description: "Cable Lug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Lug.",
     image: [],
     keywords: [
-      "ALFA",
       "Cable Lug",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -747,16 +729,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-bw-cable-gland",
+    id: "electrical-bw-cable-gland",
     name: "BW Cable Gland",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "BW Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "BW Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "BW Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "BW Cable Gland.",
     image: [],
     keywords: [
-      "ALFA",
       "BW Cable Gland",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -765,16 +746,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cw-cable-gland",
+    id: "electrical-cw-cable-gland",
     name: "CW Cable Gland",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "CW Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "CW Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "CW Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "CW Cable Gland.",
     image: [],
     keywords: [
-      "ALFA",
       "CW Cable Gland",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -783,16 +763,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-a1a2-cable-gland",
+    id: "electrical-a1a2-cable-gland",
     name: "A1A2 Cable Gland",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "A1A2 Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "A1A2 Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "A1A2 Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "A1A2 Cable Gland.",
     image: [],
     keywords: [
-      "ALFA",
       "A1A2 Cable Gland",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -801,16 +780,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-e1w-cable-gland",
+    id: "electrical-e1w-cable-gland",
     name: "E1W Cable Gland",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "E1W Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "E1W Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "E1W Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "E1W Cable Gland.",
     image: [],
     keywords: [
-      "ALFA",
       "E1W Cable Gland",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -819,16 +797,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-bi-metallic-lug",
+    id: "electrical-bi-metallic-lug",
     name: "Bi-Metallic Lug",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "Bi-Metallic Lug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bi-Metallic Lug from the Alfa Electrical Materials catalogue.",
+    description: "Bi-Metallic Lug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bi-Metallic Lug.",
     image: [],
     keywords: [
-      "ALFA",
       "Bi-Metallic Lug",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -837,16 +814,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pin-type-lug",
+    id: "electrical-pin-type-lug",
     name: "Pin Type Lug",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "Pin Type Lug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pin Type Lug from the Alfa Electrical Materials catalogue.",
+    description: "Pin Type Lug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pin Type Lug.",
     image: [],
     keywords: [
-      "ALFA",
       "Pin Type Lug",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -855,16 +831,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-ferrule",
+    id: "electrical-ferrule",
     name: "Ferrule",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "Ferrule listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ferrule from the Alfa Electrical Materials catalogue.",
+    description: "Ferrule. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ferrule.",
     image: [],
     keywords: [
-      "ALFA",
       "Ferrule",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -873,16 +848,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-earth-rod",
+    id: "electrical-earth-rod",
     name: "Earth Rod",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "Earth Rod listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Earth Rod from the Alfa Electrical Materials catalogue.",
+    description: "Earth Rod. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Earth Rod.",
     image: [],
     keywords: [
-      "ALFA",
       "Earth Rod",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -891,16 +865,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-earth-rod-accessories",
+    id: "electrical-earth-rod-accessories",
     name: "Earth Rod Accessories",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "Earth Rod Accessories listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Earth Rod Accessories from the Alfa Electrical Materials catalogue.",
+    description: "Earth Rod Accessories. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Earth Rod Accessories.",
     image: [],
     keywords: [
-      "ALFA",
       "Earth Rod Accessories",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -909,16 +882,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-copper-c-clamp",
+    id: "electrical-copper-c-clamp",
     name: "Copper C Clamp",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Cable Termination & Earthing",
-    description: "Copper C Clamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Copper C Clamp from the Alfa Electrical Materials catalogue.",
+    description: "Copper C Clamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Copper C Clamp.",
     image: [],
     keywords: [
-      "ALFA",
       "Copper C Clamp",
       "Electrical Accessories",
       "Cable Termination & Earthing"
@@ -927,16 +899,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-conduit",
+    id: "electrical-pvc-conduit",
     name: "PVC Conduit",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Conduit & Accessories",
-    description: "PVC Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Conduit from the Alfa Electrical Materials catalogue.",
+    description: "PVC Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Conduit.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Conduit",
       "Electrical Accessories",
       "Conduit & Accessories"
@@ -945,16 +916,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-conduit-accessories",
+    id: "electrical-pvc-conduit-accessories",
     name: "PVC Conduit Accessories",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Conduit & Accessories",
-    description: "PVC Conduit Accessories listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Conduit Accessories from the Alfa Electrical Materials catalogue.",
+    description: "PVC Conduit Accessories. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Conduit Accessories.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Conduit Accessories",
       "Electrical Accessories",
       "Conduit & Accessories"
@@ -963,16 +933,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-adaptable-box",
+    id: "electrical-pvc-adaptable-box",
     name: "PVC Adaptable Box",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Conduit & Accessories",
-    description: "PVC Adaptable Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Adaptable Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Adaptable Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Adaptable Box.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Adaptable Box",
       "Electrical Accessories",
       "Conduit & Accessories"
@@ -981,16 +950,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-glue",
+    id: "electrical-pvc-glue",
     name: "PVC Glue",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Conduit & Accessories",
-    description: "PVC Glue listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Glue from the Alfa Electrical Materials catalogue.",
+    description: "PVC Glue. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Glue.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Glue",
       "Electrical Accessories",
       "Conduit & Accessories"
@@ -999,15 +967,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cable-management-system",
+    id: "electrical-cable-management-system",
     name: "Cable Management System",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Cable Management System listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Management System from the Alfa Electrical Materials catalogue.",
+    description: "Cable Management System. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Management System.",
     image: [],
     keywords: [
-      "ALFA",
       "Cable Management System",
       "Cable Management"
     ],
@@ -1015,15 +982,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-cable-tray",
+    id: "electrical-gi-cable-tray",
     name: "GI Cable Tray",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "GI Cable Tray listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Cable Tray from the Alfa Electrical Materials catalogue.",
+    description: "GI Cable Tray. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Cable Tray.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Cable Tray",
       "Cable Management"
     ],
@@ -1031,15 +997,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-pvc-coated-flexible-conduit",
+    id: "electrical-gi-pvc-coated-flexible-conduit",
     name: "GI PVC Coated Flexible Conduit",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "GI PVC Coated Flexible Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI PVC Coated Flexible Conduit from the Alfa Electrical Materials catalogue.",
+    description: "GI PVC Coated Flexible Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI PVC Coated Flexible Conduit.",
     image: [],
     keywords: [
-      "ALFA",
       "GI PVC Coated Flexible Conduit",
       "Cable Management"
     ],
@@ -1047,16 +1012,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-timer-switch",
+    id: "electrical-timer-switch",
     name: "Timer Switch",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Controls",
-    description: "Timer Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Timer Switch from the Alfa Electrical Materials catalogue.",
+    description: "Timer Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Timer Switch.",
     image: [],
     keywords: [
-      "ALFA",
       "Timer Switch",
       "Electrical Accessories",
       "Controls"
@@ -1065,16 +1029,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-photo-cell",
+    id: "electrical-photo-cell",
     name: "Photo Cell",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Controls",
-    description: "Photo Cell listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Photo Cell from the Alfa Electrical Materials catalogue.",
+    description: "Photo Cell. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Photo Cell.",
     image: [],
     keywords: [
-      "ALFA",
       "Photo Cell",
       "Electrical Accessories",
       "Controls"
@@ -1083,16 +1046,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-switch",
+    id: "electrical-switch",
     name: "Switch",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Switch from the Alfa Electrical Materials catalogue.",
+    description: "Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Switch.",
     image: [],
     keywords: [
-      "ALFA",
       "Switch",
       "Electrical Accessories",
       "General Electrical"
@@ -1101,16 +1063,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-socket",
+    id: "electrical-socket",
     name: "Socket",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Socket from the Alfa Electrical Materials catalogue.",
+    description: "Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Socket.",
     image: [],
     keywords: [
-      "ALFA",
       "Socket",
       "Electrical Accessories",
       "General Electrical"
@@ -1119,16 +1080,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-conduit",
+    id: "electrical-gi-conduit",
     name: "GI Conduit",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "GI Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Conduit from the Alfa Electrical Materials catalogue.",
+    description: "GI Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Conduit.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Conduit",
       "Electrical Accessories",
       "General Electrical"
@@ -1137,16 +1097,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hot-dip-galvanised-conduit",
+    id: "electrical-hot-dip-galvanised-conduit",
     name: "Hot Dip Galvanised Conduit",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Hot Dip Galvanised Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hot Dip Galvanised Conduit from the Alfa Electrical Materials catalogue.",
+    description: "Hot Dip Galvanised Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hot Dip Galvanised Conduit.",
     image: [],
     keywords: [
-      "ALFA",
       "Hot Dip Galvanised Conduit",
       "Electrical Accessories",
       "General Electrical"
@@ -1155,16 +1114,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-pvc-coated-conduit",
+    id: "electrical-gi-pvc-coated-conduit",
     name: "GI PVC Coated Conduit",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "GI PVC Coated Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI PVC Coated Conduit from the Alfa Electrical Materials catalogue.",
+    description: "GI PVC Coated Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI PVC Coated Conduit.",
     image: [],
     keywords: [
-      "ALFA",
       "GI PVC Coated Conduit",
       "Electrical Accessories",
       "General Electrical"
@@ -1173,16 +1131,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-pipe",
+    id: "electrical-pvc-pipe",
     name: "PVC Pipe",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "PVC Pipe listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Pipe from the Alfa Electrical Materials catalogue.",
+    description: "PVC Pipe. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Pipe.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Pipe",
       "Electrical Accessories",
       "General Electrical"
@@ -1191,16 +1148,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-pipe-accessories",
+    id: "electrical-pvc-pipe-accessories",
     name: "PVC Pipe Accessories",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "PVC Pipe Accessories listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Pipe Accessories from the Alfa Electrical Materials catalogue.",
+    description: "PVC Pipe Accessories. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Pipe Accessories.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Pipe Accessories",
       "Electrical Accessories",
       "General Electrical"
@@ -1209,16 +1165,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-solvent-cement-glue",
+    id: "electrical-solvent-cement-glue",
     name: "Solvent Cement Glue",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Solvent Cement Glue listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Solvent Cement Glue from the Alfa Electrical Materials catalogue.",
+    description: "Solvent Cement Glue. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Solvent Cement Glue.",
     image: [],
     keywords: [
-      "ALFA",
       "Solvent Cement Glue",
       "Electrical Accessories",
       "General Electrical"
@@ -1227,16 +1182,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-waterproof-box",
+    id: "electrical-pvc-waterproof-box",
     name: "PVC Waterproof Box",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "PVC Waterproof Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Waterproof Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Waterproof Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Waterproof Box.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Waterproof Box",
       "Electrical Accessories",
       "General Electrical"
@@ -1245,15 +1199,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-floor-box-under-floor",
+    id: "electrical-floor-box-under-floor",
     name: "Floor Box - Under Floor",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Floor Box - Under Floor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Floor Box - Under Floor from the Alfa Electrical Materials catalogue.",
+    description: "Floor Box - Under Floor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Floor Box - Under Floor.",
     image: [],
     keywords: [
-      "ALFA",
       "Floor Box - Under Floor",
       "Cable Management"
     ],
@@ -1261,15 +1214,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-floor-box-flush-floor",
+    id: "electrical-floor-box-flush-floor",
     name: "Floor Box - Flush Floor",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Floor Box - Flush Floor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Floor Box - Flush Floor from the Alfa Electrical Materials catalogue.",
+    description: "Floor Box - Flush Floor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Floor Box - Flush Floor.",
     image: [],
     keywords: [
-      "ALFA",
       "Floor Box - Flush Floor",
       "Cable Management"
     ],
@@ -1277,15 +1229,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-box",
+    id: "electrical-gi-box",
     name: "GI Box",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "GI Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Box from the Alfa Electrical Materials catalogue.",
+    description: "GI Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Box.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Box",
       "Cable Management"
     ],
@@ -1293,15 +1244,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-adaptable-box",
+    id: "electrical-gi-adaptable-box",
     name: "GI Adaptable Box",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "GI Adaptable Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Adaptable Box from the Alfa Electrical Materials catalogue.",
+    description: "GI Adaptable Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Adaptable Box.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Adaptable Box",
       "Cable Management"
     ],
@@ -1309,15 +1259,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-metal-enclosure",
+    id: "electrical-metal-enclosure",
     name: "Metal Enclosure",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Metal Enclosure listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Enclosure from the Alfa Electrical Materials catalogue.",
+    description: "Metal Enclosure. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Enclosure.",
     image: [],
     keywords: [
-      "ALFA",
       "Metal Enclosure",
       "Cable Management"
     ],
@@ -1325,15 +1274,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-din-rail",
+    id: "electrical-din-rail",
     name: "DIN Rail",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "DIN Rail listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "DIN Rail from the Alfa Electrical Materials catalogue.",
+    description: "DIN Rail. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "DIN Rail.",
     image: [],
     keywords: [
-      "ALFA",
       "DIN Rail",
       "Cable Management"
     ],
@@ -1341,15 +1289,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-neutral-bar",
+    id: "electrical-neutral-bar",
     name: "Neutral Bar",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Neutral Bar listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Neutral Bar from the Alfa Electrical Materials catalogue.",
+    description: "Neutral Bar. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Neutral Bar.",
     image: [],
     keywords: [
-      "ALFA",
       "Neutral Bar",
       "Cable Management"
     ],
@@ -1357,15 +1304,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-earth-bar",
+    id: "electrical-earth-bar",
     name: "Earth Bar",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Earth Bar listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Earth Bar from the Alfa Electrical Materials catalogue.",
+    description: "Earth Bar. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Earth Bar.",
     image: [],
     keywords: [
-      "ALFA",
       "Earth Bar",
       "Cable Management"
     ],
@@ -1373,15 +1319,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-cable-tie",
+    id: "electrical-pvc-cable-tie",
     name: "PVC Cable Tie",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "PVC Cable Tie listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Cable Tie from the Alfa Electrical Materials catalogue.",
+    description: "PVC Cable Tie. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Cable Tie.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Cable Tie",
       "Cable Management"
     ],
@@ -1389,15 +1334,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-cable-tie",
+    id: "electrical-gi-cable-tie",
     name: "GI Cable Tie",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "GI Cable Tie listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Cable Tie from the Alfa Electrical Materials catalogue.",
+    description: "GI Cable Tie. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Cable Tie.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Cable Tie",
       "Cable Management"
     ],
@@ -1405,15 +1349,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-pvc-coated-cable-tie",
+    id: "electrical-gi-pvc-coated-cable-tie",
     name: "GI PVC Coated Cable Tie",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "GI PVC Coated Cable Tie listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI PVC Coated Cable Tie from the Alfa Electrical Materials catalogue.",
+    description: "GI PVC Coated Cable Tie. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI PVC Coated Cable Tie.",
     image: [],
     keywords: [
-      "ALFA",
       "GI PVC Coated Cable Tie",
       "Cable Management"
     ],
@@ -1421,15 +1364,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pin-type-busbar",
+    id: "electrical-pin-type-busbar",
     name: "Pin Type Busbar",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Pin Type Busbar listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pin Type Busbar from the Alfa Electrical Materials catalogue.",
+    description: "Pin Type Busbar. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pin Type Busbar.",
     image: [],
     keywords: [
-      "ALFA",
       "Pin Type Busbar",
       "Cable Management"
     ],
@@ -1437,15 +1379,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-u-type-busbar",
+    id: "electrical-u-type-busbar",
     name: "U Type Busbar",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "U Type Busbar listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "U Type Busbar from the Alfa Electrical Materials catalogue.",
+    description: "U Type Busbar. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "U Type Busbar.",
     image: [],
     keywords: [
-      "ALFA",
       "U Type Busbar",
       "Cable Management"
     ],
@@ -1453,15 +1394,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-spiral-wrapping",
+    id: "electrical-spiral-wrapping",
     name: "Spiral Wrapping",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Spiral Wrapping listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Spiral Wrapping from the Alfa Electrical Materials catalogue.",
+    description: "Spiral Wrapping. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Spiral Wrapping.",
     image: [],
     keywords: [
-      "ALFA",
       "Spiral Wrapping",
       "Cable Management"
     ],
@@ -1469,15 +1409,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pg-gland",
+    id: "electrical-pg-gland",
     name: "PG Gland",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "PG Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PG Gland from the Alfa Electrical Materials catalogue.",
+    description: "PG Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PG Gland.",
     image: [],
     keywords: [
-      "ALFA",
       "PG Gland",
       "Cable Management"
     ],
@@ -1485,15 +1424,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-stuffing-gland",
+    id: "electrical-stuffing-gland",
     name: "Stuffing Gland",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Stuffing Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Stuffing Gland from the Alfa Electrical Materials catalogue.",
+    description: "Stuffing Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Stuffing Gland.",
     image: [],
     keywords: [
-      "ALFA",
       "Stuffing Gland",
       "Cable Management"
     ],
@@ -1501,15 +1439,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-bentonite-powder",
+    id: "electrical-bentonite-powder",
     name: "Bentonite Powder",
-    brand: "ALFA",
+    brand: "",
     category: "Earthing",
-    description: "Bentonite Powder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bentonite Powder from the Alfa Electrical Materials catalogue.",
+    description: "Bentonite Powder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bentonite Powder.",
     image: [],
     keywords: [
-      "ALFA",
       "Bentonite Powder",
       "Earthing"
     ],
@@ -1522,8 +1459,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "PVC Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "PVC Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Switch Socket.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1540,8 +1477,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Weatherproof Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Switch Socket.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1558,8 +1495,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Metal Clad Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Clad Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Metal Clad Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Clad Switch Socket.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1576,8 +1513,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Metal Clad Accessories listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Clad Accessories from the Alfa Electrical Materials catalogue.",
+    description: "Metal Clad Accessories. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Clad Accessories.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1594,8 +1531,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Chrome Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Chrome Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Chrome Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Chrome Switch Socket.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1612,8 +1549,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Silver Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Silver Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Silver Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Silver Switch Socket.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1630,8 +1567,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Gold Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Gold Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Gold Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Gold Switch Socket.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1648,8 +1585,8 @@ export const alfaProducts: Product[] = [
     brand: "DUPRO",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Pop-Up Floor Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pop-Up Floor Socket from the Alfa Electrical Materials catalogue.",
+    description: "Pop-Up Floor Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pop-Up Floor Socket.",
     image: [],
     keywords: [
       "DUPRO",
@@ -1661,16 +1598,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-flexible-conduit",
+    id: "electrical-gi-flexible-conduit",
     name: "GI Flexible Conduit",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "GI Flexible Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Flexible Conduit from the Alfa Electrical Materials catalogue.",
+    description: "GI Flexible Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Flexible Conduit.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Flexible Conduit",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1679,16 +1615,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pulling-spring",
+    id: "electrical-pulling-spring",
     name: "Pulling Spring",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "Pulling Spring listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pulling Spring from the Alfa Electrical Materials catalogue.",
+    description: "Pulling Spring. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pulling Spring.",
     image: [],
     keywords: [
-      "ALFA",
       "Pulling Spring",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1697,16 +1632,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-bending-spring",
+    id: "electrical-bending-spring",
     name: "Bending Spring",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "Bending Spring listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bending Spring from the Alfa Electrical Materials catalogue.",
+    description: "Bending Spring. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bending Spring.",
     image: [],
     keywords: [
-      "ALFA",
       "Bending Spring",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1715,16 +1649,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-brass-bush",
+    id: "electrical-brass-bush",
     name: "Brass Bush",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "Brass Bush listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Brass Bush from the Alfa Electrical Materials catalogue.",
+    description: "Brass Bush. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Brass Bush.",
     image: [],
     keywords: [
-      "ALFA",
       "Brass Bush",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1733,16 +1666,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-brass-lock-nut",
+    id: "electrical-brass-lock-nut",
     name: "Brass Lock Nut",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "Brass Lock Nut listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Brass Lock Nut from the Alfa Electrical Materials catalogue.",
+    description: "Brass Lock Nut. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Brass Lock Nut.",
     image: [],
     keywords: [
-      "ALFA",
       "Brass Lock Nut",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1751,16 +1683,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-brass-reducer",
+    id: "electrical-brass-reducer",
     name: "Brass Reducer",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "Brass Reducer listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Brass Reducer from the Alfa Electrical Materials catalogue.",
+    description: "Brass Reducer. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Brass Reducer.",
     image: [],
     keywords: [
-      "ALFA",
       "Brass Reducer",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1769,16 +1700,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-dome-cover",
+    id: "electrical-gi-dome-cover",
     name: "GI Dome Cover",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "GI Dome Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Dome Cover from the Alfa Electrical Materials catalogue.",
+    description: "GI Dome Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Dome Cover.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Dome Cover",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1787,16 +1717,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-dome-hook",
+    id: "electrical-gi-dome-hook",
     name: "GI Dome Hook",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "GI Dome Hook listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Dome Hook from the Alfa Electrical Materials catalogue.",
+    description: "GI Dome Hook. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Dome Hook.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Dome Hook",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1805,16 +1734,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-weatherproof-pvc-cover",
+    id: "electrical-weatherproof-pvc-cover",
     name: "Weatherproof PVC Cover",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "Weatherproof PVC Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof PVC Cover from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof PVC Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof PVC Cover.",
     image: [],
     keywords: [
-      "ALFA",
       "Weatherproof PVC Cover",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1823,16 +1751,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-heat-shrink-sleeve",
+    id: "electrical-heat-shrink-sleeve",
     name: "Heat Shrink Sleeve",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "Heat Shrink Sleeve listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Heat Shrink Sleeve from the Alfa Electrical Materials catalogue.",
+    description: "Heat Shrink Sleeve. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Heat Shrink Sleeve.",
     image: [],
     keywords: [
-      "ALFA",
       "Heat Shrink Sleeve",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1841,16 +1768,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-slotted-channel",
+    id: "electrical-gi-slotted-channel",
     name: "GI Slotted Channel",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "GI Slotted Channel listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Slotted Channel from the Alfa Electrical Materials catalogue.",
+    description: "GI Slotted Channel. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Slotted Channel.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Slotted Channel",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1859,16 +1785,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-gi-trunking",
+    id: "electrical-gi-trunking",
     name: "GI Trunking",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "GI Trunking listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Trunking from the Alfa Electrical Materials catalogue.",
+    description: "GI Trunking. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Trunking.",
     image: [],
     keywords: [
-      "ALFA",
       "GI Trunking",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1877,16 +1802,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-micc-clip",
+    id: "electrical-micc-clip",
     name: "MICC Clip",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
     subcategory: "Conduit & Cable Management",
-    description: "MICC Clip listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MICC Clip from the Alfa Electrical Materials catalogue.",
+    description: "MICC Clip. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MICC Clip.",
     image: [],
     keywords: [
-      "ALFA",
       "MICC Clip",
       "Cable Management",
       "Conduit & Cable Management"
@@ -1895,16 +1819,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-bending-machine",
+    id: "electrical-bending-machine",
     name: "Bending Machine",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Tools",
     subcategory: "Installation Tools",
-    description: "Bending Machine listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bending Machine from the Alfa Electrical Materials catalogue.",
+    description: "Bending Machine. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bending Machine.",
     image: [],
     keywords: [
-      "ALFA",
       "Bending Machine",
       "Electrical Tools",
       "Installation Tools"
@@ -1913,16 +1836,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cable-cutter",
+    id: "electrical-cable-cutter",
     name: "Cable Cutter",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Tools",
     subcategory: "Installation Tools",
-    description: "Cable Cutter listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Cutter from the Alfa Electrical Materials catalogue.",
+    description: "Cable Cutter. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Cutter.",
     image: [],
     keywords: [
-      "ALFA",
       "Cable Cutter",
       "Electrical Tools",
       "Installation Tools"
@@ -1931,15 +1853,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-multicore-cable",
+    id: "electrical-pvc-multicore-cable",
     name: "PVC Multicore Cable",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "PVC Multicore Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Multicore Cable from the Alfa Electrical Materials catalogue.",
+    description: "PVC Multicore Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Multicore Cable.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Multicore Cable",
       "Cables & Wires"
     ],
@@ -1947,15 +1868,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-communication-cable",
+    id: "electrical-pvc-communication-cable",
     name: "PVC Communication Cable",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "PVC Communication Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Communication Cable from the Alfa Electrical Materials catalogue.",
+    description: "PVC Communication Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Communication Cable.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Communication Cable",
       "Cables & Wires"
     ],
@@ -1963,15 +1883,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cat6-data-cable",
+    id: "electrical-cat6-data-cable",
     name: "Cat6 Data Cable",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "Cat6 Data Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cat6 Data Cable from the Alfa Electrical Materials catalogue.",
+    description: "Cat6 Data Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cat6 Data Cable.",
     image: [],
     keywords: [
-      "ALFA",
       "Cat6 Data Cable",
       "Cables & Wires"
     ],
@@ -1979,15 +1898,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cat5-data-cable",
+    id: "electrical-cat5-data-cable",
     name: "Cat5 Data Cable",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "Cat5 Data Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cat5 Data Cable from the Alfa Electrical Materials catalogue.",
+    description: "Cat5 Data Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cat5 Data Cable.",
     image: [],
     keywords: [
-      "ALFA",
       "Cat5 Data Cable",
       "Cables & Wires"
     ],
@@ -1995,15 +1913,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-dish-wire",
+    id: "electrical-dish-wire",
     name: "Dish Wire",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "Dish Wire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Dish Wire from the Alfa Electrical Materials catalogue.",
+    description: "Dish Wire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Dish Wire.",
     image: [],
     keywords: [
-      "ALFA",
       "Dish Wire",
       "Cables & Wires"
     ],
@@ -2011,15 +1928,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-speaker-cable",
+    id: "electrical-speaker-cable",
     name: "Speaker Cable",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "Speaker Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Speaker Cable from the Alfa Electrical Materials catalogue.",
+    description: "Speaker Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Speaker Cable.",
     image: [],
     keywords: [
-      "ALFA",
       "Speaker Cable",
       "Cables & Wires"
     ],
@@ -2027,15 +1943,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-flood-light",
+    id: "electrical-led-flood-light",
     name: "LED Flood Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Flood Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Flood Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Flood Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Flood Light.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Flood Light",
       "Lighting"
     ],
@@ -2043,15 +1958,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-cob-light",
+    id: "electrical-led-cob-light",
     name: "LED COB Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED COB Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED COB Light from the Alfa Electrical Materials catalogue.",
+    description: "LED COB Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED COB Light.",
     image: [],
     keywords: [
-      "ALFA",
       "LED COB Light",
       "Lighting"
     ],
@@ -2059,15 +1973,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-mirror-light",
+    id: "electrical-led-mirror-light",
     name: "LED Mirror Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Mirror Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Mirror Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Mirror Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Mirror Light.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Mirror Light",
       "Lighting"
     ],
@@ -2075,15 +1988,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-panel-light",
+    id: "electrical-led-panel-light",
     name: "LED Panel Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Panel Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Panel Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Panel Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Panel Light.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Panel Light",
       "Lighting"
     ],
@@ -2091,15 +2003,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-ufo-light",
+    id: "electrical-ufo-light",
     name: "UFO Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "UFO Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "UFO Light from the Alfa Electrical Materials catalogue.",
+    description: "UFO Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "UFO Light.",
     image: [],
     keywords: [
-      "ALFA",
       "UFO Light",
       "Lighting"
     ],
@@ -2107,15 +2018,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-prismatic-dust-proof-fitting",
+    id: "electrical-prismatic-dust-proof-fitting",
     name: "Prismatic Dust Proof Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "Prismatic Dust Proof Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Prismatic Dust Proof Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Prismatic Dust Proof Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Prismatic Dust Proof Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Prismatic Dust Proof Fitting",
       "Lighting"
     ],
@@ -2123,15 +2033,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-t5-fitting",
+    id: "electrical-t5-fitting",
     name: "T5 Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "T5 Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "T5 Fitting from the Alfa Electrical Materials catalogue.",
+    description: "T5 Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "T5 Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "T5 Fitting",
       "Lighting"
     ],
@@ -2139,15 +2048,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-tube",
+    id: "electrical-led-tube",
     name: "LED Tube",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Tube listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Tube from the Alfa Electrical Materials catalogue.",
+    description: "LED Tube. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Tube.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Tube",
       "Lighting"
     ],
@@ -2155,15 +2063,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-bulb",
+    id: "electrical-led-bulb",
     name: "LED Bulb",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Bulb listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Bulb from the Alfa Electrical Materials catalogue.",
+    description: "LED Bulb. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Bulb.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Bulb",
       "Lighting"
     ],
@@ -2171,15 +2078,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-candle-lamp",
+    id: "electrical-led-candle-lamp",
     name: "LED Candle Lamp",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Candle Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Candle Lamp from the Alfa Electrical Materials catalogue.",
+    description: "LED Candle Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Candle Lamp.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Candle Lamp",
       "Lighting"
     ],
@@ -2187,15 +2093,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-mr16-lamp",
+    id: "electrical-mr16-lamp",
     name: "MR16 Lamp",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "MR16 Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MR16 Lamp from the Alfa Electrical Materials catalogue.",
+    description: "MR16 Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MR16 Lamp.",
     image: [],
     keywords: [
-      "ALFA",
       "MR16 Lamp",
       "Lighting"
     ],
@@ -2203,15 +2108,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-highway-fitting",
+    id: "electrical-led-highway-fitting",
     name: "LED Highway Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Highway Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Highway Fitting from the Alfa Electrical Materials catalogue.",
+    description: "LED Highway Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Highway Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Highway Fitting",
       "Lighting"
     ],
@@ -2219,15 +2123,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-emergency-light",
+    id: "electrical-emergency-light",
     name: "Emergency Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "Emergency Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Emergency Light from the Alfa Electrical Materials catalogue.",
+    description: "Emergency Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Emergency Light.",
     image: [],
     keywords: [
-      "ALFA",
       "Emergency Light",
       "Lighting"
     ],
@@ -2235,15 +2138,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-strip-light",
+    id: "electrical-led-strip-light",
     name: "LED Strip Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Strip Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Strip Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Strip Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Strip Light.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Strip Light",
       "Lighting"
     ],
@@ -2251,15 +2153,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-60x60-led-panel-light",
+    id: "electrical-60x60-led-panel-light",
     name: "60x60 LED Panel Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "60x60 LED Panel Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "60x60 LED Panel Light from the Alfa Electrical Materials catalogue.",
+    description: "60x60 LED Panel Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "60x60 LED Panel Light.",
     image: [],
     keywords: [
-      "ALFA",
       "60x60 LED Panel Light",
       "Lighting"
     ],
@@ -2267,15 +2168,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-led-weatherproof-fitting",
+    id: "electrical-led-weatherproof-fitting",
     name: "LED Weatherproof Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
-    description: "LED Weatherproof Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Weatherproof Fitting from the Alfa Electrical Materials catalogue.",
+    description: "LED Weatherproof Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Weatherproof Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "LED Weatherproof Fitting",
       "Lighting"
     ],
@@ -2283,16 +2183,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-batten-fitting",
+    id: "electrical-batten-fitting",
     name: "Batten Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Batten Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Batten Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Batten Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Batten Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Batten Fitting",
       "Lighting",
       "Lighting & Accessories"
@@ -2301,16 +2200,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-weatherproof-fitting",
+    id: "electrical-weatherproof-fitting",
     name: "Weatherproof Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Weatherproof Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Weatherproof Fitting",
       "Lighting",
       "Lighting & Accessories"
@@ -2319,16 +2217,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-prismatic-fitting",
+    id: "electrical-prismatic-fitting",
     name: "Prismatic Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Prismatic Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Prismatic Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Prismatic Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Prismatic Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Prismatic Fitting",
       "Lighting",
       "Lighting & Accessories"
@@ -2337,16 +2234,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-louvre-fitting",
+    id: "electrical-louvre-fitting",
     name: "Louvre Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Louvre Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Louvre Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Louvre Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Louvre Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Louvre Fitting",
       "Lighting",
       "Lighting & Accessories"
@@ -2355,16 +2251,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-mirror-light",
+    id: "electrical-mirror-light",
     name: "Mirror Light",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Mirror Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Mirror Light from the Alfa Electrical Materials catalogue.",
+    description: "Mirror Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Mirror Light.",
     image: [],
     keywords: [
-      "ALFA",
       "Mirror Light",
       "Lighting",
       "Lighting & Accessories"
@@ -2373,16 +2268,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-metal-halide-fitting",
+    id: "electrical-metal-halide-fitting",
     name: "Metal Halide Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Metal Halide Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Halide Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Metal Halide Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Halide Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Metal Halide Fitting",
       "Lighting",
       "Lighting & Accessories"
@@ -2391,16 +2285,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-halogen-fitting",
+    id: "electrical-halogen-fitting",
     name: "Halogen Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Halogen Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Halogen Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Halogen Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Halogen Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Halogen Fitting",
       "Lighting",
       "Lighting & Accessories"
@@ -2409,16 +2302,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hand-lamp",
+    id: "electrical-hand-lamp",
     name: "Hand Lamp",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Hand Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hand Lamp from the Alfa Electrical Materials catalogue.",
+    description: "Hand Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hand Lamp.",
     image: [],
     keywords: [
-      "ALFA",
       "Hand Lamp",
       "Lighting",
       "Lighting & Accessories"
@@ -2427,16 +2319,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-metal-halide-lamp",
+    id: "electrical-metal-halide-lamp",
     name: "Metal Halide Lamp",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Metal Halide Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Halide Lamp from the Alfa Electrical Materials catalogue.",
+    description: "Metal Halide Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Halide Lamp.",
     image: [],
     keywords: [
-      "ALFA",
       "Metal Halide Lamp",
       "Lighting",
       "Lighting & Accessories"
@@ -2445,16 +2336,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-halogen-lamp",
+    id: "electrical-halogen-lamp",
     name: "Halogen Lamp",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Halogen Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Halogen Lamp from the Alfa Electrical Materials catalogue.",
+    description: "Halogen Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Halogen Lamp.",
     image: [],
     keywords: [
-      "ALFA",
       "Halogen Lamp",
       "Lighting",
       "Lighting & Accessories"
@@ -2463,16 +2353,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-red-alarm-bell",
+    id: "electrical-red-alarm-bell",
     name: "Red Alarm Bell",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Red Alarm Bell listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Red Alarm Bell from the Alfa Electrical Materials catalogue.",
+    description: "Red Alarm Bell. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Red Alarm Bell.",
     image: [],
     keywords: [
-      "ALFA",
       "Red Alarm Bell",
       "Lighting",
       "Lighting & Accessories"
@@ -2481,16 +2370,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-door-bell",
+    id: "electrical-door-bell",
     name: "Door Bell",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Door Bell listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Door Bell from the Alfa Electrical Materials catalogue.",
+    description: "Door Bell. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Door Bell.",
     image: [],
     keywords: [
-      "ALFA",
       "Door Bell",
       "Lighting",
       "Lighting & Accessories"
@@ -2499,16 +2387,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-magnetic-ballast",
+    id: "electrical-magnetic-ballast",
     name: "Magnetic Ballast",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Magnetic Ballast listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Magnetic Ballast from the Alfa Electrical Materials catalogue.",
+    description: "Magnetic Ballast. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Magnetic Ballast.",
     image: [],
     keywords: [
-      "ALFA",
       "Magnetic Ballast",
       "Lighting",
       "Lighting & Accessories"
@@ -2517,16 +2404,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-electronic-ballast",
+    id: "electrical-electronic-ballast",
     name: "Electronic Ballast",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Electronic Ballast listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electronic Ballast from the Alfa Electrical Materials catalogue.",
+    description: "Electronic Ballast. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electronic Ballast.",
     image: [],
     keywords: [
-      "ALFA",
       "Electronic Ballast",
       "Lighting",
       "Lighting & Accessories"
@@ -2535,16 +2421,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-starter",
+    id: "electrical-starter",
     name: "Starter",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Starter listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Starter from the Alfa Electrical Materials catalogue.",
+    description: "Starter. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Starter.",
     image: [],
     keywords: [
-      "ALFA",
       "Starter",
       "Lighting",
       "Lighting & Accessories"
@@ -2553,16 +2438,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-bulkhead-fitting",
+    id: "electrical-bulkhead-fitting",
     name: "Bulkhead Fitting",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Bulkhead Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bulkhead Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Bulkhead Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bulkhead Fitting.",
     image: [],
     keywords: [
-      "ALFA",
       "Bulkhead Fitting",
       "Lighting",
       "Lighting & Accessories"
@@ -2571,16 +2455,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-tube-holder",
+    id: "electrical-tube-holder",
     name: "Tube Holder",
-    brand: "ALFA",
+    brand: "",
     category: "Lighting",
     subcategory: "Lighting & Accessories",
-    description: "Tube Holder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Tube Holder from the Alfa Electrical Materials catalogue.",
+    description: "Tube Holder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Tube Holder.",
     image: [],
     keywords: [
-      "ALFA",
       "Tube Holder",
       "Lighting",
       "Lighting & Accessories"
@@ -2589,16 +2472,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-elcb-box",
+    id: "electrical-elcb-box",
     name: "ELCB Box",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "ELCB Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "ELCB Box from the Alfa Electrical Materials catalogue.",
+    description: "ELCB Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "ELCB Box.",
     image: [],
     keywords: [
-      "ALFA",
       "ELCB Box",
       "Electrical Accessories",
       "General Electrical"
@@ -2607,16 +2489,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-motion-sensor",
+    id: "electrical-motion-sensor",
     name: "Motion Sensor",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Motion Sensor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Motion Sensor from the Alfa Electrical Materials catalogue.",
+    description: "Motion Sensor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Motion Sensor.",
     image: [],
     keywords: [
-      "ALFA",
       "Motion Sensor",
       "Electrical Accessories",
       "General Electrical"
@@ -2625,16 +2506,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-smoke-detector",
+    id: "electrical-smoke-detector",
     name: "Smoke Detector",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Smoke Detector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Smoke Detector from the Alfa Electrical Materials catalogue.",
+    description: "Smoke Detector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Smoke Detector.",
     image: [],
     keywords: [
-      "ALFA",
       "Smoke Detector",
       "Electrical Accessories",
       "General Electrical"
@@ -2643,16 +2523,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-wire-clip",
+    id: "electrical-wire-clip",
     name: "Wire Clip",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Wire Clip listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Wire Clip from the Alfa Electrical Materials catalogue.",
+    description: "Wire Clip. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Wire Clip.",
     image: [],
     keywords: [
-      "ALFA",
       "Wire Clip",
       "Electrical Accessories",
       "General Electrical"
@@ -2661,16 +2540,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-trunking-sleeve",
+    id: "electrical-trunking-sleeve",
     name: "Trunking Sleeve",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Trunking Sleeve listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Trunking Sleeve from the Alfa Electrical Materials catalogue.",
+    description: "Trunking Sleeve. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Trunking Sleeve.",
     image: [],
     keywords: [
-      "ALFA",
       "Trunking Sleeve",
       "Electrical Accessories",
       "General Electrical"
@@ -2679,16 +2557,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-binding-wrap",
+    id: "electrical-binding-wrap",
     name: "Binding Wrap",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Binding Wrap listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Binding Wrap from the Alfa Electrical Materials catalogue.",
+    description: "Binding Wrap. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Binding Wrap.",
     image: [],
     keywords: [
-      "ALFA",
       "Binding Wrap",
       "Electrical Accessories",
       "General Electrical"
@@ -2697,16 +2574,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-fishing-tape",
+    id: "electrical-fishing-tape",
     name: "Fishing Tape",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Fishing Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Fishing Tape from the Alfa Electrical Materials catalogue.",
+    description: "Fishing Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Fishing Tape.",
     image: [],
     keywords: [
-      "ALFA",
       "Fishing Tape",
       "Electrical Accessories",
       "General Electrical"
@@ -2715,16 +2591,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-isolator",
+    id: "electrical-pvc-isolator",
     name: "PVC Isolator",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "PVC Isolator listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Isolator from the Alfa Electrical Materials catalogue.",
+    description: "PVC Isolator. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Isolator.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Isolator",
       "Electrical Accessories",
       "General Electrical"
@@ -2733,16 +2608,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-electrical-tester",
+    id: "electrical-electrical-tester",
     name: "Electrical Tester",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Electrical Tester listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electrical Tester from the Alfa Electrical Materials catalogue.",
+    description: "Electrical Tester. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electrical Tester.",
     image: [],
     keywords: [
-      "ALFA",
       "Electrical Tester",
       "Electrical Accessories",
       "General Electrical"
@@ -2751,16 +2625,15 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hand-gloves",
+    id: "electrical-hand-gloves",
     name: "Hand Gloves",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "General Electrical",
-    description: "Hand Gloves listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hand Gloves from the Alfa Electrical Materials catalogue.",
+    description: "Hand Gloves. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hand Gloves.",
     image: [],
     keywords: [
-      "ALFA",
       "Hand Gloves",
       "Electrical Accessories",
       "General Electrical"
@@ -2769,15 +2642,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-round-exhaust-fan",
+    id: "electrical-pvc-round-exhaust-fan",
     name: "PVC Round Exhaust Fan",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "PVC Round Exhaust Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Round Exhaust Fan from the Alfa Electrical Materials catalogue.",
+    description: "PVC Round Exhaust Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Round Exhaust Fan.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Round Exhaust Fan",
       "Ventilation"
     ],
@@ -2785,15 +2657,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pvc-square-auto-shutter-exhaust-fan",
+    id: "electrical-pvc-square-auto-shutter-exhaust-fan",
     name: "PVC Square Auto Shutter Exhaust Fan",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "PVC Square Auto Shutter Exhaust Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Square Auto Shutter Exhaust Fan from the Alfa Electrical Materials catalogue.",
+    description: "PVC Square Auto Shutter Exhaust Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Square Auto Shutter Exhaust Fan.",
     image: [],
     keywords: [
-      "ALFA",
       "PVC Square Auto Shutter Exhaust Fan",
       "Ventilation"
     ],
@@ -2801,15 +2672,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-metal-exhaust-fan",
+    id: "electrical-metal-exhaust-fan",
     name: "Metal Exhaust Fan",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "Metal Exhaust Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Exhaust Fan from the Alfa Electrical Materials catalogue.",
+    description: "Metal Exhaust Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Exhaust Fan.",
     image: [],
     keywords: [
-      "ALFA",
       "Metal Exhaust Fan",
       "Ventilation"
     ],
@@ -2817,15 +2687,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-mist-fan",
+    id: "electrical-mist-fan",
     name: "Mist Fan",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "Mist Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Mist Fan from the Alfa Electrical Materials catalogue.",
+    description: "Mist Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Mist Fan.",
     image: [],
     keywords: [
-      "ALFA",
       "Mist Fan",
       "Ventilation"
     ],
@@ -2833,15 +2702,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-pedestal-fan",
+    id: "electrical-pedestal-fan",
     name: "Pedestal Fan",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "Pedestal Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pedestal Fan from the Alfa Electrical Materials catalogue.",
+    description: "Pedestal Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pedestal Fan.",
     image: [],
     keywords: [
-      "ALFA",
       "Pedestal Fan",
       "Ventilation"
     ],
@@ -2849,15 +2717,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-dust-ceiling-fan",
+    id: "electrical-dust-ceiling-fan",
     name: "Dust Ceiling Fan",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "Dust Ceiling Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Dust Ceiling Fan from the Alfa Electrical Materials catalogue.",
+    description: "Dust Ceiling Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Dust Ceiling Fan.",
     image: [],
     keywords: [
-      "ALFA",
       "Dust Ceiling Fan",
       "Ventilation"
     ],
@@ -2865,15 +2732,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-telephone-box",
+    id: "electrical-telephone-box",
     name: "Telephone Box",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Telephone Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Telephone Box from the Alfa Electrical Materials catalogue.",
+    description: "Telephone Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Telephone Box.",
     image: [],
     keywords: [
-      "ALFA",
       "Telephone Box",
       "Electrical Accessories"
     ],
@@ -2886,8 +2752,8 @@ export const alfaProducts: Product[] = [
     brand: "ALHAMA",
     category: "Lighting",
     subcategory: "Weatherproof Lighting",
-    description: "Alhama Weatherproof LED Light Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Alhama Weatherproof LED Light Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Alhama Weatherproof LED Light Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Alhama Weatherproof LED Light Fitting.",
     features: [
       "Prismatic design for light distribution",
       "Tool-free access to tray",
@@ -2915,8 +2781,8 @@ export const alfaProducts: Product[] = [
     brand: "VORTICE",
     sku: "12612",
     category: "Ventilation",
-    description: "Vortice 150/6 AR Wall/Window Axial Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Vortice 150/6 AR Wall/Window Axial Fan from the Alfa Electrical Materials catalogue.",
+    description: "Vortice 150/6 AR Wall/Window Axial Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Vortice 150/6 AR Wall/Window Axial Fan.",
     image: [],
     keywords: [
       "VORTICE",
@@ -2932,8 +2798,8 @@ export const alfaProducts: Product[] = [
     brand: "VORTICE",
     sku: "12452",
     category: "Ventilation",
-    description: "Vortice 230/9 AR Wall/Window Axial Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Vortice 230/9 AR Wall/Window Axial Fan from the Alfa Electrical Materials catalogue.",
+    description: "Vortice 230/9 AR Wall/Window Axial Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Vortice 230/9 AR Wall/Window Axial Fan.",
     image: [],
     keywords: [
       "VORTICE",
@@ -2949,8 +2815,8 @@ export const alfaProducts: Product[] = [
     brand: "VORTICE",
     sku: "12620",
     category: "Ventilation",
-    description: "Vortice 15/6 A Wall/Window Axial Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Vortice 15/6 A Wall/Window Axial Fan from the Alfa Electrical Materials catalogue.",
+    description: "Vortice 15/6 A Wall/Window Axial Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Vortice 15/6 A Wall/Window Axial Fan.",
     image: [],
     keywords: [
       "VORTICE",
@@ -2966,8 +2832,8 @@ export const alfaProducts: Product[] = [
     brand: "VORTICE",
     sku: "12760",
     category: "Ventilation",
-    description: "Vortice 23/9 AR Wall/Window Axial Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Vortice 23/9 AR Wall/Window Axial Fan from the Alfa Electrical Materials catalogue.",
+    description: "Vortice 23/9 AR Wall/Window Axial Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Vortice 23/9 AR Wall/Window Axial Fan.",
     image: [],
     keywords: [
       "VORTICE",
@@ -2978,15 +2844,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-window-type-ventilating-fan-6-inch",
+    id: "electrical-window-type-ventilating-fan-6-inch",
     name: "Window Type Ventilating Fan 6 Inch",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "Window Type Ventilating Fan 6 Inch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Window Type Ventilating Fan 6 Inch from the Alfa Electrical Materials catalogue.",
+    description: "Window Type Ventilating Fan 6 Inch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Window Type Ventilating Fan 6 Inch.",
     image: [],
     keywords: [
-      "ALFA",
       "Window Type Ventilating Fan 6 Inch",
       "Ventilation"
     ],
@@ -2994,15 +2859,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-window-type-ventilating-fan-9-inch",
+    id: "electrical-window-type-ventilating-fan-9-inch",
     name: "Window Type Ventilating Fan 9 Inch",
-    brand: "ALFA",
+    brand: "",
     category: "Ventilation",
-    description: "Window Type Ventilating Fan 9 Inch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Window Type Ventilating Fan 9 Inch from the Alfa Electrical Materials catalogue.",
+    description: "Window Type Ventilating Fan 9 Inch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Window Type Ventilating Fan 9 Inch.",
     image: [],
     keywords: [
-      "ALFA",
       "Window Type Ventilating Fan 9 Inch",
       "Ventilation"
     ],
@@ -3010,13 +2874,13 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-timer-switch-30a",
+    id: "electrical-timer-switch-30a",
     name: "Timer Switch 30A",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
     subcategory: "Controls",
-    description: "Timer Switch 30A listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Timer Switch 30A from the Alfa Electrical Materials catalogue.",
+    description: "Timer Switch 30A. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Timer Switch 30A.",
     specifications: [
       {
         "label": "Maximum Current",
@@ -3031,7 +2895,6 @@ export const alfaProducts: Product[] = [
     ],
     image: [],
     keywords: [
-      "ALFA",
       "Timer Switch 30A",
       "Electrical Accessories",
       "Controls"
@@ -3040,13 +2903,13 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-110-220v-step-up-down-single-phase-auto-transformer",
+    id: "electrical-110-220v-step-up-down-single-phase-auto-transformer",
     name: "110/220V Step Up-Down Single Phase Auto Transformer",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Equipment",
     subcategory: "Transformers",
-    description: "110/220V Step Up-Down Single Phase Auto Transformer listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "110/220V Step Up-Down Single Phase Auto Transformer from the Alfa Electrical Materials catalogue.",
+    description: "110/220V Step Up-Down Single Phase Auto Transformer. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "110/220V Step Up-Down Single Phase Auto Transformer.",
     specifications: [
       {
         "label": "Reversible Voltages",
@@ -3055,7 +2918,6 @@ export const alfaProducts: Product[] = [
     ],
     image: [],
     keywords: [
-      "ALFA",
       "110/220V Step Up-Down Single Phase Auto Transformer",
       "Electrical Equipment",
       "Transformers"
@@ -3069,8 +2931,8 @@ export const alfaProducts: Product[] = [
     brand: "GT",
     category: "Cable Accessories",
     subcategory: "Cast Resin Joints",
-    description: "GT Cast Resin Cable Joint Kit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GT Cast Resin Cable Joint Kit from the Alfa Electrical Materials catalogue.",
+    description: "GT Cast Resin Cable Joint Kit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GT Cast Resin Cable Joint Kit.",
     features: [
       "Suitable for PVC, PE-X (XLP) and PE insulated cables",
       "Suitable for outdoor, indoor, earth, water and installation duct applications",
@@ -3092,8 +2954,8 @@ export const alfaProducts: Product[] = [
     brand: "GT",
     category: "Cable Accessories",
     subcategory: "Cast Resin Joints",
-    description: "GT Straight Joint listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GT Straight Joint from the Alfa Electrical Materials catalogue.",
+    description: "GT Straight Joint. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GT Straight Joint.",
     image: [],
     keywords: [
       "GT",
@@ -3110,8 +2972,8 @@ export const alfaProducts: Product[] = [
     brand: "GT",
     category: "Cable Accessories",
     subcategory: "Cast Resin Joints",
-    description: "GT Branch Joint listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GT Branch Joint from the Alfa Electrical Materials catalogue.",
+    description: "GT Branch Joint. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GT Branch Joint.",
     image: [],
     keywords: [
       "GT",
@@ -3128,8 +2990,8 @@ export const alfaProducts: Product[] = [
     brand: "GT",
     category: "Cable Accessories",
     subcategory: "Cast Resin Joints",
-    description: "GT Double Branch Joint listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GT Double Branch Joint from the Alfa Electrical Materials catalogue.",
+    description: "GT Double Branch Joint. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GT Double Branch Joint.",
     image: [],
     keywords: [
       "GT",
@@ -3146,8 +3008,8 @@ export const alfaProducts: Product[] = [
     brand: "GT",
     category: "Cable Accessories",
     subcategory: "Cast Resin Joints",
-    description: "GT Transition Joint listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GT Transition Joint from the Alfa Electrical Materials catalogue.",
+    description: "GT Transition Joint. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GT Transition Joint.",
     image: [],
     keywords: [
       "GT",
@@ -3164,8 +3026,8 @@ export const alfaProducts: Product[] = [
     brand: "GT",
     category: "Cable Accessories",
     subcategory: "Cast Resin Joints",
-    description: "GTZ Cylindrical Joint listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GTZ Cylindrical Joint from the Alfa Electrical Materials catalogue.",
+    description: "GTZ Cylindrical Joint. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GTZ Cylindrical Joint.",
     image: [],
     keywords: [
       "GT",
@@ -3182,8 +3044,8 @@ export const alfaProducts: Product[] = [
     brand: "GT",
     category: "Cable Accessories",
     subcategory: "Cast Resin Joints",
-    description: "GA 2-Component Polyurethane Cast Resin listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GA 2-Component Polyurethane Cast Resin from the Alfa Electrical Materials catalogue.",
+    description: "GA 2-Component Polyurethane Cast Resin. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GA 2-Component Polyurethane Cast Resin.",
     features: [
       "High hydrolysis strength",
       "Thin-fluid after mixing",
@@ -3216,8 +3078,8 @@ export const alfaProducts: Product[] = [
     name: "Metal Exhaust Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "Metal Exhaust Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Exhaust Fan from the Alfa Electrical Materials catalogue.",
+    description: "Metal Exhaust Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Exhaust Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3232,8 +3094,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Round Exhaust Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "PVC Round Exhaust Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Round Exhaust Fan from the Alfa Electrical Materials catalogue.",
+    description: "PVC Round Exhaust Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Round Exhaust Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3248,8 +3110,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Square Auto Shutter Duct Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "PVC Square Auto Shutter Duct Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Square Auto Shutter Duct Fan from the Alfa Electrical Materials catalogue.",
+    description: "PVC Square Auto Shutter Duct Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Square Auto Shutter Duct Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3264,8 +3126,8 @@ export const alfaProducts: Product[] = [
     name: "Window Type Duct Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "Window Type Duct Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Window Type Duct Fan from the Alfa Electrical Materials catalogue.",
+    description: "Window Type Duct Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Window Type Duct Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3280,8 +3142,8 @@ export const alfaProducts: Product[] = [
     name: "60x60 Ceiling Fan + LED",
     brand: "RELITE",
     category: "Ventilation",
-    description: "60x60 Ceiling Fan + LED listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "60x60 Ceiling Fan + LED from the Alfa Electrical Materials catalogue.",
+    description: "60x60 Ceiling Fan + LED. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "60x60 Ceiling Fan + LED.",
     image: [],
     keywords: [
       "RELITE",
@@ -3296,8 +3158,8 @@ export const alfaProducts: Product[] = [
     name: "Square Design Ceiling Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "Square Design Ceiling Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Square Design Ceiling Fan from the Alfa Electrical Materials catalogue.",
+    description: "Square Design Ceiling Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Square Design Ceiling Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3312,8 +3174,8 @@ export const alfaProducts: Product[] = [
     name: "Mist & Stand Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "Mist & Stand Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Mist & Stand Fan from the Alfa Electrical Materials catalogue.",
+    description: "Mist & Stand Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Mist & Stand Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3328,8 +3190,8 @@ export const alfaProducts: Product[] = [
     name: "Blower Fan with Hose",
     brand: "RELITE",
     category: "Ventilation",
-    description: "Blower Fan with Hose listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Blower Fan with Hose from the Alfa Electrical Materials catalogue.",
+    description: "Blower Fan with Hose. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Blower Fan with Hose.",
     image: [],
     keywords: [
       "RELITE",
@@ -3344,8 +3206,8 @@ export const alfaProducts: Product[] = [
     name: "Wall Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "Wall Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Wall Fan from the Alfa Electrical Materials catalogue.",
+    description: "Wall Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Wall Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3360,8 +3222,8 @@ export const alfaProducts: Product[] = [
     name: "16 Inch Orbit Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "16 Inch Orbit Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "16 Inch Orbit Fan from the Alfa Electrical Materials catalogue.",
+    description: "16 Inch Orbit Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "16 Inch Orbit Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -3376,8 +3238,8 @@ export const alfaProducts: Product[] = [
     name: "Motion Sensor",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Motion Sensor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Motion Sensor from the Alfa Electrical Materials catalogue.",
+    description: "Motion Sensor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Motion Sensor.",
     image: [],
     keywords: [
       "RELITE",
@@ -3392,8 +3254,8 @@ export const alfaProducts: Product[] = [
     name: "Smoke Detector",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Smoke Detector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Smoke Detector from the Alfa Electrical Materials catalogue.",
+    description: "Smoke Detector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Smoke Detector.",
     image: [],
     keywords: [
       "RELITE",
@@ -3408,8 +3270,8 @@ export const alfaProducts: Product[] = [
     name: "Metal Enclosure",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Metal Enclosure listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Enclosure from the Alfa Electrical Materials catalogue.",
+    description: "Metal Enclosure. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Enclosure.",
     image: [],
     keywords: [
       "RELITE",
@@ -3424,8 +3286,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -3440,8 +3302,8 @@ export const alfaProducts: Product[] = [
     name: "GI Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "GI Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Box from the Alfa Electrical Materials catalogue.",
+    description: "GI Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -3456,8 +3318,8 @@ export const alfaProducts: Product[] = [
     name: "GI Ring",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "GI Ring listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Ring from the Alfa Electrical Materials catalogue.",
+    description: "GI Ring. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Ring.",
     image: [],
     keywords: [
       "RELITE",
@@ -3472,8 +3334,8 @@ export const alfaProducts: Product[] = [
     name: "Aluminium Weatherproof Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Aluminium Weatherproof Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Aluminium Weatherproof Box from the Alfa Electrical Materials catalogue.",
+    description: "Aluminium Weatherproof Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Aluminium Weatherproof Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -3488,8 +3350,8 @@ export const alfaProducts: Product[] = [
     name: "Waterproof Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Waterproof Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Waterproof Box from the Alfa Electrical Materials catalogue.",
+    description: "Waterproof Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Waterproof Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -3504,8 +3366,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Dome",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Dome listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Dome from the Alfa Electrical Materials catalogue.",
+    description: "PVC Dome. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Dome.",
     image: [],
     keywords: [
       "RELITE",
@@ -3520,8 +3382,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Conduit",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Conduit from the Alfa Electrical Materials catalogue.",
+    description: "PVC Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Conduit.",
     image: [],
     keywords: [
       "RELITE",
@@ -3536,8 +3398,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Trunking",
     brand: "RELITE",
     category: "Cable Management",
-    description: "PVC Trunking listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Trunking from the Alfa Electrical Materials catalogue.",
+    description: "PVC Trunking. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Trunking.",
     image: [],
     keywords: [
       "RELITE",
@@ -3552,8 +3414,8 @@ export const alfaProducts: Product[] = [
     name: "Floor Trunking",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Floor Trunking listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Floor Trunking from the Alfa Electrical Materials catalogue.",
+    description: "Floor Trunking. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Floor Trunking.",
     image: [],
     keywords: [
       "RELITE",
@@ -3568,8 +3430,8 @@ export const alfaProducts: Product[] = [
     name: "Slotted Trunking",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Slotted Trunking listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Slotted Trunking from the Alfa Electrical Materials catalogue.",
+    description: "Slotted Trunking. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Slotted Trunking.",
     image: [],
     keywords: [
       "RELITE",
@@ -3584,8 +3446,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Cable Tie",
     brand: "RELITE",
     category: "Cable Management",
-    description: "PVC Cable Tie listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Cable Tie from the Alfa Electrical Materials catalogue.",
+    description: "PVC Cable Tie. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Cable Tie.",
     image: [],
     keywords: [
       "RELITE",
@@ -3600,8 +3462,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Coated Cable Tie",
     brand: "RELITE",
     category: "Cable Management",
-    description: "PVC Coated Cable Tie listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Coated Cable Tie from the Alfa Electrical Materials catalogue.",
+    description: "PVC Coated Cable Tie. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Coated Cable Tie.",
     image: [],
     keywords: [
       "RELITE",
@@ -3616,8 +3478,8 @@ export const alfaProducts: Product[] = [
     name: "Stainless Steel Cable Tie",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Stainless Steel Cable Tie listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Stainless Steel Cable Tie from the Alfa Electrical Materials catalogue.",
+    description: "Stainless Steel Cable Tie. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Stainless Steel Cable Tie.",
     image: [],
     keywords: [
       "RELITE",
@@ -3632,8 +3494,8 @@ export const alfaProducts: Product[] = [
     name: "Cable Tie Base",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Cable Tie Base listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Tie Base from the Alfa Electrical Materials catalogue.",
+    description: "Cable Tie Base. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Tie Base.",
     image: [],
     keywords: [
       "RELITE",
@@ -3648,8 +3510,8 @@ export const alfaProducts: Product[] = [
     name: "Fishing Tape",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Fishing Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Fishing Tape from the Alfa Electrical Materials catalogue.",
+    description: "Fishing Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Fishing Tape.",
     image: [],
     keywords: [
       "RELITE",
@@ -3664,8 +3526,8 @@ export const alfaProducts: Product[] = [
     name: "Wire Clip",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Wire Clip listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Wire Clip from the Alfa Electrical Materials catalogue.",
+    description: "Wire Clip. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Wire Clip.",
     image: [],
     keywords: [
       "RELITE",
@@ -3680,8 +3542,8 @@ export const alfaProducts: Product[] = [
     name: "Metal Pulling Spring",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Metal Pulling Spring listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Pulling Spring from the Alfa Electrical Materials catalogue.",
+    description: "Metal Pulling Spring. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Pulling Spring.",
     image: [],
     keywords: [
       "RELITE",
@@ -3696,8 +3558,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Carrier Strip",
     brand: "RELITE",
     category: "Cable Management",
-    description: "PVC Carrier Strip listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Carrier Strip from the Alfa Electrical Materials catalogue.",
+    description: "PVC Carrier Strip. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Carrier Strip.",
     image: [],
     keywords: [
       "RELITE",
@@ -3712,8 +3574,8 @@ export const alfaProducts: Product[] = [
     name: "Cable Marker",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Cable Marker listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Marker from the Alfa Electrical Materials catalogue.",
+    description: "Cable Marker. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Marker.",
     image: [],
     keywords: [
       "RELITE",
@@ -3728,8 +3590,8 @@ export const alfaProducts: Product[] = [
     name: "Industrial Plug",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Industrial Plug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Plug from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Plug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Plug.",
     image: [],
     keywords: [
       "RELITE",
@@ -3744,8 +3606,8 @@ export const alfaProducts: Product[] = [
     name: "Industrial Switched Socket",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Industrial Switched Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Switched Socket from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Switched Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Switched Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -3760,8 +3622,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Isolator",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Isolator listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Isolator from the Alfa Electrical Materials catalogue.",
+    description: "PVC Isolator. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Isolator.",
     image: [],
     keywords: [
       "RELITE",
@@ -3776,8 +3638,8 @@ export const alfaProducts: Product[] = [
     name: "Pipe Accessories",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Pipe Accessories listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pipe Accessories from the Alfa Electrical Materials catalogue.",
+    description: "Pipe Accessories. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pipe Accessories.",
     image: [],
     keywords: [
       "RELITE",
@@ -3792,8 +3654,8 @@ export const alfaProducts: Product[] = [
     name: "PG Gland",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PG Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PG Gland from the Alfa Electrical Materials catalogue.",
+    description: "PG Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PG Gland.",
     image: [],
     keywords: [
       "RELITE",
@@ -3808,8 +3670,8 @@ export const alfaProducts: Product[] = [
     name: "Tube Holder",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Tube Holder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Tube Holder from the Alfa Electrical Materials catalogue.",
+    description: "Tube Holder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Tube Holder.",
     image: [],
     keywords: [
       "RELITE",
@@ -3824,8 +3686,8 @@ export const alfaProducts: Product[] = [
     name: "Bending Machine",
     brand: "RELITE",
     category: "Electrical Tools",
-    description: "Bending Machine listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bending Machine from the Alfa Electrical Materials catalogue.",
+    description: "Bending Machine. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bending Machine.",
     image: [],
     keywords: [
       "RELITE",
@@ -3840,8 +3702,8 @@ export const alfaProducts: Product[] = [
     name: "Die Set",
     brand: "RELITE",
     category: "Electrical Tools",
-    description: "Die Set listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Die Set from the Alfa Electrical Materials catalogue.",
+    description: "Die Set. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Die Set.",
     image: [],
     keywords: [
       "RELITE",
@@ -3856,8 +3718,8 @@ export const alfaProducts: Product[] = [
     name: "Crimping Tool",
     brand: "RELITE",
     category: "Electrical Tools",
-    description: "Crimping Tool listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Crimping Tool from the Alfa Electrical Materials catalogue.",
+    description: "Crimping Tool. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Crimping Tool.",
     image: [],
     keywords: [
       "RELITE",
@@ -3872,8 +3734,8 @@ export const alfaProducts: Product[] = [
     name: "Cable Cutter",
     brand: "RELITE",
     category: "Electrical Tools",
-    description: "Cable Cutter listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Cutter from the Alfa Electrical Materials catalogue.",
+    description: "Cable Cutter. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Cutter.",
     image: [],
     keywords: [
       "RELITE",
@@ -3888,8 +3750,8 @@ export const alfaProducts: Product[] = [
     name: "Float Switch",
     brand: "RELITE",
     category: "Pumps & Controls",
-    description: "Float Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Float Switch from the Alfa Electrical Materials catalogue.",
+    description: "Float Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Float Switch.",
     image: [],
     keywords: [
       "RELITE",
@@ -3904,8 +3766,8 @@ export const alfaProducts: Product[] = [
     name: "Insect Killer",
     brand: "RELITE",
     category: "Pest Control",
-    description: "Insect Killer listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Insect Killer from the Alfa Electrical Materials catalogue.",
+    description: "Insect Killer. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Insect Killer.",
     image: [],
     keywords: [
       "RELITE",
@@ -3920,8 +3782,8 @@ export const alfaProducts: Product[] = [
     name: "Rail Mounting Connector",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Rail Mounting Connector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Rail Mounting Connector from the Alfa Electrical Materials catalogue.",
+    description: "Rail Mounting Connector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Rail Mounting Connector.",
     image: [],
     keywords: [
       "RELITE",
@@ -3936,8 +3798,8 @@ export const alfaProducts: Product[] = [
     name: "E27 Holder",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "E27 Holder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "E27 Holder from the Alfa Electrical Materials catalogue.",
+    description: "E27 Holder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "E27 Holder.",
     image: [],
     keywords: [
       "RELITE",
@@ -3952,8 +3814,8 @@ export const alfaProducts: Product[] = [
     name: "Ceiling Rose",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Ceiling Rose listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ceiling Rose from the Alfa Electrical Materials catalogue.",
+    description: "Ceiling Rose. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ceiling Rose.",
     image: [],
     keywords: [
       "RELITE",
@@ -3968,8 +3830,8 @@ export const alfaProducts: Product[] = [
     name: "Pendant Holder",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Pendant Holder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pendant Holder from the Alfa Electrical Materials catalogue.",
+    description: "Pendant Holder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pendant Holder.",
     image: [],
     keywords: [
       "RELITE",
@@ -3984,8 +3846,8 @@ export const alfaProducts: Product[] = [
     name: "Earthing Connector",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Earthing Connector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Earthing Connector from the Alfa Electrical Materials catalogue.",
+    description: "Earthing Connector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Earthing Connector.",
     image: [],
     keywords: [
       "RELITE",
@@ -4000,8 +3862,8 @@ export const alfaProducts: Product[] = [
     name: "Insulation Tape",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Insulation Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Insulation Tape from the Alfa Electrical Materials catalogue.",
+    description: "Insulation Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Insulation Tape.",
     image: [],
     keywords: [
       "RELITE",
@@ -4016,8 +3878,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Insulated Lug",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Insulated Lug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Insulated Lug from the Alfa Electrical Materials catalogue.",
+    description: "PVC Insulated Lug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Insulated Lug.",
     image: [],
     keywords: [
       "RELITE",
@@ -4032,8 +3894,8 @@ export const alfaProducts: Product[] = [
     name: "Heat Shrink Sleeve",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Heat Shrink Sleeve listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Heat Shrink Sleeve from the Alfa Electrical Materials catalogue.",
+    description: "Heat Shrink Sleeve. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Heat Shrink Sleeve.",
     image: [],
     keywords: [
       "RELITE",
@@ -4048,8 +3910,8 @@ export const alfaProducts: Product[] = [
     name: "Trunking Sleeve",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Trunking Sleeve listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Trunking Sleeve from the Alfa Electrical Materials catalogue.",
+    description: "Trunking Sleeve. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Trunking Sleeve.",
     image: [],
     keywords: [
       "RELITE",
@@ -4064,8 +3926,8 @@ export const alfaProducts: Product[] = [
     name: "Caution Tape",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Caution Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Caution Tape from the Alfa Electrical Materials catalogue.",
+    description: "Caution Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Caution Tape.",
     image: [],
     keywords: [
       "RELITE",
@@ -4080,8 +3942,8 @@ export const alfaProducts: Product[] = [
     name: "Porcelain Holder",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Porcelain Holder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Porcelain Holder from the Alfa Electrical Materials catalogue.",
+    description: "Porcelain Holder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Porcelain Holder.",
     image: [],
     keywords: [
       "RELITE",
@@ -4096,8 +3958,8 @@ export const alfaProducts: Product[] = [
     name: "Adjustable Earth Bonding Clamp",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Adjustable Earth Bonding Clamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Adjustable Earth Bonding Clamp from the Alfa Electrical Materials catalogue.",
+    description: "Adjustable Earth Bonding Clamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Adjustable Earth Bonding Clamp.",
     image: [],
     keywords: [
       "RELITE",
@@ -4112,8 +3974,8 @@ export const alfaProducts: Product[] = [
     name: "Extension Drum",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Extension Drum listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Extension Drum from the Alfa Electrical Materials catalogue.",
+    description: "Extension Drum. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Extension Drum.",
     image: [],
     keywords: [
       "RELITE",
@@ -4128,8 +3990,8 @@ export const alfaProducts: Product[] = [
     name: "Extension Board",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Extension Board listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Extension Board from the Alfa Electrical Materials catalogue.",
+    description: "Extension Board. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Extension Board.",
     image: [],
     keywords: [
       "RELITE",
@@ -4144,8 +4006,8 @@ export const alfaProducts: Product[] = [
     name: "Weatherproof Connector",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Weatherproof Connector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Connector from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Connector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Connector.",
     image: [],
     keywords: [
       "RELITE",
@@ -4160,8 +4022,8 @@ export const alfaProducts: Product[] = [
     name: "Alarm Bell",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Alarm Bell listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Alarm Bell from the Alfa Electrical Materials catalogue.",
+    description: "Alarm Bell. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Alarm Bell.",
     image: [],
     keywords: [
       "RELITE",
@@ -4176,8 +4038,8 @@ export const alfaProducts: Product[] = [
     name: "S2 Starter",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "S2 Starter listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "S2 Starter from the Alfa Electrical Materials catalogue.",
+    description: "S2 Starter. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "S2 Starter.",
     image: [],
     keywords: [
       "RELITE",
@@ -4192,8 +4054,8 @@ export const alfaProducts: Product[] = [
     name: "S10 Starter",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "S10 Starter listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "S10 Starter from the Alfa Electrical Materials catalogue.",
+    description: "S10 Starter. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "S10 Starter.",
     image: [],
     keywords: [
       "RELITE",
@@ -4208,8 +4070,8 @@ export const alfaProducts: Product[] = [
     name: "Telephone Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Telephone Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Telephone Box from the Alfa Electrical Materials catalogue.",
+    description: "Telephone Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Telephone Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -4224,8 +4086,8 @@ export const alfaProducts: Product[] = [
     name: "DB Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "DB Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "DB Box from the Alfa Electrical Materials catalogue.",
+    description: "DB Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "DB Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -4240,8 +4102,8 @@ export const alfaProducts: Product[] = [
     name: "DIN Rail",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "DIN Rail listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "DIN Rail from the Alfa Electrical Materials catalogue.",
+    description: "DIN Rail. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "DIN Rail.",
     image: [],
     keywords: [
       "RELITE",
@@ -4256,8 +4118,8 @@ export const alfaProducts: Product[] = [
     name: "LED Tube Fitting",
     brand: "RELITE",
     category: "Lighting",
-    description: "LED Tube Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Tube Fitting from the Alfa Electrical Materials catalogue.",
+    description: "LED Tube Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Tube Fitting.",
     image: [],
     keywords: [
       "RELITE",
@@ -4272,8 +4134,8 @@ export const alfaProducts: Product[] = [
     name: "LED Strip Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "LED Strip Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Strip Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Strip Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Strip Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4288,8 +4150,8 @@ export const alfaProducts: Product[] = [
     name: "LED Candle Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "LED Candle Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Candle Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Candle Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Candle Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4304,8 +4166,8 @@ export const alfaProducts: Product[] = [
     name: "LED Bulb",
     brand: "RELITE",
     category: "Lighting",
-    description: "LED Bulb listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Bulb from the Alfa Electrical Materials catalogue.",
+    description: "LED Bulb. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Bulb.",
     image: [],
     keywords: [
       "RELITE",
@@ -4320,8 +4182,8 @@ export const alfaProducts: Product[] = [
     name: "COB Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "COB Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "COB Light from the Alfa Electrical Materials catalogue.",
+    description: "COB Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "COB Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4336,8 +4198,8 @@ export const alfaProducts: Product[] = [
     name: "60x60 LED Panel",
     brand: "RELITE",
     category: "Lighting",
-    description: "60x60 LED Panel listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "60x60 LED Panel from the Alfa Electrical Materials catalogue.",
+    description: "60x60 LED Panel. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "60x60 LED Panel.",
     image: [],
     keywords: [
       "RELITE",
@@ -4352,8 +4214,8 @@ export const alfaProducts: Product[] = [
     name: "Spot Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "Spot Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Spot Light from the Alfa Electrical Materials catalogue.",
+    description: "Spot Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Spot Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4368,8 +4230,8 @@ export const alfaProducts: Product[] = [
     name: "Highway Fitting",
     brand: "RELITE",
     category: "Lighting",
-    description: "Highway Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Highway Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Highway Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Highway Fitting.",
     image: [],
     keywords: [
       "RELITE",
@@ -4384,8 +4246,8 @@ export const alfaProducts: Product[] = [
     name: "Flood Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "Flood Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Flood Light from the Alfa Electrical Materials catalogue.",
+    description: "Flood Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Flood Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4400,8 +4262,8 @@ export const alfaProducts: Product[] = [
     name: "LED Strip Light Roll",
     brand: "RELITE",
     category: "Lighting",
-    description: "LED Strip Light Roll listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Strip Light Roll from the Alfa Electrical Materials catalogue.",
+    description: "LED Strip Light Roll. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Strip Light Roll.",
     image: [],
     keywords: [
       "RELITE",
@@ -4416,8 +4278,8 @@ export const alfaProducts: Product[] = [
     name: "Panel Surface Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "Panel Surface Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Panel Surface Light from the Alfa Electrical Materials catalogue.",
+    description: "Panel Surface Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Panel Surface Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4432,8 +4294,8 @@ export const alfaProducts: Product[] = [
     name: "Round Panel Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "Round Panel Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Round Panel Light from the Alfa Electrical Materials catalogue.",
+    description: "Round Panel Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Round Panel Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4448,8 +4310,8 @@ export const alfaProducts: Product[] = [
     name: "Square Panel Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "Square Panel Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Square Panel Light from the Alfa Electrical Materials catalogue.",
+    description: "Square Panel Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Square Panel Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4464,8 +4326,8 @@ export const alfaProducts: Product[] = [
     name: "Batten Fitting",
     brand: "RELITE",
     category: "Lighting",
-    description: "Batten Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Batten Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Batten Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Batten Fitting.",
     image: [],
     keywords: [
       "RELITE",
@@ -4480,8 +4342,8 @@ export const alfaProducts: Product[] = [
     name: "LED Tube Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "LED Tube Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Tube Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Tube Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Tube Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -4496,8 +4358,8 @@ export const alfaProducts: Product[] = [
     name: "MR16 GU5.3 Lamp",
     brand: "RELITE",
     category: "Lighting",
-    description: "MR16 GU5.3 Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MR16 GU5.3 Lamp from the Alfa Electrical Materials catalogue.",
+    description: "MR16 GU5.3 Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MR16 GU5.3 Lamp.",
     image: [],
     keywords: [
       "RELITE",
@@ -4512,8 +4374,8 @@ export const alfaProducts: Product[] = [
     name: "Magnetic Ballast",
     brand: "RELITE",
     category: "Lighting",
-    description: "Magnetic Ballast listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Magnetic Ballast from the Alfa Electrical Materials catalogue.",
+    description: "Magnetic Ballast. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Magnetic Ballast.",
     image: [],
     keywords: [
       "RELITE",
@@ -4528,8 +4390,8 @@ export const alfaProducts: Product[] = [
     name: "Energy Saver Lamp",
     brand: "RELITE",
     category: "Lighting",
-    description: "Energy Saver Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Energy Saver Lamp from the Alfa Electrical Materials catalogue.",
+    description: "Energy Saver Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Energy Saver Lamp.",
     image: [],
     keywords: [
       "RELITE",
@@ -4544,8 +4406,8 @@ export const alfaProducts: Product[] = [
     name: "Bending Spring",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Bending Spring listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bending Spring from the Alfa Electrical Materials catalogue.",
+    description: "Bending Spring. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bending Spring.",
     image: [],
     keywords: [
       "RELITE",
@@ -4560,8 +4422,8 @@ export const alfaProducts: Product[] = [
     name: "MICC Fire Clip",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "MICC Fire Clip listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MICC Fire Clip from the Alfa Electrical Materials catalogue.",
+    description: "MICC Fire Clip. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MICC Fire Clip.",
     image: [],
     keywords: [
       "RELITE",
@@ -4576,8 +4438,8 @@ export const alfaProducts: Product[] = [
     name: "Cat6 Wire",
     brand: "RELITE",
     category: "Cables & Wires",
-    description: "Cat6 Wire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cat6 Wire from the Alfa Electrical Materials catalogue.",
+    description: "Cat6 Wire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cat6 Wire.",
     image: [],
     keywords: [
       "RELITE",
@@ -4592,8 +4454,8 @@ export const alfaProducts: Product[] = [
     name: "Coaxial Cable",
     brand: "RELITE",
     category: "Cables & Wires",
-    description: "Coaxial Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Coaxial Cable from the Alfa Electrical Materials catalogue.",
+    description: "Coaxial Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Coaxial Cable.",
     image: [],
     keywords: [
       "RELITE",
@@ -4608,8 +4470,8 @@ export const alfaProducts: Product[] = [
     name: "Insect Killer Tube",
     brand: "RELITE",
     category: "Pest Control",
-    description: "Insect Killer Tube listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Insect Killer Tube from the Alfa Electrical Materials catalogue.",
+    description: "Insect Killer Tube. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Insect Killer Tube.",
     image: [],
     keywords: [
       "RELITE",
@@ -4624,8 +4486,8 @@ export const alfaProducts: Product[] = [
     name: "Bentonite Powder",
     brand: "RELITE",
     category: "Earthing",
-    description: "Bentonite Powder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bentonite Powder from the Alfa Electrical Materials catalogue.",
+    description: "Bentonite Powder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bentonite Powder.",
     image: [],
     keywords: [
       "RELITE",
@@ -4640,8 +4502,8 @@ export const alfaProducts: Product[] = [
     name: "Hook Plate",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Hook Plate listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hook Plate from the Alfa Electrical Materials catalogue.",
+    description: "Hook Plate. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hook Plate.",
     image: [],
     keywords: [
       "RELITE",
@@ -4656,8 +4518,8 @@ export const alfaProducts: Product[] = [
     name: "Dome Cover",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Dome Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Dome Cover from the Alfa Electrical Materials catalogue.",
+    description: "Dome Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Dome Cover.",
     image: [],
     keywords: [
       "RELITE",
@@ -4672,8 +4534,8 @@ export const alfaProducts: Product[] = [
     name: "Ball & Socket",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Ball & Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ball & Socket from the Alfa Electrical Materials catalogue.",
+    description: "Ball & Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ball & Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -4688,8 +4550,8 @@ export const alfaProducts: Product[] = [
     name: "Galvanised Steel Cable Drum",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Galvanised Steel Cable Drum listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Galvanised Steel Cable Drum from the Alfa Electrical Materials catalogue.",
+    description: "Galvanised Steel Cable Drum. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Galvanised Steel Cable Drum.",
     image: [],
     keywords: [
       "RELITE",
@@ -4704,8 +4566,8 @@ export const alfaProducts: Product[] = [
     name: "Angle Corner Roller",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Angle Corner Roller listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Angle Corner Roller from the Alfa Electrical Materials catalogue.",
+    description: "Angle Corner Roller. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Angle Corner Roller.",
     image: [],
     keywords: [
       "RELITE",
@@ -4720,8 +4582,8 @@ export const alfaProducts: Product[] = [
     name: "Triple Cable Roller",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Triple Cable Roller listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Triple Cable Roller from the Alfa Electrical Materials catalogue.",
+    description: "Triple Cable Roller. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Triple Cable Roller.",
     image: [],
     keywords: [
       "RELITE",
@@ -4736,8 +4598,8 @@ export const alfaProducts: Product[] = [
     name: "Straight Cable Roller",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Straight Cable Roller listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Straight Cable Roller from the Alfa Electrical Materials catalogue.",
+    description: "Straight Cable Roller. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Straight Cable Roller.",
     image: [],
     keywords: [
       "RELITE",
@@ -4752,8 +4614,8 @@ export const alfaProducts: Product[] = [
     name: "Cable Roller",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Cable Roller listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Roller from the Alfa Electrical Materials catalogue.",
+    description: "Cable Roller. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Roller.",
     image: [],
     keywords: [
       "RELITE",
@@ -4768,8 +4630,8 @@ export const alfaProducts: Product[] = [
     name: "GI Channel",
     brand: "RELITE",
     category: "Cable Management",
-    description: "GI Channel listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Channel from the Alfa Electrical Materials catalogue.",
+    description: "GI Channel. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Channel.",
     image: [],
     keywords: [
       "RELITE",
@@ -4784,8 +4646,8 @@ export const alfaProducts: Product[] = [
     name: "Channel End Cap",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Channel End Cap listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Channel End Cap from the Alfa Electrical Materials catalogue.",
+    description: "Channel End Cap. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Channel End Cap.",
     image: [],
     keywords: [
       "RELITE",
@@ -4800,8 +4662,8 @@ export const alfaProducts: Product[] = [
     name: "Floor Box",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Floor Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Floor Box from the Alfa Electrical Materials catalogue.",
+    description: "Floor Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Floor Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -4816,8 +4678,8 @@ export const alfaProducts: Product[] = [
     name: "Spiral Sleeve",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Spiral Sleeve listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Spiral Sleeve from the Alfa Electrical Materials catalogue.",
+    description: "Spiral Sleeve. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Spiral Sleeve.",
     image: [],
     keywords: [
       "RELITE",
@@ -4832,8 +4694,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Pulling Spring",
     brand: "RELITE",
     category: "Cable Management",
-    description: "PVC Pulling Spring listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Pulling Spring from the Alfa Electrical Materials catalogue.",
+    description: "PVC Pulling Spring. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Pulling Spring.",
     image: [],
     keywords: [
       "RELITE",
@@ -4848,8 +4710,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Glue",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Glue listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Glue from the Alfa Electrical Materials catalogue.",
+    description: "PVC Glue. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Glue.",
     image: [],
     keywords: [
       "RELITE",
@@ -4864,8 +4726,8 @@ export const alfaProducts: Product[] = [
     name: "Photo Cell",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Photo Cell listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Photo Cell from the Alfa Electrical Materials catalogue.",
+    description: "Photo Cell. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Photo Cell.",
     image: [],
     keywords: [
       "RELITE",
@@ -4880,8 +4742,8 @@ export const alfaProducts: Product[] = [
     name: "Packing Tape",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Packing Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Packing Tape from the Alfa Electrical Materials catalogue.",
+    description: "Packing Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Packing Tape.",
     image: [],
     keywords: [
       "RELITE",
@@ -4896,8 +4758,8 @@ export const alfaProducts: Product[] = [
     name: "Masking Tape",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Masking Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Masking Tape from the Alfa Electrical Materials catalogue.",
+    description: "Masking Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Masking Tape.",
     image: [],
     keywords: [
       "RELITE",
@@ -4912,8 +4774,8 @@ export const alfaProducts: Product[] = [
     name: "Bulkhead Fitting",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Bulkhead Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bulkhead Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Bulkhead Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bulkhead Fitting.",
     image: [],
     keywords: [
       "RELITE",
@@ -4928,8 +4790,8 @@ export const alfaProducts: Product[] = [
     name: "Chrome Switch Socket",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Chrome Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Chrome Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Chrome Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Chrome Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -4944,8 +4806,8 @@ export const alfaProducts: Product[] = [
     name: "Electronic Ballast",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Electronic Ballast listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electronic Ballast from the Alfa Electrical Materials catalogue.",
+    description: "Electronic Ballast. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electronic Ballast.",
     image: [],
     keywords: [
       "RELITE",
@@ -4960,8 +4822,8 @@ export const alfaProducts: Product[] = [
     name: "Hand Lamp",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Hand Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hand Lamp from the Alfa Electrical Materials catalogue.",
+    description: "Hand Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hand Lamp.",
     image: [],
     keywords: [
       "RELITE",
@@ -4976,8 +4838,8 @@ export const alfaProducts: Product[] = [
     name: "Fisher Plug",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Fisher Plug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Fisher Plug from the Alfa Electrical Materials catalogue.",
+    description: "Fisher Plug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Fisher Plug.",
     image: [],
     keywords: [
       "RELITE",
@@ -4992,8 +4854,8 @@ export const alfaProducts: Product[] = [
     name: "Cotton Sleeve",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Cotton Sleeve listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cotton Sleeve from the Alfa Electrical Materials catalogue.",
+    description: "Cotton Sleeve. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cotton Sleeve.",
     image: [],
     keywords: [
       "RELITE",
@@ -5008,8 +4870,8 @@ export const alfaProducts: Product[] = [
     name: "Capacitor",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Capacitor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Capacitor from the Alfa Electrical Materials catalogue.",
+    description: "Capacitor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Capacitor.",
     image: [],
     keywords: [
       "RELITE",
@@ -5024,8 +4886,8 @@ export const alfaProducts: Product[] = [
     name: "Metal Halide Ballast",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Metal Halide Ballast listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Halide Ballast from the Alfa Electrical Materials catalogue.",
+    description: "Metal Halide Ballast. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Halide Ballast.",
     image: [],
     keywords: [
       "RELITE",
@@ -5040,8 +4902,8 @@ export const alfaProducts: Product[] = [
     name: "Ignitor",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Ignitor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ignitor from the Alfa Electrical Materials catalogue.",
+    description: "Ignitor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ignitor.",
     image: [],
     keywords: [
       "RELITE",
@@ -5056,8 +4918,8 @@ export const alfaProducts: Product[] = [
     name: "Busbar Insulator",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Busbar Insulator listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Busbar Insulator from the Alfa Electrical Materials catalogue.",
+    description: "Busbar Insulator. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Busbar Insulator.",
     image: [],
     keywords: [
       "RELITE",
@@ -5072,8 +4934,8 @@ export const alfaProducts: Product[] = [
     name: "Busbar",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Busbar listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Busbar from the Alfa Electrical Materials catalogue.",
+    description: "Busbar. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Busbar.",
     image: [],
     keywords: [
       "RELITE",
@@ -5088,8 +4950,8 @@ export const alfaProducts: Product[] = [
     name: "GI Conduit Accessories",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "GI Conduit Accessories listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Conduit Accessories from the Alfa Electrical Materials catalogue.",
+    description: "GI Conduit Accessories. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Conduit Accessories.",
     image: [],
     keywords: [
       "RELITE",
@@ -5104,8 +4966,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Weatherproof Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Weatherproof Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Weatherproof Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Weatherproof Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Weatherproof Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -5120,8 +4982,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Adaptable Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "PVC Adaptable Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Adaptable Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Adaptable Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Adaptable Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -5136,8 +4998,8 @@ export const alfaProducts: Product[] = [
     name: "Switch Box",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Switch Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Switch Box from the Alfa Electrical Materials catalogue.",
+    description: "Switch Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Switch Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -5152,8 +5014,8 @@ export const alfaProducts: Product[] = [
     name: "Nickel Adaptor",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Nickel Adaptor listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Nickel Adaptor from the Alfa Electrical Materials catalogue.",
+    description: "Nickel Adaptor. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Nickel Adaptor.",
     image: [],
     keywords: [
       "RELITE",
@@ -5168,8 +5030,8 @@ export const alfaProducts: Product[] = [
     name: "Tube Clip",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Tube Clip listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Tube Clip from the Alfa Electrical Materials catalogue.",
+    description: "Tube Clip. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Tube Clip.",
     image: [],
     keywords: [
       "RELITE",
@@ -5184,8 +5046,8 @@ export const alfaProducts: Product[] = [
     name: "Metal Clad Switch Socket",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Metal Clad Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Metal Clad Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Metal Clad Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Metal Clad Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5200,8 +5062,8 @@ export const alfaProducts: Product[] = [
     name: "Pop-Up Floor Socket",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Pop-Up Floor Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pop-Up Floor Socket from the Alfa Electrical Materials catalogue.",
+    description: "Pop-Up Floor Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pop-Up Floor Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5216,8 +5078,8 @@ export const alfaProducts: Product[] = [
     name: "Shaver Socket",
     brand: "RELITE",
     category: "Electrical Accessories",
-    description: "Shaver Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Shaver Socket from the Alfa Electrical Materials catalogue.",
+    description: "Shaver Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Shaver Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5232,8 +5094,8 @@ export const alfaProducts: Product[] = [
     name: "GI PVC Coated Flexible Conduit 15m Roll",
     brand: "RELITE",
     category: "Cable Management",
-    description: "GI PVC Coated Flexible Conduit 15m Roll listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI PVC Coated Flexible Conduit 15m Roll from the Alfa Electrical Materials catalogue.",
+    description: "GI PVC Coated Flexible Conduit 15m Roll. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI PVC Coated Flexible Conduit 15m Roll.",
     image: [],
     keywords: [
       "RELITE",
@@ -5248,8 +5110,8 @@ export const alfaProducts: Product[] = [
     name: "Ceiling Fan",
     brand: "RELITE",
     category: "Ventilation",
-    description: "Ceiling Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ceiling Fan from the Alfa Electrical Materials catalogue.",
+    description: "Ceiling Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ceiling Fan.",
     image: [],
     keywords: [
       "RELITE",
@@ -5264,8 +5126,8 @@ export const alfaProducts: Product[] = [
     name: "Emergency Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "Emergency Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Emergency Light from the Alfa Electrical Materials catalogue.",
+    description: "Emergency Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Emergency Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -5281,8 +5143,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5299,8 +5161,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Weatherproof Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5317,8 +5179,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "2 Gang Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5335,8 +5197,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "3 Gang 1 Way Plate Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "3 Gang 1 Way Plate Switch from the Alfa Electrical Materials catalogue.",
+    description: "3 Gang 1 Way Plate Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "3 Gang 1 Way Plate Switch.",
     image: [],
     keywords: [
       "RELITE",
@@ -5353,8 +5215,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "1 Gang 1 Way Plate Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "1 Gang 1 Way Plate Switch from the Alfa Electrical Materials catalogue.",
+    description: "1 Gang 1 Way Plate Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "1 Gang 1 Way Plate Switch.",
     image: [],
     keywords: [
       "RELITE",
@@ -5371,8 +5233,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "1 Gang Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "1 Gang Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "1 Gang Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "1 Gang Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5389,8 +5251,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A 1 Gang Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A 1 Gang Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "13A 1 Gang Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A 1 Gang Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5407,8 +5269,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A 1 Gang DP + 2 USB Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A 1 Gang DP + 2 USB Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "13A 1 Gang DP + 2 USB Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A 1 Gang DP + 2 USB Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5425,8 +5287,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "10A 3 Gang 1 Way Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "10A 3 Gang 1 Way Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "10A 3 Gang 1 Way Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "10A 3 Gang 1 Way Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5443,8 +5305,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "1 Gang Light Wooden Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "1 Gang Light Wooden Cover from the Alfa Electrical Materials catalogue.",
+    description: "1 Gang Light Wooden Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "1 Gang Light Wooden Cover.",
     image: [],
     keywords: [
       "RELITE",
@@ -5461,8 +5323,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "2 Gang Light Wooden Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang Light Wooden Cover from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang Light Wooden Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang Light Wooden Cover.",
     image: [],
     keywords: [
       "RELITE",
@@ -5479,8 +5341,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A 2 Gang DP + 2 USB Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A 2 Gang DP + 2 USB Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "13A 2 Gang DP + 2 USB Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A 2 Gang DP + 2 USB Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5497,8 +5359,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "1 Gang Grey Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "1 Gang Grey Cover from the Alfa Electrical Materials catalogue.",
+    description: "1 Gang Grey Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "1 Gang Grey Cover.",
     image: [],
     keywords: [
       "RELITE",
@@ -5515,8 +5377,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "2 Gang Grey Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang Grey Cover from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang Grey Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang Grey Cover.",
     image: [],
     keywords: [
       "RELITE",
@@ -5533,8 +5395,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A 2 Gang Single Pole Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A 2 Gang Single Pole Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "13A 2 Gang Single Pole Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A 2 Gang Single Pole Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5551,8 +5413,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A 2 Gang Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A 2 Gang Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "13A 2 Gang Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A 2 Gang Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5569,8 +5431,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "45A 1 Gang DP + Neon Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "45A 1 Gang DP + Neon Switch from the Alfa Electrical Materials catalogue.",
+    description: "45A 1 Gang DP + Neon Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "45A 1 Gang DP + Neon Switch.",
     image: [],
     keywords: [
       "RELITE",
@@ -5587,8 +5449,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Gold Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Gold Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Gold Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Gold Switch Socket.",
     image: [],
     keywords: [
       "RELITE",
@@ -5605,8 +5467,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "1 Gang Blank Plate listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "1 Gang Blank Plate from the Alfa Electrical Materials catalogue.",
+    description: "1 Gang Blank Plate. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "1 Gang Blank Plate.",
     image: [],
     keywords: [
       "RELITE",
@@ -5623,8 +5485,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "2 Gang Blank Plate listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang Blank Plate from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang Blank Plate. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang Blank Plate.",
     image: [],
     keywords: [
       "RELITE",
@@ -5641,8 +5503,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "40mm 1 Gang Metal Clad Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "40mm 1 Gang Metal Clad Box from the Alfa Electrical Materials catalogue.",
+    description: "40mm 1 Gang Metal Clad Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "40mm 1 Gang Metal Clad Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -5659,8 +5521,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "40mm 2 Gang Metal Clad Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "40mm 2 Gang Metal Clad Box from the Alfa Electrical Materials catalogue.",
+    description: "40mm 2 Gang Metal Clad Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "40mm 2 Gang Metal Clad Box.",
     image: [],
     keywords: [
       "RELITE",
@@ -5677,8 +5539,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "E27 Batten Lamp Holder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "E27 Batten Lamp Holder from the Alfa Electrical Materials catalogue.",
+    description: "E27 Batten Lamp Holder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "E27 Batten Lamp Holder.",
     image: [],
     keywords: [
       "RELITE",
@@ -5695,8 +5557,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "Plug-In Type Ceiling Rose listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Plug-In Type Ceiling Rose from the Alfa Electrical Materials catalogue.",
+    description: "Plug-In Type Ceiling Rose. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Plug-In Type Ceiling Rose.",
     image: [],
     keywords: [
       "RELITE",
@@ -5713,8 +5575,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "T2 E27 Lamp Holder listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "T2 E27 Lamp Holder from the Alfa Electrical Materials catalogue.",
+    description: "T2 E27 Lamp Holder. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "T2 E27 Lamp Holder.",
     image: [],
     keywords: [
       "RELITE",
@@ -5731,8 +5593,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "2 Gang 1 Way Plate Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang 1 Way Plate Switch from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang 1 Way Plate Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang 1 Way Plate Switch.",
     image: [],
     keywords: [
       "RELITE",
@@ -5749,8 +5611,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "Rotary Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Rotary Switch from the Alfa Electrical Materials catalogue.",
+    description: "Rotary Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Rotary Switch.",
     image: [],
     keywords: [
       "RELITE",
@@ -5767,8 +5629,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "Cut Out Fuse listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cut Out Fuse from the Alfa Electrical Materials catalogue.",
+    description: "Cut Out Fuse. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cut Out Fuse.",
     image: [],
     keywords: [
       "RELITE",
@@ -5785,8 +5647,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "Weather Resistant Cable Cleat listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weather Resistant Cable Cleat from the Alfa Electrical Materials catalogue.",
+    description: "Weather Resistant Cable Cleat. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weather Resistant Cable Cleat.",
     image: [],
     keywords: [
       "RELITE",
@@ -5803,8 +5665,8 @@ export const alfaProducts: Product[] = [
     brand: "RELITE",
     category: "Electrical Accessories",
     subcategory: "Switches, Boxes & Accessories",
-    description: "Stainless Steel Machine Screw listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Stainless Steel Machine Screw from the Alfa Electrical Materials catalogue.",
+    description: "Stainless Steel Machine Screw. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Stainless Steel Machine Screw.",
     image: [],
     keywords: [
       "RELITE",
@@ -5820,8 +5682,8 @@ export const alfaProducts: Product[] = [
     name: "Trunking Sleeve Edge Guard",
     brand: "RELITE",
     category: "Cable Management",
-    description: "Trunking Sleeve Edge Guard listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Trunking Sleeve Edge Guard from the Alfa Electrical Materials catalogue.",
+    description: "Trunking Sleeve Edge Guard. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Trunking Sleeve Edge Guard.",
     image: [],
     keywords: [
       "RELITE",
@@ -5836,8 +5698,8 @@ export const alfaProducts: Product[] = [
     name: "High Bay UFO LED Light",
     brand: "RELITE",
     category: "Lighting",
-    description: "High Bay UFO LED Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "High Bay UFO LED Light from the Alfa Electrical Materials catalogue.",
+    description: "High Bay UFO LED Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "High Bay UFO LED Light.",
     image: [],
     keywords: [
       "RELITE",
@@ -5853,8 +5715,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "2 Gang Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang Switch Socket.",
     image: [],
     keywords: [
       "REXANS",
@@ -5871,8 +5733,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "2 Gang 1 Way Plate Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang 1 Way Plate Switch from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang 1 Way Plate Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang 1 Way Plate Switch.",
     image: [],
     keywords: [
       "REXANS",
@@ -5889,8 +5751,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Universal Socket USB + C Port listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Universal Socket USB + C Port from the Alfa Electrical Materials catalogue.",
+    description: "Universal Socket USB + C Port. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Universal Socket USB + C Port.",
     image: [],
     keywords: [
       "REXANS",
@@ -5907,8 +5769,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Weatherproof Switch Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Switch Socket from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Switch Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Switch Socket.",
     image: [],
     keywords: [
       "REXANS",
@@ -5925,8 +5787,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "16A + 13A Double Socket listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "16A + 13A Double Socket from the Alfa Electrical Materials catalogue.",
+    description: "16A + 13A Double Socket. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "16A + 13A Double Socket.",
     image: [],
     keywords: [
       "REXANS",
@@ -5943,8 +5805,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "40mm 1 Gang Metal Clad Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "40mm 1 Gang Metal Clad Box from the Alfa Electrical Materials catalogue.",
+    description: "40mm 1 Gang Metal Clad Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "40mm 1 Gang Metal Clad Box.",
     image: [],
     keywords: [
       "REXANS",
@@ -5961,8 +5823,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "40mm 2 Gang Metal Clad Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "40mm 2 Gang Metal Clad Box from the Alfa Electrical Materials catalogue.",
+    description: "40mm 2 Gang Metal Clad Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "40mm 2 Gang Metal Clad Box.",
     image: [],
     keywords: [
       "REXANS",
@@ -5979,8 +5841,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A 1 Gang Multi Socket 2 USB + Neon listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A 1 Gang Multi Socket 2 USB + Neon from the Alfa Electrical Materials catalogue.",
+    description: "13A 1 Gang Multi Socket 2 USB + Neon. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A 1 Gang Multi Socket 2 USB + Neon.",
     image: [],
     keywords: [
       "REXANS",
@@ -5997,8 +5859,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A 2 Gang Multi Socket 2 USB + Neon listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A 2 Gang Multi Socket 2 USB + Neon from the Alfa Electrical Materials catalogue.",
+    description: "13A 2 Gang Multi Socket 2 USB + Neon. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A 2 Gang Multi Socket 2 USB + Neon.",
     image: [],
     keywords: [
       "REXANS",
@@ -6015,8 +5877,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "2 Gang 2 Way Switch IP66 listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "2 Gang 2 Way Switch IP66 from the Alfa Electrical Materials catalogue.",
+    description: "2 Gang 2 Way Switch IP66. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "2 Gang 2 Way Switch IP66.",
     image: [],
     keywords: [
       "REXANS",
@@ -6033,8 +5895,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "1 Gang IP66 Bell Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "1 Gang IP66 Bell Switch from the Alfa Electrical Materials catalogue.",
+    description: "1 Gang IP66 Bell Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "1 Gang IP66 Bell Switch.",
     image: [],
     keywords: [
       "REXANS",
@@ -6051,8 +5913,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Weatherproof Box Knockout listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Box Knockout from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Box Knockout. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Box Knockout.",
     image: [],
     keywords: [
       "REXANS",
@@ -6069,8 +5931,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "13A Plug Top listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "13A Plug Top from the Alfa Electrical Materials catalogue.",
+    description: "13A Plug Top. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "13A Plug Top.",
     image: [],
     keywords: [
       "REXANS",
@@ -6087,8 +5949,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "15A Plug Top listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "15A Plug Top from the Alfa Electrical Materials catalogue.",
+    description: "15A Plug Top. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "15A Plug Top.",
     image: [],
     keywords: [
       "REXANS",
@@ -6105,8 +5967,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "PVC Isolator listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Isolator from the Alfa Electrical Materials catalogue.",
+    description: "PVC Isolator. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Isolator.",
     image: [],
     keywords: [
       "REXANS",
@@ -6123,8 +5985,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "PVC Weatherproof Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Weatherproof Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Weatherproof Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Weatherproof Box.",
     image: [],
     keywords: [
       "REXANS",
@@ -6141,8 +6003,8 @@ export const alfaProducts: Product[] = [
     brand: "REXANS",
     category: "Electrical Accessories",
     subcategory: "Switches & Sockets",
-    description: "Smoke Detector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Smoke Detector from the Alfa Electrical Materials catalogue.",
+    description: "Smoke Detector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Smoke Detector.",
     image: [],
     keywords: [
       "REXANS",
@@ -6158,8 +6020,8 @@ export const alfaProducts: Product[] = [
     name: "24 Inch Stand Fan",
     brand: "REXANS",
     category: "Ventilation",
-    description: "24 Inch Stand Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "24 Inch Stand Fan from the Alfa Electrical Materials catalogue.",
+    description: "24 Inch Stand Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "24 Inch Stand Fan.",
     image: [],
     keywords: [
       "REXANS",
@@ -6174,8 +6036,8 @@ export const alfaProducts: Product[] = [
     name: "Industrial Wall Fan",
     brand: "REXANS",
     category: "Ventilation",
-    description: "Industrial Wall Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Wall Fan from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Wall Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Wall Fan.",
     image: [],
     keywords: [
       "REXANS",
@@ -6190,8 +6052,8 @@ export const alfaProducts: Product[] = [
     name: "Duct Fan",
     brand: "REXANS",
     category: "Ventilation",
-    description: "Duct Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Duct Fan from the Alfa Electrical Materials catalogue.",
+    description: "Duct Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Duct Fan.",
     image: [],
     keywords: [
       "REXANS",
@@ -6206,8 +6068,8 @@ export const alfaProducts: Product[] = [
     name: "MCCB",
     brand: "REXANS",
     category: "Switchgear",
-    description: "MCCB listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MCCB from the Alfa Electrical Materials catalogue.",
+    description: "MCCB. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MCCB.",
     image: [],
     keywords: [
       "REXANS",
@@ -6222,8 +6084,8 @@ export const alfaProducts: Product[] = [
     name: "Dust Proof Fitting",
     brand: "REXANS",
     category: "Lighting",
-    description: "Dust Proof Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Dust Proof Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Dust Proof Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Dust Proof Fitting.",
     image: [],
     keywords: [
       "REXANS",
@@ -6238,8 +6100,8 @@ export const alfaProducts: Product[] = [
     name: "LED Weatherproof Fitting",
     brand: "REXANS",
     category: "Lighting",
-    description: "LED Weatherproof Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Weatherproof Fitting from the Alfa Electrical Materials catalogue.",
+    description: "LED Weatherproof Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Weatherproof Fitting.",
     image: [],
     keywords: [
       "REXANS",
@@ -6254,8 +6116,8 @@ export const alfaProducts: Product[] = [
     name: "LED Tube Light",
     brand: "REXANS",
     category: "Lighting",
-    description: "LED Tube Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Tube Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Tube Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Tube Light.",
     image: [],
     keywords: [
       "REXANS",
@@ -6270,8 +6132,8 @@ export const alfaProducts: Product[] = [
     name: "Rubber Flexible Wire",
     brand: "REXANS",
     category: "Cables & Wires",
-    description: "Rubber Flexible Wire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Rubber Flexible Wire from the Alfa Electrical Materials catalogue.",
+    description: "Rubber Flexible Wire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Rubber Flexible Wire.",
     image: [],
     keywords: [
       "REXANS",
@@ -6286,8 +6148,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Flexible Wire",
     brand: "REXANS",
     category: "Cables & Wires",
-    description: "PVC Flexible Wire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Flexible Wire from the Alfa Electrical Materials catalogue.",
+    description: "PVC Flexible Wire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Flexible Wire.",
     image: [],
     keywords: [
       "REXANS",
@@ -6302,8 +6164,8 @@ export const alfaProducts: Product[] = [
     name: "Insect Killer",
     brand: "REXANS",
     category: "Pest Control",
-    description: "Insect Killer listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Insect Killer from the Alfa Electrical Materials catalogue.",
+    description: "Insect Killer. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Insect Killer.",
     image: [],
     keywords: [
       "REXANS",
@@ -6318,8 +6180,8 @@ export const alfaProducts: Product[] = [
     name: "Flood Light",
     brand: "REXANS",
     category: "Lighting",
-    description: "Flood Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Flood Light from the Alfa Electrical Materials catalogue.",
+    description: "Flood Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Flood Light.",
     image: [],
     keywords: [
       "REXANS",
@@ -6334,8 +6196,8 @@ export const alfaProducts: Product[] = [
     name: "High Bay Fitting",
     brand: "REXANS",
     category: "Lighting",
-    description: "High Bay Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "High Bay Fitting from the Alfa Electrical Materials catalogue.",
+    description: "High Bay Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "High Bay Fitting.",
     image: [],
     keywords: [
       "REXANS",
@@ -6350,8 +6212,8 @@ export const alfaProducts: Product[] = [
     name: "LED Mirror Light",
     brand: "REXANS",
     category: "Lighting",
-    description: "LED Mirror Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Mirror Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Mirror Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Mirror Light.",
     image: [],
     keywords: [
       "REXANS",
@@ -6366,8 +6228,8 @@ export const alfaProducts: Product[] = [
     name: "MR16 GU5.3 Lamp",
     brand: "REXANS",
     category: "Lighting",
-    description: "MR16 GU5.3 Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MR16 GU5.3 Lamp from the Alfa Electrical Materials catalogue.",
+    description: "MR16 GU5.3 Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MR16 GU5.3 Lamp.",
     image: [],
     keywords: [
       "REXANS",
@@ -6382,8 +6244,8 @@ export const alfaProducts: Product[] = [
     name: "E14 LED Candle Lamp",
     brand: "REXANS",
     category: "Lighting",
-    description: "E14 LED Candle Lamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "E14 LED Candle Lamp from the Alfa Electrical Materials catalogue.",
+    description: "E14 LED Candle Lamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "E14 LED Candle Lamp.",
     image: [],
     keywords: [
       "REXANS",
@@ -6398,8 +6260,8 @@ export const alfaProducts: Product[] = [
     name: "Prismatic Universal Socket LED Panel",
     brand: "REXANS",
     category: "Lighting",
-    description: "Prismatic Universal Socket LED Panel listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Prismatic Universal Socket LED Panel from the Alfa Electrical Materials catalogue.",
+    description: "Prismatic Universal Socket LED Panel. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Prismatic Universal Socket LED Panel.",
     image: [],
     keywords: [
       "REXANS",
@@ -6414,8 +6276,8 @@ export const alfaProducts: Product[] = [
     name: "LED Batten Fitting",
     brand: "REXANS",
     category: "Lighting",
-    description: "LED Batten Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Batten Fitting from the Alfa Electrical Materials catalogue.",
+    description: "LED Batten Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Batten Fitting.",
     image: [],
     keywords: [
       "REXANS",
@@ -6430,8 +6292,8 @@ export const alfaProducts: Product[] = [
     name: "LED T5 Fitting",
     brand: "REXANS",
     category: "Lighting",
-    description: "LED T5 Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED T5 Fitting from the Alfa Electrical Materials catalogue.",
+    description: "LED T5 Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED T5 Fitting.",
     image: [],
     keywords: [
       "REXANS",
@@ -6446,8 +6308,8 @@ export const alfaProducts: Product[] = [
     name: "Backlit LED Panel",
     brand: "REXANS",
     category: "Lighting",
-    description: "Backlit LED Panel listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Backlit LED Panel from the Alfa Electrical Materials catalogue.",
+    description: "Backlit LED Panel. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Backlit LED Panel.",
     image: [],
     keywords: [
       "REXANS",
@@ -6462,8 +6324,8 @@ export const alfaProducts: Product[] = [
     name: "Industrial Plug IP67",
     brand: "REXANS",
     category: "Electrical Accessories",
-    description: "Industrial Plug IP67 listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Plug IP67 from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Plug IP67. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Plug IP67.",
     image: [],
     keywords: [
       "REXANS",
@@ -6478,8 +6340,8 @@ export const alfaProducts: Product[] = [
     name: "Industrial Socket IP67",
     brand: "REXANS",
     category: "Electrical Accessories",
-    description: "Industrial Socket IP67 listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Socket IP67 from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Socket IP67. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Socket IP67.",
     image: [],
     keywords: [
       "REXANS",
@@ -6494,8 +6356,8 @@ export const alfaProducts: Product[] = [
     name: "Weatherproof Cover",
     brand: "REXANS",
     category: "Electrical Accessories",
-    description: "Weatherproof Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Cover from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Cover.",
     image: [],
     keywords: [
       "REXANS",
@@ -6510,8 +6372,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Junction Box",
     brand: "REXANS",
     category: "Electrical Accessories",
-    description: "PVC Junction Box listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Junction Box from the Alfa Electrical Materials catalogue.",
+    description: "PVC Junction Box. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Junction Box.",
     image: [],
     keywords: [
       "REXANS",
@@ -6526,8 +6388,8 @@ export const alfaProducts: Product[] = [
     name: "Wire Clip",
     brand: "REXANS",
     category: "Electrical Accessories",
-    description: "Wire Clip listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Wire Clip from the Alfa Electrical Materials catalogue.",
+    description: "Wire Clip. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Wire Clip.",
     image: [],
     keywords: [
       "REXANS",
@@ -6542,8 +6404,8 @@ export const alfaProducts: Product[] = [
     name: "Pulling Spring Rope",
     brand: "AR-AR",
     category: "Cable Management",
-    description: "Pulling Spring Rope listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Pulling Spring Rope from the Alfa Electrical Materials catalogue.",
+    description: "Pulling Spring Rope. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Pulling Spring Rope.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6558,8 +6420,8 @@ export const alfaProducts: Product[] = [
     name: "Flexible Wire",
     brand: "AR-AR",
     category: "Cables & Wires",
-    description: "Flexible Wire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Flexible Wire from the Alfa Electrical Materials catalogue.",
+    description: "Flexible Wire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Flexible Wire.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6574,8 +6436,8 @@ export const alfaProducts: Product[] = [
     name: "Bi-Metallic Lug",
     brand: "AR-AR",
     category: "Electrical Accessories",
-    description: "Bi-Metallic Lug listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Bi-Metallic Lug from the Alfa Electrical Materials catalogue.",
+    description: "Bi-Metallic Lug. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Bi-Metallic Lug.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6590,8 +6452,8 @@ export const alfaProducts: Product[] = [
     name: "Cable Gland",
     brand: "AR-AR",
     category: "Electrical Accessories",
-    description: "Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Gland.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6606,8 +6468,8 @@ export const alfaProducts: Product[] = [
     name: "Lockable Weatherproof Cover",
     brand: "AR-AR",
     category: "Electrical Accessories",
-    description: "Lockable Weatherproof Cover listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Lockable Weatherproof Cover from the Alfa Electrical Materials catalogue.",
+    description: "Lockable Weatherproof Cover. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Lockable Weatherproof Cover.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6622,8 +6484,8 @@ export const alfaProducts: Product[] = [
     name: "LED Tube Fitting Combo",
     brand: "AR-AR",
     category: "Lighting",
-    description: "LED Tube Fitting Combo listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Tube Fitting Combo from the Alfa Electrical Materials catalogue.",
+    description: "LED Tube Fitting Combo. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Tube Fitting Combo.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6638,8 +6500,8 @@ export const alfaProducts: Product[] = [
     name: "Weatherproof Fitting",
     brand: "AR-AR",
     category: "Lighting",
-    description: "Weatherproof Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Fitting.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6654,8 +6516,8 @@ export const alfaProducts: Product[] = [
     name: "LED Flood Light",
     brand: "AR-AR",
     category: "Lighting",
-    description: "LED Flood Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LED Flood Light from the Alfa Electrical Materials catalogue.",
+    description: "LED Flood Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LED Flood Light.",
     image: [],
     keywords: [
       "AR-AR",
@@ -6670,8 +6532,8 @@ export const alfaProducts: Product[] = [
     name: "Flexible Cable",
     brand: "RAMM",
     category: "Cables & Wires",
-    description: "Flexible Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Flexible Cable from the Alfa Electrical Materials catalogue.",
+    description: "Flexible Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Flexible Cable.",
     image: [],
     keywords: [
       "RAMM",
@@ -6686,8 +6548,8 @@ export const alfaProducts: Product[] = [
     name: "Speaker Wire",
     brand: "RAMM",
     category: "Cables & Wires",
-    description: "Speaker Wire listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Speaker Wire from the Alfa Electrical Materials catalogue.",
+    description: "Speaker Wire. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Speaker Wire.",
     image: [],
     keywords: [
       "RAMM",
@@ -6702,8 +6564,8 @@ export const alfaProducts: Product[] = [
     name: "GI Flexible Conduit",
     brand: "RAMM",
     category: "Cable Management",
-    description: "GI Flexible Conduit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "GI Flexible Conduit from the Alfa Electrical Materials catalogue.",
+    description: "GI Flexible Conduit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "GI Flexible Conduit.",
     image: [],
     keywords: [
       "RAMM",
@@ -6718,8 +6580,8 @@ export const alfaProducts: Product[] = [
     name: "PVC Trunking",
     brand: "RAMM",
     category: "Cable Management",
-    description: "PVC Trunking listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "PVC Trunking from the Alfa Electrical Materials catalogue.",
+    description: "PVC Trunking. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "PVC Trunking.",
     image: [],
     keywords: [
       "RAMM",
@@ -6734,8 +6596,8 @@ export const alfaProducts: Product[] = [
     name: "Smoke Detector",
     brand: "RAMM",
     category: "Electrical Accessories",
-    description: "Smoke Detector listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Smoke Detector from the Alfa Electrical Materials catalogue.",
+    description: "Smoke Detector. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Smoke Detector.",
     image: [],
     keywords: [
       "RAMM",
@@ -6750,8 +6612,8 @@ export const alfaProducts: Product[] = [
     name: "Weatherproof Fitting",
     brand: "RAMM",
     category: "Electrical Accessories",
-    description: "Weatherproof Fitting listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Weatherproof Fitting from the Alfa Electrical Materials catalogue.",
+    description: "Weatherproof Fitting. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Weatherproof Fitting.",
     image: [],
     keywords: [
       "RAMM",
@@ -6766,8 +6628,8 @@ export const alfaProducts: Product[] = [
     name: "Flood Light",
     brand: "RAMM",
     category: "Lighting",
-    description: "Flood Light listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Flood Light from the Alfa Electrical Materials catalogue.",
+    description: "Flood Light. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Flood Light.",
     image: [],
     keywords: [
       "RAMM",
@@ -6782,8 +6644,8 @@ export const alfaProducts: Product[] = [
     name: "Electrical Tester",
     brand: "DUPRO",
     category: "Electrical Tools",
-    description: "Electrical Tester listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electrical Tester from the Alfa Electrical Materials catalogue.",
+    description: "Electrical Tester. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electrical Tester.",
     image: [],
     keywords: [
       "DUPRO",
@@ -6794,15 +6656,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-copper-tape",
+    id: "electrical-copper-tape",
     name: "Copper Tape",
-    brand: "ALFA",
+    brand: "",
     category: "Earthing",
-    description: "Copper Tape listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Copper Tape from the Alfa Electrical Materials catalogue.",
+    description: "Copper Tape. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Copper Tape.",
     image: [],
     keywords: [
-      "ALFA",
       "Copper Tape",
       "Earthing"
     ],
@@ -6810,15 +6671,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-hanging-clamp",
+    id: "electrical-hanging-clamp",
     name: "Hanging Clamp",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Hanging Clamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Hanging Clamp from the Alfa Electrical Materials catalogue.",
+    description: "Hanging Clamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Hanging Clamp.",
     image: [],
     keywords: [
-      "ALFA",
       "Hanging Clamp",
       "Electrical Accessories"
     ],
@@ -6826,15 +6686,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cable-tray-coupler",
+    id: "electrical-cable-tray-coupler",
     name: "Cable Tray Coupler",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Cable Tray Coupler listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Tray Coupler from the Alfa Electrical Materials catalogue.",
+    description: "Cable Tray Coupler. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Tray Coupler.",
     image: [],
     keywords: [
-      "ALFA",
       "Cable Tray Coupler",
       "Electrical Accessories"
     ],
@@ -6842,15 +6701,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-lsf-shroud",
+    id: "electrical-lsf-shroud",
     name: "LSF Shroud",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "LSF Shroud listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "LSF Shroud from the Alfa Electrical Materials catalogue.",
+    description: "LSF Shroud. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "LSF Shroud.",
     image: [],
     keywords: [
-      "ALFA",
       "LSF Shroud",
       "Electrical Accessories"
     ],
@@ -6858,15 +6716,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cable-tray",
+    id: "electrical-cable-tray",
     name: "Cable Tray",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Cable Tray listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Tray from the Alfa Electrical Materials catalogue.",
+    description: "Cable Tray. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Tray.",
     image: [],
     keywords: [
-      "ALFA",
       "Cable Tray",
       "Cable Management"
     ],
@@ -6878,8 +6735,8 @@ export const alfaProducts: Product[] = [
     name: "MK Switch",
     brand: "MK",
     category: "Electrical Accessories",
-    description: "MK Switch listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "MK Switch from the Alfa Electrical Materials catalogue.",
+    description: "MK Switch. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "MK Switch.",
     image: [],
     keywords: [
       "MK",
@@ -6894,8 +6751,8 @@ export const alfaProducts: Product[] = [
     name: "Ghosia Fan",
     brand: "GHOSIA",
     category: "Ventilation",
-    description: "Ghosia Fan listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Ghosia Fan from the Alfa Electrical Materials catalogue.",
+    description: "Ghosia Fan. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Ghosia Fan.",
     image: [],
     keywords: [
       "GHOSIA",
@@ -6910,8 +6767,8 @@ export const alfaProducts: Product[] = [
     name: "Cellpack Cable Joint Kit",
     brand: "CELLPACK",
     category: "Cable Accessories",
-    description: "Cellpack Cable Joint Kit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cellpack Cable Joint Kit from the Alfa Electrical Materials catalogue.",
+    description: "Cellpack Cable Joint Kit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cellpack Cable Joint Kit.",
     image: [],
     keywords: [
       "CELLPACK",
@@ -6922,15 +6779,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-u-bolt-clamp",
+    id: "electrical-u-bolt-clamp",
     name: "U Bolt Clamp",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "U Bolt Clamp listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "U Bolt Clamp from the Alfa Electrical Materials catalogue.",
+    description: "U Bolt Clamp. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "U Bolt Clamp.",
     image: [],
     keywords: [
-      "ALFA",
       "U Bolt Clamp",
       "Cable Management"
     ],
@@ -6938,15 +6794,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-cable-drum-lifting-jack-hydraulic",
+    id: "electrical-cable-drum-lifting-jack-hydraulic",
     name: "Cable Drum Lifting Jack Hydraulic",
-    brand: "ALFA",
+    brand: "",
     category: "Cable Management",
-    description: "Cable Drum Lifting Jack Hydraulic listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Cable Drum Lifting Jack Hydraulic from the Alfa Electrical Materials catalogue.",
+    description: "Cable Drum Lifting Jack Hydraulic. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Cable Drum Lifting Jack Hydraulic.",
     image: [],
     keywords: [
-      "ALFA",
       "Cable Drum Lifting Jack Hydraulic",
       "Cable Management"
     ],
@@ -6954,15 +6809,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-electrical-hand-gloves-11kv",
+    id: "electrical-electrical-hand-gloves-11kv",
     name: "Electrical Hand Gloves 11kV",
-    brand: "ALFA",
+    brand: "",
     category: "Safety Equipment",
-    description: "Electrical Hand Gloves 11kV listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electrical Hand Gloves 11kV from the Alfa Electrical Materials catalogue.",
+    description: "Electrical Hand Gloves 11kV. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electrical Hand Gloves 11kV.",
     image: [],
     keywords: [
-      "ALFA",
       "Electrical Hand Gloves 11kV",
       "Safety Equipment"
     ],
@@ -6970,15 +6824,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-electrical-hand-gloves-33kv",
+    id: "electrical-electrical-hand-gloves-33kv",
     name: "Electrical Hand Gloves 33kV",
-    brand: "ALFA",
+    brand: "",
     category: "Safety Equipment",
-    description: "Electrical Hand Gloves 33kV listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Electrical Hand Gloves 33kV from the Alfa Electrical Materials catalogue.",
+    description: "Electrical Hand Gloves 33kV. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Electrical Hand Gloves 33kV.",
     image: [],
     keywords: [
-      "ALFA",
       "Electrical Hand Gloves 33kV",
       "Safety Equipment"
     ],
@@ -6986,15 +6839,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-fire-cable",
+    id: "electrical-fire-cable",
     name: "Fire Cable",
-    brand: "ALFA",
+    brand: "",
     category: "Cables & Wires",
-    description: "Fire Cable listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Fire Cable from the Alfa Electrical Materials catalogue.",
+    description: "Fire Cable. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Fire Cable.",
     image: [],
     keywords: [
-      "ALFA",
       "Fire Cable",
       "Cables & Wires"
     ],
@@ -7006,8 +6858,8 @@ export const alfaProducts: Product[] = [
     name: "CW Cable Gland",
     brand: "HEX / BRACO",
     category: "Electrical Accessories",
-    description: "CW Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "CW Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "CW Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "CW Cable Gland.",
     image: [],
     keywords: [
       "HEX / BRACO",
@@ -7022,8 +6874,8 @@ export const alfaProducts: Product[] = [
     name: "BW Cable Gland",
     brand: "HEX / BRACO",
     category: "Electrical Accessories",
-    description: "BW Cable Gland listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "BW Cable Gland from the Alfa Electrical Materials catalogue.",
+    description: "BW Cable Gland. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "BW Cable Gland.",
     image: [],
     keywords: [
       "HEX / BRACO",
@@ -7034,15 +6886,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-terminal-block",
+    id: "electrical-terminal-block",
     name: "Terminal Block",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Terminal Block listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Terminal Block from the Alfa Electrical Materials catalogue.",
+    description: "Terminal Block. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Terminal Block.",
     image: [],
     keywords: [
-      "ALFA",
       "Terminal Block",
       "Electrical Accessories"
     ],
@@ -7050,15 +6901,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-spring-nut",
+    id: "electrical-spring-nut",
     name: "Spring Nut",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Spring Nut listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Spring Nut from the Alfa Electrical Materials catalogue.",
+    description: "Spring Nut. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Spring Nut.",
     image: [],
     keywords: [
-      "ALFA",
       "Spring Nut",
       "Electrical Accessories"
     ],
@@ -7066,15 +6916,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-line-tap",
+    id: "electrical-line-tap",
     name: "Line Tap",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Line Tap listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Line Tap from the Alfa Electrical Materials catalogue.",
+    description: "Line Tap. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Line Tap.",
     image: [],
     keywords: [
-      "ALFA",
       "Line Tap",
       "Electrical Accessories"
     ],
@@ -7082,15 +6931,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-spiral-bolt",
+    id: "electrical-spiral-bolt",
     name: "Spiral Bolt",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Spiral Bolt listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Spiral Bolt from the Alfa Electrical Materials catalogue.",
+    description: "Spiral Bolt. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Spiral Bolt.",
     image: [],
     keywords: [
-      "ALFA",
       "Spiral Bolt",
       "Electrical Accessories"
     ],
@@ -7098,15 +6946,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-zinc-plated-steel-screw",
+    id: "electrical-zinc-plated-steel-screw",
     name: "Zinc Plated Steel Screw",
-    brand: "ALFA",
+    brand: "",
     category: "Electrical Accessories",
-    description: "Zinc Plated Steel Screw listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Zinc Plated Steel Screw from the Alfa Electrical Materials catalogue.",
+    description: "Zinc Plated Steel Screw. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Zinc Plated Steel Screw.",
     image: [],
     keywords: [
-      "ALFA",
       "Zinc Plated Steel Screw",
       "Electrical Accessories"
     ],
@@ -7118,8 +6965,8 @@ export const alfaProducts: Product[] = [
     name: "Taparia Tester 813",
     brand: "TAPARIA",
     category: "Electrical Tools",
-    description: "Taparia Tester 813 listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Taparia Tester 813 from the Alfa Electrical Materials catalogue.",
+    description: "Taparia Tester 813. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Taparia Tester 813.",
     image: [],
     keywords: [
       "TAPARIA",
@@ -7134,8 +6981,8 @@ export const alfaProducts: Product[] = [
     name: "Taparia Tester 814",
     brand: "TAPARIA",
     category: "Electrical Tools",
-    description: "Taparia Tester 814 listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Taparia Tester 814 from the Alfa Electrical Materials catalogue.",
+    description: "Taparia Tester 814. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Taparia Tester 814.",
     image: [],
     keywords: [
       "TAPARIA",
@@ -7150,8 +6997,8 @@ export const alfaProducts: Product[] = [
     name: "Taparia Tester 818",
     brand: "TAPARIA",
     category: "Electrical Tools",
-    description: "Taparia Tester 818 listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Taparia Tester 818 from the Alfa Electrical Materials catalogue.",
+    description: "Taparia Tester 818. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Taparia Tester 818.",
     image: [],
     keywords: [
       "TAPARIA",
@@ -7162,15 +7009,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-earth-pit",
+    id: "electrical-earth-pit",
     name: "Earth Pit",
-    brand: "ALFA",
+    brand: "",
     category: "Earthing",
-    description: "Earth Pit listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Earth Pit from the Alfa Electrical Materials catalogue.",
+    description: "Earth Pit. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Earth Pit.",
     image: [],
     keywords: [
-      "ALFA",
       "Earth Pit",
       "Earthing"
     ],
@@ -7178,15 +7024,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-industrial-salt",
+    id: "electrical-industrial-salt",
     name: "Industrial Salt",
-    brand: "ALFA",
+    brand: "",
     category: "Earthing",
-    description: "Industrial Salt listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Industrial Salt from the Alfa Electrical Materials catalogue.",
+    description: "Industrial Salt. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Industrial Salt.",
     image: [],
     keywords: [
-      "ALFA",
       "Industrial Salt",
       "Earthing"
     ],
@@ -7194,15 +7039,14 @@ export const alfaProducts: Product[] = [
     dataQuality: "catalogue"
   },
   {
-    id: "alfa-earthing-charcoal",
+    id: "electrical-earthing-charcoal",
     name: "Earthing Charcoal",
-    brand: "ALFA",
+    brand: "",
     category: "Earthing",
-    description: "Earthing Charcoal listed in the Alfa Electrical Materials catalogue. Contact SMT for current availability, specifications and quotation.",
-    shortDescription: "Earthing Charcoal from the Alfa Electrical Materials catalogue.",
+    description: "Earthing Charcoal. Contact SMT for current availability, specifications and quotation.",
+    shortDescription: "Earthing Charcoal.",
     image: [],
     keywords: [
-      "ALFA",
       "Earthing Charcoal",
       "Earthing"
     ],

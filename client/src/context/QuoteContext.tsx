@@ -8,7 +8,7 @@ import {
 } from "react";
 
 
-const STORAGE_KEY = "smt-quote-list-v1";
+const STORAGE_KEY = "smt-quote-list-v2";
 const MAX_QUANTITY = 9999;
 
 export interface QuoteItem {

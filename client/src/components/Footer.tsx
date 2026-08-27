@@ -60,6 +60,7 @@ export default function Footer() {
   return (
     <footer
       className="
+        overflow-x-clip
         border-t
         border-neutral-800
         bg-neutral-950
@@ -75,17 +76,19 @@ export default function Footer() {
           max-w-7xl
 
           px-4
-          py-12
+          py-10
 
           sm:px-6
+          sm:py-12
           md:py-14
         "
       >
         <div
           className="
             grid
-            gap-10
+            gap-8
 
+            sm:gap-10
             md:grid-cols-2
 
             lg:grid-cols-[1.4fr_0.7fr_1fr]
@@ -163,10 +166,11 @@ export default function Footer() {
 
             <div
               className="
-                mt-6
+                mt-5
                 flex
                 flex-wrap
                 gap-2
+                sm:mt-6
               "
             >
               <a
@@ -252,8 +256,14 @@ export default function Footer() {
 
             <nav
               className="
-                mt-5
-                space-y-3
+                mt-4
+                grid
+                grid-cols-2
+                gap-x-5
+                gap-y-3
+                md:mt-5
+                md:block
+                md:space-y-3
               "
               aria-label="Footer navigation"
             >
@@ -313,6 +323,7 @@ export default function Footer() {
                   group
 
                   flex
+                  min-w-0
                   items-start
                   gap-3
 
@@ -346,6 +357,7 @@ export default function Footer() {
                   group
 
                   flex
+                  min-w-0
                   items-start
                   gap-3
 
@@ -368,7 +380,7 @@ export default function Footer() {
                   "
                 />
 
-                <span>
+                <span className="min-w-0 break-words">
                   sales@salehmohsin.com
                 </span>
               </a>
@@ -381,6 +393,7 @@ export default function Footer() {
                   group
 
                   flex
+                  min-w-0
                   items-start
                   gap-3
 
@@ -403,7 +416,7 @@ export default function Footer() {
                   "
                 />
 
-                <span>
+                <span className="min-w-0">
                   Old Tasheel Street,
                   Al Sajaa, Sharjah,
                   UAE
@@ -426,8 +439,8 @@ export default function Footer() {
                 aria-label="SMT on Instagram"
                 className="
                   flex
-                  h-9
-                  w-9
+                  h-10
+                  w-10
                   items-center
                   justify-center
 
@@ -455,8 +468,8 @@ export default function Footer() {
                 aria-label="SMT on WhatsApp"
                 className="
                   flex
-                  h-9
-                  w-9
+                  h-10
+                  w-10
                   items-center
                   justify-center
 
@@ -504,6 +517,7 @@ export default function Footer() {
             py-5
 
             text-xs
+            leading-5
             text-neutral-600
 
             sm:px-6
@@ -524,8 +538,11 @@ export default function Footer() {
           <div
             className="
               flex
+              flex-wrap
               items-center
-              gap-2
+              gap-x-2
+              gap-y-1
+              md:justify-end
             "
           >
             <span>
@@ -535,6 +552,7 @@ export default function Footer() {
             <img
               src="/netrise.png"
               alt=""
+              loading="lazy"
               className="
                 h-5
                 w-5

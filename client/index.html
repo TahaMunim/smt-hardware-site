@@ -17,7 +17,17 @@
     />
 
     <!-- =====================================================
-         PRIMARY SEO
+         PRIMARY SEO FALLBACK
+
+         These values are the default/homepage fallback.
+         Route-specific metadata is applied by SEO.tsx after
+         the React app loads.
+
+         IMPORTANT:
+         Do NOT hard-code a canonical URL here. A static
+         canonical of "/" would also be sent for /products,
+         /product/:id, /services, etc. SEO.tsx creates the
+         correct canonical for the current route.
     ====================================================== -->
     <title>
       Saleh Mohsin Trading LLC | Industrial Tools & Supplies UAE
@@ -38,14 +48,13 @@
       content="index, follow"
     />
 
-    <link
-      rel="canonical"
-      href="https://www.salehmohsin.com/"
-    />
-
     <!-- =====================================================
-         OPEN GRAPH
-         Used by WhatsApp, Facebook, LinkedIn, etc.
+         OPEN GRAPH FALLBACK
+
+         These remain useful as site-wide fallback metadata.
+         Product/page-specific social previews require
+         server-side metadata or prerendering because many
+         social crawlers do not execute the React app.
     ====================================================== -->
     <meta
       property="og:type"
@@ -88,7 +97,7 @@
     />
 
     <!-- =====================================================
-         X / TWITTER SHARING
+         X / TWITTER SHARING FALLBACK
     ====================================================== -->
     <meta
       name="twitter:card"
@@ -110,8 +119,16 @@
       content="https://www.salehmohsin.com/SMTLogo.png"
     />
 
+    <meta
+      name="twitter:image:alt"
+      content="Saleh Mohsin Trading LLC"
+    />
+
     <!-- =====================================================
-         STRUCTURED DATA
+         ORGANIZATION STRUCTURED DATA
+
+         Keep the organization schema in the initial HTML so
+         it exists even before React runs.
     ====================================================== -->
     <script type="application/ld+json">
       {
@@ -125,8 +142,9 @@
         "email": "sales@salehmohsin.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Old Tasheel Street, Al Sajaa",
-          "addressLocality": "Sharjah",
+          "streetAddress": "Old Tasheel Street",
+          "addressLocality": "Al Sajaa",
+          "addressRegion": "Sharjah",
           "addressCountry": "AE"
         },
         "areaServed": {
@@ -182,6 +200,10 @@
 
     <!-- =====================================================
          FONTS
+
+         Preconnect is sufficient here. The previous stylesheet
+         preload duplicated the same Google Fonts stylesheet
+         request without materially improving this setup.
     ====================================================== -->
     <link
       rel="preconnect"
@@ -192,12 +214,6 @@
       rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin
-    />
-
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@600;700;800&display=swap"
     />
 
     <link

@@ -74,6 +74,15 @@ const CATEGORY_DESCRIPTIONS: Record<
     "Rollers, brushes, refills and accessories for painting applications."
 };
 
+const FEATURED_CATEGORY_NAMES = [
+  "Power Tools",
+  "Safety Equipment",
+  "Construction Equipment",
+  "Material Handling",
+  "Hand Tools",
+  "Painting Equipment"
+] as const;
+
 function CategoryIcon({
   category
 }: {
@@ -130,14 +139,23 @@ export default function Home() {
     setSearchTerm
   ] = useState("");
 
-  const categories = Array.from(
-    new Set(
-      products.map(
-        (product) =>
-          product.category
-      )
-    )
-  ).sort();
+  /*
+    Keep the homepage intentionally curated.
+
+    The complete category hierarchy lives on
+    the Products page; showing every database
+    category here would make the homepage grow
+    indefinitely as the catalogue expands.
+  */
+  const categories =
+    FEATURED_CATEGORY_NAMES.filter(
+      (category) =>
+        products.some(
+          (product) =>
+            product.category ===
+            category
+        )
+    );
 
   /*
     Only products with actual images
@@ -200,12 +218,12 @@ export default function Home() {
   const brandUrl = (
     brand: string
   ) =>
-    `/products?search=${encodeURIComponent(
+    `/products?brand=${encodeURIComponent(
       brand
     )}`;
 
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen overflow-x-hidden bg-black">
 
       {/* =================================================
           HERO
@@ -256,7 +274,7 @@ export default function Home() {
             gap-12
 
             px-4
-            py-14
+            py-12
 
             sm:px-6
             sm:py-16
@@ -394,7 +412,7 @@ export default function Home() {
                       event.target.value
                     )
                   }
-                  placeholder="Search products, brands or model numbers..."
+                  placeholder="Search products, brands or models..."
                   aria-label="Search SMT catalogue"
                   className="
                     min-w-0
@@ -424,6 +442,8 @@ export default function Home() {
                     bg-yellow-500
 
                     px-5
+
+                    whitespace-nowrap
 
                     text-sm
                     font-bold
@@ -805,7 +825,7 @@ export default function Home() {
 
           bg-black
 
-          py-16
+          py-12
           md:py-20
         "
         data-testid="categories-section"
@@ -1051,7 +1071,7 @@ export default function Home() {
         className="
           bg-neutral-950
 
-          py-16
+          py-12
           md:py-20
         "
         data-testid="products-preview-section"
@@ -1287,6 +1307,7 @@ export default function Home() {
                       ]
                     }
                     alt={brand}
+                    loading="lazy"
                     className="
                       max-h-12
                       max-w-[130px]
@@ -1317,7 +1338,7 @@ export default function Home() {
         className="
           bg-neutral-950
 
-          py-16
+          py-12
           md:py-20
         "
       >
@@ -1593,7 +1614,7 @@ export default function Home() {
 
           bg-black
 
-          py-16
+          py-12
           md:py-20
         "
       >
